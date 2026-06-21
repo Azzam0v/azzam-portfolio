@@ -1,4 +1,4 @@
-import { ArrowUpRight, CheckCircle2, Github } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2, ExternalLink, Github } from 'lucide-react';
 import ProjectVisual from './ProjectVisual';
 
 function ProjectCard({ project }) {
@@ -24,16 +24,28 @@ function ProjectCard({ project }) {
             <span key={technology}>{technology}</span>
           ))}
         </div>
-        <a
-          className="project-link"
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Github size={18} />
-          Voir le code
-          <ArrowUpRight size={17} />
-        </a>
+        <div className="project-actions">
+          <a
+            className="project-link project-link--primary"
+            href={project.live}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ExternalLink size={18} />
+            Voir le projet
+            <ArrowUpRight size={17} />
+          </a>
+          <a
+            className="project-link"
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Github size={18} />
+            Voir le code
+            <ArrowUpRight size={17} />
+          </a>
+        </div>
       </div>
       <ProjectVisual project={project} />
     </article>
