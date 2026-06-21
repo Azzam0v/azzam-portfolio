@@ -1,9 +1,24 @@
-import { ArrowUpRight, CheckCircle2, ExternalLink, Github } from 'lucide-react';
-import ProjectVisual from './ProjectVisual';
+import {
+  ArrowUpRight,
+  BrainCircuit,
+  CheckCircle2,
+  Dumbbell,
+  ExternalLink,
+  Github,
+  Scissors,
+} from 'lucide-react';
+
+const projectIcons = {
+  rzo: Dumbbell,
+  nova: Scissors,
+  memory: BrainCircuit,
+};
 
 function ProjectCard({ project }) {
+  const ProjectIcon = projectIcons[project.id] ?? ExternalLink;
+
   return (
-    <article className={`project project--${project.tone}`}>
+    <article className="project">
       <div className="project__content">
         <div className="project__meta">
           <span>{project.number}</span>
@@ -47,7 +62,17 @@ function ProjectCard({ project }) {
           </a>
         </div>
       </div>
-      <ProjectVisual project={project} />
+      <a
+        className="project-icon"
+        href={project.live}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={`Ouvrir ${project.name}`}
+      >
+        <ProjectIcon aria-hidden="true" />
+        <span>{project.number}</span>
+        <ArrowUpRight aria-hidden="true" />
+      </a>
     </article>
   );
 }

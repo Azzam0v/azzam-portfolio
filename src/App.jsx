@@ -65,12 +65,13 @@ function App() {
             </div>
             <p className="hero-intro">Salut, moi c’est Azzam.</p>
             <h1>
-              Je construis des produits web
+              Je construis des produits numériques
               <em>qui ont du caractère.</em>
             </h1>
             <p className="hero-copy">
-              Développeur React & full-stack, j’aime transformer une idée en
-              expérience fluide, solide et franchement agréable à utiliser.
+              Développeur full-stack, j’aime transformer une idée en produit
+              fluide, solide et franchement agréable à utiliser — de
+              l’interface jusqu’à la logique serveur.
             </p>
             <div className="hero-actions">
               <a className="button button--light" href="#projects">
@@ -96,8 +97,8 @@ function App() {
                 <code>
                   <i>const</i> developer = {'{\n'}
                   {'  '}name: <b>'Azzam'</b>,{'\n'}
-                  {'  '}focus: <b>'Web products'</b>,{'\n'}
-                  {'  '}tools: [<b>'React'</b>, <b>'Java'</b>],{'\n'}
+                  {'  '}focus: <b>'Digital products'</b>,{'\n'}
+                  {'  '}tools: [<b>'React'</b>, <b>'Java'</b>, <b>'APIs'</b>],{'\n'}
                   {'  '}mindset: <b>'ship & improve'</b>{'\n'}
                   {'}'};
                 </code>
@@ -119,10 +120,11 @@ function App() {
         <section className="projects-section" id="projects">
           <div className="section-heading">
             <p className="section-index">01 / PROJETS SÉLECTIONNÉS</p>
-            <h2>Trois projets.<br />Trois ambiances.</h2>
+            <h2>Une sélection<br />de projets.</h2>
             <p>
-              Du sport à la beauté en passant par le jeu : une sélection qui
-              montre ma manière de réfléchir, designer et construire.
+              Des produits aux univers différents qui montrent ma manière de
+              réfléchir, concevoir et construire. La collection continuera
+              naturellement de grandir.
             </p>
           </div>
           <div className="projects-list">
@@ -139,9 +141,10 @@ function App() {
           </div>
           <div className="about-copy">
             <p>
-              J’aime les projets où l’interface, la logique et le besoin
-              utilisateur se rencontrent. Mon objectif : livrer quelque chose
-              de propre techniquement, mais surtout de simple à comprendre.
+              J’aime les projets où l’interface, le backend, la logique métier
+              et le besoin utilisateur se rencontrent. Mon objectif : livrer
+              quelque chose de propre techniquement, mais surtout de simple à
+              comprendre.
             </p>
             <p>
               Je travaille sur tout le parcours — de la première maquette au

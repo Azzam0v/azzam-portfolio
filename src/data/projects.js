@@ -10,7 +10,6 @@ export const projects = [
     technologies: ['React', 'Spring Boot', 'Stripe', 'Docker'],
     live: 'https://rzosports.com/',
     github: 'https://github.com/RZO-SPORTS/RZO-SPORTS-CLIENT',
-    tone: 'electric',
   },
   {
     id: 'nova',
@@ -23,7 +22,6 @@ export const projects = [
     technologies: ['React', 'Vite', 'Bootstrap', 'React Router'],
     live: 'https://azzam0v.github.io/salondecoiffurenova/',
     github: 'https://github.com/Azzam0v/salondecoiffurenova',
-    tone: 'gold',
   },
   {
     id: 'memory',
@@ -36,6 +34,5 @@ export const projects = [
     technologies: ['React', 'Hooks', 'CSS', 'LocalStorage'],
     live: 'https://azzam0v.github.io/memory-safari/',
     github: 'https://github.com/Azzam0v/memory-safari',
-    tone: 'sky',
   },
 ];
