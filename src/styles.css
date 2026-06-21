@@ -320,20 +320,6 @@ a:focus-visible {
   color: #d2d4d7;
 }
 
-.scroll-hint {
-  position: absolute;
-  z-index: 2;
-  left: max(24px, calc((100vw - 1240px) / 2));
-  bottom: 24px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #747a84;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  text-transform: uppercase;
-}
-
 .hero-orbit {
   position: absolute;
   z-index: 1;
@@ -781,10 +767,6 @@ footer > span {
 
   .hero-side {
     margin-top: 30px;
-  }
-
-  .scroll-hint {
-    display: none;
   }
 
   .section-heading,

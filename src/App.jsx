@@ -112,9 +112,6 @@ function App() {
               <span>DESIGN</span> × <span>CODE</span> × <span>IMPACT</span>
             </div>
           </div>
-          <a className="scroll-hint" href="#projects" aria-label="Faire défiler vers les projets">
-            <span>Scroll</span><ArrowDown size={16} />
-          </a>
         </section>
 
         <section className="projects-section" id="projects">
