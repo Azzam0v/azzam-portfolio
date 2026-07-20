@@ -1,5 +1,6 @@
 import {
   ArrowUpRight,
+  BarChart3,
   BrainCircuit,
   CheckCircle2,
   Dumbbell,
@@ -11,6 +12,7 @@ import {
 const projectIcons = {
   rzo: Dumbbell,
   nova: Scissors,
+  novaAnalytics: BarChart3,
   memory: BrainCircuit,
 };
 
@@ -40,39 +42,62 @@ function ProjectCard({ project }) {
           ))}
         </div>
         <div className="project-actions">
-          <a
-            className="project-link project-link--primary"
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ExternalLink size={18} />
-            Voir le projet
-            <ArrowUpRight size={17} />
-          </a>
-          <a
-            className="project-link"
-            href={project.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github size={18} />
-            Voir le code
-            <ArrowUpRight size={17} />
-          </a>
+          {project.live ? (
+            <a
+              className="project-link project-link--primary"
+              href={project.live}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ExternalLink size={18} />
+              Voir le projet
+              <ArrowUpRight size={17} />
+            </a>
+          ) : (
+            <span className="project-link project-link--disabled">
+              <ExternalLink size={18} />
+              URL a completer
+            </span>
+          )}
+          {project.github ? (
+            <a
+              className="project-link"
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Github size={18} />
+              Voir le code
+              <ArrowUpRight size={17} />
+            </a>
+          ) : (
+            <span className="project-link project-link--disabled">
+              <Github size={18} />
+              Depot a completer
+            </span>
+          )}
         </div>
       </div>
-      <a
-        className="project-icon"
-        href={project.live}
-        target="_blank"
-        rel="noreferrer"
-        aria-label={`Ouvrir ${project.name}`}
-      >
-        <ProjectIcon aria-hidden="true" />
-        <span>{project.number}</span>
-        <ArrowUpRight aria-hidden="true" />
-      </a>
+      {project.image ? (
+        <img className="project-preview" src={project.image} alt={`Apercu de ${project.name}`} />
+      ) : project.live ? (
+        <a
+          className="project-icon"
+          href={project.live}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Ouvrir ${project.name}`}
+        >
+          <ProjectIcon aria-hidden="true" />
+          <span>{project.number}</span>
+          <ArrowUpRight aria-hidden="true" />
+        </a>
+      ) : (
+        <div className="project-icon" aria-hidden="true">
+          <ProjectIcon />
+          <span>{project.number}</span>
+        </div>
+      )}
     </article>
   );
 }

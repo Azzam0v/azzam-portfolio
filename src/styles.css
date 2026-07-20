@@ -520,6 +520,15 @@ a:focus-visible {
   transform: translate(3px, -3px);
 }
 
+.project-link--disabled {
+  color: #777c84;
+  cursor: not-allowed;
+}
+
+.project-link--disabled:hover svg:last-child {
+  transform: none;
+}
+
 .project-icon {
   position: relative;
   width: min(100%, 240px);
@@ -559,6 +568,17 @@ a:focus-visible {
 .project-icon:hover {
   border-radius: 22%;
   transform: rotate(4deg) scale(1.03);
+}
+
+.project-preview {
+  width: min(100%, 360px);
+  aspect-ratio: 16 / 10;
+  justify-self: end;
+  object-fit: cover;
+  border: 1px solid #bfc0b8;
+  border-radius: 8px;
+  background: #f7f6f1;
+  box-shadow: 0 24px 60px rgba(11, 13, 16, 0.16);
 }
 
 .about-section {
@@ -789,6 +809,10 @@ footer > span {
 
   .project-icon {
     width: 170px;
+    justify-self: start;
+  }
+
+  .project-preview {
     justify-self: start;
   }
 }

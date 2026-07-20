@@ -35,4 +35,17 @@ export const projects = [
     live: 'https://azzam0v.github.io/memory-safari/',
     github: 'https://github.com/Azzam0v/memory-safari',
   },
+  {
+    id: 'novaAnalytics',
+    number: '04',
+    name: 'Nova Hair Studio Analytics',
+    category: 'Tableau de bord bilingue',
+    description:
+      "Tableau de bord bilingue permettant d'analyser les rendez-vous et la performance des services de Nova Hair Studio.",
+    highlights: ['Graphiques interactifs', 'Interface bilingue', 'Donnees synthetiques'],
+    technologies: ['React', 'TypeScript', 'Recharts', 'Internationalisation'],
+    live: 'https://azzam0v.github.io/nova-hair-dashboard/',
+    github: 'https://github.com/Azzam0v/nova-hair-dashboard',
+    image: '/nova-hair-dashboard-preview.png',
+  },
 ];
