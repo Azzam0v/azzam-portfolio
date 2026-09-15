@@ -1,208 +1,580 @@
-import { useState } from 'react';
+import { useLanguage } from "./i18n";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowRight,
   ArrowUpRight,
+  Check,
   Code2,
   Github,
   Layers3,
   Linkedin,
+  MapPin,
   Menu,
-  Sparkles,
+  Plus,
+  Users,
   X,
-} from 'lucide-react';
-import ProjectCard from './components/ProjectCard';
-import { projects } from './data/projects';
+} from "lucide-react";
+import ProjectCard from "./components/ProjectCard";
+import { profile, projects, rzo } from "./data/projects";
 
-const skills = [
-  ['01', 'Front-end', 'React, JavaScript, interfaces responsives et accessibles.'],
-  ['02', 'Back-end', 'APIs, logique métier, authentification et intégrations.'],
-  ['03', 'Produit', 'Des parcours clairs, utiles et pensés pour de vrais utilisateurs.'],
-];
+function ExternalLink({ href, children, className = "" }) {
+  return (
+    <a
+      className={className}
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {children}
+      <ArrowUpRight size={18} aria-hidden="true" />
+    </a>
+  );
+}
 
-function App() {
+export default function App() {
+  const { t, translate, language, setLanguage } = useLanguage();
+  const localizedRzo = translate(rzo);
+  const localizedProjects = translate(projects);
   const [menuOpen, setMenuOpen] = useState(false);
-  const closeMenu = () => setMenuOpen(false);
+  const menuButton = useRef(null);
+  useEffect(() => {
+    const onEscape = (event) => {
+      if (event.key === "Escape" && menuOpen) {
+        setMenuOpen(false);
+        menuButton.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onEscape);
+    return () => document.removeEventListener("keydown", onEscape);
+  }, [menuOpen]);
 
   return (
-    <div className="portfolio">
-      <header className="site-nav">
-        <a className="logo" href="#top" onClick={closeMenu} aria-label="Accueil">
-          AE<span>K</span>
-        </a>
-        <button
-          type="button"
-          className="menu-button"
-          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-          aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((open) => !open)}
-        >
-          {menuOpen ? <X /> : <Menu />}
-        </button>
-        <nav className={menuOpen ? 'is-open' : ''} aria-label="Navigation principale">
-          <a href="#projects" onClick={closeMenu}>Projets</a>
-          <a href="#about" onClick={closeMenu}>À propos</a>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
-        </nav>
+    <>
+      <a className="skip-link" href="#main">
+        {t("Aller au contenu")}
+      </a>
+      <header className="site-nav wrap">
         <a
-          className="nav-social"
-          href="https://github.com/Azzam0v"
-          target="_blank"
-          rel="noreferrer"
+          className="wordmark"
+          href="#top"
+          aria-label={t("Azzam El Kettani, accueil")}
+          onClick={() => setMenuOpen(false)}
         >
-          GitHub <ArrowUpRight size={15} />
+          {t("azzam")}
+          <span className="brand-dot">{t(".")}</span>
+          <span className="wordmark-sub">{t("EL KETTANI")}</span>
         </a>
-      </header>
-
-      <main id="top">
-        <section className="hero-section">
-          <div className="hero-orbit hero-orbit--one" />
-          <div className="hero-orbit hero-orbit--two" />
-          <div className="hero-content">
-            <div className="availability">
-              <span />
-              Disponible pour de nouveaux projets
-            </div>
-            <p className="hero-intro">Salut, moi c’est Azzam.</p>
-            <h1>
-              Je construis des produits numériques
-              <em>qui ont du caractère.</em>
-            </h1>
-            <p className="hero-copy">
-              Développeur full-stack, j’aime transformer une idée en produit
-              fluide, solide et franchement agréable à utiliser — de
-              l’interface jusqu’à la logique serveur.
-            </p>
-            <div className="hero-actions">
-              <a className="button button--light" href="#projects">
-                Découvrir mes projets <ArrowDown size={18} />
-              </a>
-              <a
-                className="button button--ghost"
-                href="https://www.linkedin.com/in/azzam-el-kettani-656b3b301/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin size={18} /> LinkedIn
-              </a>
-            </div>
+        <div className="nav-tools">
+          <div
+            className="language-switch"
+            role="group"
+            aria-label={t("Langue du site")}
+          >
+            <button
+              type="button"
+              lang="fr"
+              aria-label="Français"
+              aria-pressed={language === "fr"}
+              onClick={() => setLanguage("fr")}
+            >
+              FR
+            </button>
+            <span aria-hidden="true">/</span>
+            <button
+              type="button"
+              lang="en"
+              aria-label="English"
+              aria-pressed={language === "en"}
+              onClick={() => setLanguage("en")}
+            >
+              EN
+            </button>
           </div>
-          <div className="hero-side">
-            <div className="code-card">
-              <div className="code-card__top">
-                <span /><span /><span />
-                <small>azzam.jsx</small>
-              </div>
-              <pre>
-                <code>
-                  <i>const</i> developer = {'{\n'}
-                  {'  '}name: <b>'Azzam'</b>,{'\n'}
-                  {'  '}focus: <b>'Digital products'</b>,{'\n'}
-                  {'  '}tools: [<b>'React'</b>, <b>'Java'</b>, <b>'APIs'</b>],{'\n'}
-                  {'  '}mindset: <b>'ship & improve'</b>{'\n'}
-                  {'}'};
-                </code>
-              </pre>
-              <div className="code-result">
-                <Sparkles size={17} />
-                <span>Building something useful...</span>
-              </div>
-            </div>
-            <div className="hero-stamp">
-              <span>DESIGN</span> × <span>CODE</span> × <span>IMPACT</span>
-            </div>
+          <button
+            ref={menuButton}
+            className="menu-button"
+            type="button"
+            aria-expanded={menuOpen}
+            aria-controls="navigation"
+            aria-label={menuOpen ? t("Fermer le menu") : t("Ouvrir le menu")}
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {menuOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+        <nav
+          id="navigation"
+          className={menuOpen ? "is-open" : ""}
+          aria-label={t("Navigation principale")}
+        >
+          <a href="#projects" onClick={() => setMenuOpen(false)}>
+            {t("Les projets")} <span>{t("03")}</span>
+          </a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            {t("À propos")}
+          </a>
+          <a
+            className="nav-contact"
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+          >
+            {t("Discutons")} <ArrowUpRight size={16} />
+          </a>
+        </nav>
+      </header>
+      <main id="main">
+        <section className="hero wrap" id="top" aria-labelledby="hero-title">
+          <div className="hero-eyebrow">
+            <p className="eyebrow">{t("DÉVELOPPEUR FULL-STACK")}</p>
+            <span>
+              <span className="status-dot" /> {t("Ouvert aux opportunités")}
+            </span>
+          </div>
+          <h1 id="hero-title">
+            {t("Du code.")}
+            <br />
+            {t("Du sens.")}
+            <span className="hero-asterisk" aria-hidden="true">
+              {t("✳")}
+            </span>
+            <br />
+            <span className="muted-heading">{t("De l’impact.")}</span>
+          </h1>
+          <div className="hero-bottom">
+            <p>
+              {t("Moi, c’est")} <strong>{t("Azzam El Kettani.")}</strong>
+              <br />
+              {t(
+                "Développeur full-stack et cofondateur de RZO Sports. Je construis des expériences web soignées et des produits qui rapprochent les gens.",
+              )}
+            </p>
+            <a className="button button-dark" href="#projects">
+              {t("Explorer mes projets")} <ArrowDown size={18} />
+            </a>
+          </div>
+          <div className="hero-meta">
+            <span>
+              <MapPin size={14} /> {t("Ottawa — Gatineau")}
+            </span>
+            <span>{t("FRONT-END & BACK-END")}</span>
+            <a href={profile.github} target="_blank" rel="noopener noreferrer">
+              {t("GitHub")} <ArrowUpRight size={14} />
+            </a>
           </div>
         </section>
-
-        <section className="projects-section" id="projects">
+        <section
+          className="work-section wrap"
+          id="projects"
+          aria-labelledby="work-title"
+        >
           <div className="section-heading">
-            <p className="section-index">01 / PROJETS SÉLECTIONNÉS</p>
-            <h2>Une sélection<br />de projets.</h2>
+            <p className="eyebrow">{t("01 / PROJETS SÉLECTIONNÉS")}</p>
+            <div className="heading-row">
+              <h2 id="work-title">
+                {t("Trois projets.")}
+                <br />
+                <span className="muted-heading">{t("Trois intentions.")}</span>
+              </h2>
+              <p>
+                {t("Un produit au service du sport.")}
+                <br />
+                {t("Deux présences web singulières.")}
+                <br />
+                {t("La même attention à l’expérience.")}
+              </p>
+            </div>
+          </div>
+          <article className="rzo-project" id="rzo">
+            <div className="rzo-top">
+              <span>
+                <span className="status-dot" /> {t("PROJET PHARE")}
+              </span>
+              <span>{t("01 / PLATEFORME FULL-STACK")}</span>
+            </div>
+            <div className="rzo-grid">
+              <div className="rzo-copy">
+                <p className="rzo-wordmark">
+                  {t("RZO")}
+                  <span>{t("SPORTS")}</span>
+                </p>
+                <h3>
+                  {t("Le sport nous rassemble.")}
+                  <br />
+                  {t("La technologie")}
+                  <br />
+                  <em>{t("crée le lien.")}</em>
+                </h3>
+                <p>
+                  {t(
+                    "Une plateforme pour trouver un terrain, organiser une partie et connecter les joueurs aux centres sportifs d’Ottawa et de Gatineau.",
+                  )}
+                </p>
+                <div className="rzo-actions">
+                  <ExternalLink className="button button-lime" href={rzo.live}>
+                    {t("Découvrir RZO")}
+                  </ExternalLink>
+                  <a className="light-link" href="#rzo-story">
+                    {t("L’histoire du projet")} <ArrowDown size={16} />
+                  </a>
+                </div>
+              </div>
+              <div className="rzo-visual">
+                <img
+                  src={`${import.meta.env.BASE_URL}images/rzo-football.jpg`}
+                  alt={t(
+                    "Un terrain de football, au cœur de l’expérience sportive RZO",
+                  )}
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                />
+                <div className="rzo-visual-overlay" />
+                <div className="rzo-map-label">
+                  <MapPin size={14} /> {t("OTTAWA / GATINEAU")}
+                </div>
+                <div className="court" aria-hidden="true">
+                  <div className="court-center" />
+                  <div className="court-box court-box-left" />
+                  <div className="court-box court-box-right" />
+                  <span className="player player-one" />
+                  <span className="player player-two" />
+                  <span className="player player-three" />
+                </div>
+                <div className="rzo-visual-caption">
+                  <span>
+                    {t("LE MÊME TERRAIN.")}
+                    <br />
+                    {t("DE NOUVELLES RENCONTRES.")}
+                  </span>
+                  <Users size={30} />
+                </div>
+              </div>
+            </div>
+            <div className="rzo-stack">
+              {rzo.technologies.map((tech) => (
+                <span key={tech}>{tech}</span>
+              ))}
+            </div>
+          </article>
+          <div className="rzo-story" id="rzo-story">
+            <div>
+              <p className="eyebrow">
+                {t("COFONDATEUR & DÉVELOPPEUR FULL-STACK")}
+              </p>
+              <h3>
+                {t("Plus qu’un projet")}
+                <br />
+                {t("de programmation.")}
+              </h3>
+              <div className="founder-note">
+                {t("Un problème réel.")}
+                <br />
+                {t("Deux cofondateurs.")}
+                <br />
+                {t("Une entreprise incorporée.")}
+              </div>
+            </div>
+            <div>
+              <p className="story-lead">
+                {t(
+                  "Notre ambition : révolutionner la façon de vivre le sport et de créer du lien à Ottawa–Gatineau.",
+                )}
+              </p>
+              <p className="muted">
+                {t(
+                  "J’ai cofondé RZO Sports avec mon ami Mehdi Semmar à partir d’un constat simple : les joueurs et les centres sportifs avaient besoin d’un même espace pour se retrouver, réserver et organiser le jeu.",
+                )}
+              </p>
+              <p className="muted">
+                {t(
+                  "Nous avons rencontré des gestionnaires, au téléphone et sur place. Certains fonctionnaient encore par courriel, d’autres avec des outils peu adaptés. Ces échanges ont guidé la création d’un premier produit, testé auprès de vrais utilisateurs.",
+                )}
+              </p>
+              <p className="muted">
+                {t(
+                  "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.",
+                )}
+              </p>
+            </div>
+          </div>
+          <div className="milestones">
+            <div>
+              <span className="milestone-value">{t("Startup Garage")}</span>
+              <h4>{t("De l’idée au modèle d’affaires")}</h4>
+              <p>
+                {t(
+                  "Accélérateur de l’Université d’Ottawa : étude de marché, plan d’affaires et identité de marque.",
+                )}
+              </p>
+            </div>
+            <div>
+              <span className="milestone-value">{t("2 / 40")}</span>
+              <h4>{t("Au concours de pitch")}</h4>
+              <p>
+                {t(
+                  "Deuxième place sur 40 équipes, devant un jury de quatre investisseurs.",
+                )}
+              </p>
+            </div>
+            <div>
+              <span className="milestone-value">{t("Shopify Builders")}</span>
+              <h4>{t("Le produit face à son public")}</h4>
+              <p>
+                {t(
+                  "Présentation de RZO et échanges avec d’autres personnes qui construisent leurs entreprises.",
+                )}
+              </p>
+            </div>
+          </div>
+          <div className="product-gallery">
+            <div className="product-gallery-heading">
+              <p className="eyebrow">{t("DU CONCEPT AU PRODUIT")}</p>
+              <p>{t("Un aperçu de l’application RZO Sports.")}</p>
+            </div>
+            <div className="product-shots">
+              <figure>
+                <a
+                  href={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t("Agrandir la première capture RZO")}
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
+                    alt={t("Capture de l’application RZO Sports")}
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>{t("01 / L’EXPÉRIENCE RZO")}</figcaption>
+              </figure>
+              <figure>
+                <a
+                  href={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={t("Agrandir la deuxième capture RZO")}
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
+                    alt={t("Capture d’un espace de gestion RZO Sports")}
+                    width="1600"
+                    height="1000"
+                    loading="lazy"
+                  />
+                </a>
+                <figcaption>{t("02 / LE PRODUIT EN DÉTAIL")}</figcaption>
+              </figure>
+            </div>
+            <a
+              className="story-source"
+              href="https://mehdisemmar.me/blog/rzo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("L’aventure racontée par Mehdi, mon cofondateur")}{" "}
+              <ArrowUpRight size={14} />
+            </a>
+          </div>
+          <div className="feature-grid">
+            {localizedRzo.features.map(([n, title, text]) => (
+              <div key={n}>
+                <span className="feature-number">
+                  {n} {t("/")}
+                </span>
+                <h4>{title}</h4>
+                <p>{text}</p>
+              </div>
+            ))}
+          </div>
+          <details className="engineering">
+            <summary>
+              <span>
+                <Code2 size={20} /> {t("Sous le capot de RZO")}{" "}
+                <small>{t("Architecture, choix techniques & qualité")}</small>
+              </span>
+              <Plus size={22} />
+            </summary>
+            <div className="engineering-content">
+              <div className="architecture" aria-label={t("Architecture RZO")}>
+                <span>
+                  {t("React")}
+                  <small>{t("Interface & parcours")}</small>
+                </span>
+                <ArrowRight />
+                <span>
+                  {t("Spring Boot")}
+                  <small>{t("API & règles métier")}</small>
+                </span>
+                <ArrowRight />
+                <span>
+                  {t("MySQL")}
+                  <small>{t("Données persistantes")}</small>
+                </span>
+              </div>
+              <div className="engineering-grid">
+                {localizedRzo.engineering.map((item) => (
+                  <div key={item.title}>
+                    <h4>{item.title}</h4>
+                    <p>{item.text}</p>
+                    <div className="tags">
+                      {item.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="engineering-footer">
+                <p>
+                  {t(
+                    "Fonctionnalités et architecture décrites à partir du code du projet.",
+                  )}
+                </p>
+                <ExternalLink href={rzo.github}>
+                  {t("Explorer le code client")}
+                </ExternalLink>
+              </div>
+            </div>
+          </details>
+          <div className="sites-heading">
+            <div>
+              <p className="eyebrow">
+                {t("SITES VITRINES / DÉVELOPPEMENT STATIQUE")}
+              </p>
+              <h3>
+                {t("Des univers qui")}
+                <br />
+                {t("font la différence.")}
+              </h3>
+            </div>
             <p>
-              Des produits aux univers différents qui montrent ma manière de
-              réfléchir, concevoir et construire. La collection continuera
-              naturellement de grandir.
+              {t("Identité visuelle, contenu et parcours.")}
+              <br />
+              {t("Des sites légers, avec des interactions ciblées")}
+              <br />
+              {t("et des services de réservation externes.")}
             </p>
           </div>
-          <div className="projects-list">
-            {projects.map((project) => (
+          <div className="sites-grid">
+            {localizedProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
         </section>
-
-        <section className="about-section" id="about">
-          <div className="about-heading">
-            <p className="section-index">02 / À PROPOS</p>
-            <h2>Curieux par nature.<br />Exigeant dans le code.</h2>
-          </div>
-          <div className="about-copy">
-            <p>
-              J’aime les projets où l’interface, le backend, la logique métier
-              et le besoin utilisateur se rencontrent. Mon objectif : livrer
-              quelque chose de propre techniquement, mais surtout de simple à
-              comprendre.
-            </p>
-            <p>
-              Je travaille sur tout le parcours — de la première maquette au
-              déploiement — avec une préférence assumée pour les interfaces
-              vivantes et les produits qui résolvent un vrai problème.
-            </p>
-          </div>
-          <div className="skills-grid">
-            {skills.map(([number, title, copy]) => (
-              <article key={title}>
-                <span>{number}</span>
-                {number === '01' && <Code2 />}
-                {number === '02' && <Layers3 />}
-                {number === '03' && <Sparkles />}
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </article>
-            ))}
-          </div>
-          <div className="stack-marquee" aria-label="Technologies utilisées">
-            <div>
-              <span>REACT</span><i>✦</i><span>JAVASCRIPT</span><i>✦</i>
-              <span>JAVA</span><i>✦</i><span>SPRING BOOT</span><i>✦</i>
-              <span>CSS</span><i>✦</i><span>GIT</span><i>✦</i>
+        <section
+          className="about-section"
+          id="about"
+          aria-labelledby="about-title"
+        >
+          <div className="wrap">
+            <div className="about-grid">
+              <div>
+                <p className="eyebrow">{t("02 / MA FAÇON DE TRAVAILLER")}</p>
+                <h2 id="about-title">
+                  {t("Penser au-delà")}
+                  <br />
+                  <span className="muted-heading">{t("de l’écran.")}</span>
+                </h2>
+              </div>
+              <div className="about-copy">
+                <p>
+                  {t(
+                    "J’aime comprendre ce qu’une personne cherche à accomplir, puis construire le chemin le plus clair pour y arriver.",
+                  )}
+                </p>
+                <p>
+                  {t(
+                    "Un site de restaurant, l’identité d’un salon ou une plateforme sportive : chaque projet demande ses propres choix. J’accorde autant d’attention à la lisibilité d’une interface qu’à la structure du code qui la fait fonctionner.",
+                  )}
+                </p>
+                <p>
+                  {t(
+                    "Je souhaite rejoindre une équipe où je peux contribuer à des produits utiles, apprendre au contact d’autres développeurs et prendre des responsabilités concrètes.",
+                  )}
+                </p>
+                <ExternalLink href={profile.linkedin}>
+                  {t("Faisons connaissance sur LinkedIn")}
+                </ExternalLink>
+              </div>
+            </div>
+            <div className="skills-grid">
+              {[
+                [
+                  Code2,
+                  "01",
+                  "Soigner l’interface",
+                  "React, JavaScript, HTML et CSS. Des parcours responsives, une hiérarchie claire et une attention au clavier.",
+                ],
+                [
+                  Layers3,
+                  "02",
+                  "Structurer le produit",
+                  "Java, Spring Boot, API REST et MySQL. Relier l’expérience utilisateur à une logique métier cohérente.",
+                ],
+                [
+                  Users,
+                  "03",
+                  "Partir du besoin",
+                  "Comprendre le contexte, choisir les bons outils et améliorer le produit à partir de situations concrètes.",
+                ],
+              ].map(([Icon, n, title, text]) => (
+                <div key={n}>
+                  <div className="skill-top">
+                    <Icon size={23} />
+                    <span>{n}</span>
+                  </div>
+                  <h3>{t(title)}</h3>
+                  <p>{t(text)}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
-
-        <section className="contact-section" id="contact">
-          <div>
-            <p className="section-index">03 / ON SE PARLE ?</p>
-            <h2>Une idée en tête ?<br /><em>Construisons-la.</em></h2>
+        <section className="contact wrap" id="contact">
+          <div className="contact-top">
+            <p className="eyebrow">{t("03 / LA SUITE S’ÉCRIT ENSEMBLE")}</p>
+            <span>
+              <Check size={15} /> {t("À l’écoute d’opportunités")}
+            </span>
           </div>
-          <div className="contact-actions">
-            <a
-              className="contact-link"
-              href="https://www.linkedin.com/in/azzam-el-kettani-656b3b301/"
-              target="_blank"
-              rel="noreferrer"
+          <h2>
+            {t("Du concret.")}
+            <br />
+            {t("Ensemble")}
+            <span className="brand-dot">{t(".")}</span>
+          </h2>
+          <div className="contact-bottom">
+            <p>
+              {t("Vous cherchez un développeur impliqué,")}
+              <br />
+              {t("avec le goût du produit et du travail soigné ?")}
+              <br />
+              <strong>{t("Parlons de votre équipe.")}</strong>
+            </p>
+            <ExternalLink
+              className="button button-dark"
+              href={profile.linkedin}
             >
-              <Linkedin /> Me contacter sur LinkedIn <ArrowRight />
-            </a>
-            <a
-              className="contact-link"
-              href="https://github.com/Azzam0v"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Github /> Explorer mon GitHub <ArrowRight />
-            </a>
+              <Linkedin size={19} /> {t("Me contacter")}
+            </ExternalLink>
           </div>
         </section>
       </main>
-
-      <footer>
-        <a className="logo" href="#top">AE<span>K</span></a>
-        <p>Conçu et développé par Azzam El Kettani.</p>
-        <span>© {new Date().getFullYear()}</span>
+      <footer className="wrap">
+        <span>
+          {t("©")} {new Date().getFullYear()} {t("Azzam El Kettani")}
+        </span>
+        <span>{t("Conçu avec intention. Développé avec soin.")}</span>
+        <a href={profile.github} target="_blank" rel="noopener noreferrer">
+          <Github size={15} /> {t("GitHub")} <ArrowUpRight size={14} />
+        </a>
+        <a href="#top" aria-label={t("Retour en haut")}>
+          {t("↑")}
+        </a>
       </footer>
-    </div>
+    </>
   );
 }
-
-export default App;
