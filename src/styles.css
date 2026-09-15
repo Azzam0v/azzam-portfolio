@@ -1384,6 +1384,272 @@ a:not(.button):hover {
     padding-inline: 14px;
   }
 }
+.experience-section {
+  padding-bottom: 94px;
+}
+.experience-section > .section-heading {
+  border-top: 1px solid var(--line);
+  padding-top: 64px;
+}
+.experience-section h2 {
+  font-size: clamp(34px, 3.8vw, 53px);
+}
+.experience-card {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.75fr) minmax(0, 2fr);
+  gap: 58px;
+  border-top: 1px solid var(--line);
+  margin-top: 38px;
+  padding-top: 35px;
+}
+.experience-monogram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 155px;
+  padding: 18px;
+  background: #e5ead9;
+  color: #3c4b2a;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  border-radius: 4px;
+}
+.experience-monogram span {
+  font-size: 19px;
+  font-weight: 400;
+}
+.experience-organization {
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 22px;
+  max-width: 240px;
+  font-weight: 600;
+}
+.experience-location,
+.experience-period {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+.experience-employer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 5px;
+}
+.experience-work > .eyebrow {
+  color: #56613f;
+  font-size: 9px;
+  line-height: 1.6;
+}
+.experience-work > h3 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.2;
+  margin-top: 15px;
+}
+.experience-intro {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-top: 17px;
+  max-width: 620px;
+}
+.experience-contributions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 27px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 28px 0;
+}
+.experience-contributions li {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.experience-contributions h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+.experience-contributions p {
+  font-size: 12px;
+  line-height: 1.85;
+  color: var(--muted);
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .site-nav nav {
+    gap: 19px;
+    font-size: 12px;
+  }
+  .nav-tools {
+    margin-left: 18px;
+  }
+  .experience-card {
+    gap: 30px;
+    grid-template-columns: minmax(175px, 0.7fr) minmax(0, 2fr);
+  }
+}
+@media (max-width: 760px) {
+  .experience-section {
+    padding-bottom: 58px;
+  }
+  .experience-section > .section-heading {
+    padding-top: 43px;
+  }
+  .experience-section h2 {
+    font-size: 36px;
+    letter-spacing: -1.9px;
+  }
+  .experience-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 28px;
+    padding-top: 25px;
+  }
+  .experience-organization {
+    max-width: 320px;
+  }
+  .experience-work > h3 {
+    font-size: 25px;
+  }
+  .experience-contributions {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}
+.experience-highlight {
+  margin-top: 36px;
+  padding: 28px 30px;
+  background: #e9eddf;
+  border-left: 3px solid #81935f;
+  border-radius: 0 4px 4px 0;
+}
+.experience-highlight .eyebrow {
+  color: #56613f;
+  font-size: 9px;
+}
+.experience-highlight h3 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  line-height: 1.3;
+  margin: 14px 0;
+}
+.experience-highlight > p:last-child {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--muted);
+  max-width: 900px;
+}
+.experience-details {
+  margin-top: 22px;
+}
+.experience-details h3 {
+  font-size: 23px;
+  line-height: 1.35;
+  letter-spacing: -0.6px;
+  font-weight: 600;
+  margin: 14px 0;
+}
+.experience-details .eyebrow {
+  font-size: 9px;
+  color: #56613f;
+  line-height: 1.7;
+}
+.experience-detail-intro,
+.internship-case p,
+.experience-takeaway p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.85;
+}
+.pipeline-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 35px;
+  margin: 30px 0 0;
+  padding: 0;
+}
+.pipeline-steps li {
+  display: flex;
+  gap: 15px;
+  align-items: start;
+}
+.pipeline-number {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bdc5ac;
+  border-radius: 50%;
+  color: #56613f;
+  font-size: 10px;
+}
+.pipeline-steps h4,
+.internship-case h4,
+.experience-takeaway h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 5px 0 9px;
+}
+.pipeline-steps p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.85;
+}
+.internship-case {
+  border-top: 1px solid var(--line);
+  margin-top: 32px;
+  padding-top: 30px;
+}
+.internship-case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  margin-top: 22px;
+}
+.investigation-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.experience-takeaway {
+  margin-top: 28px;
+  padding: 22px 25px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  border-radius: 4px;
+}
+@media (max-width: 760px) {
+  .experience-highlight {
+    padding: 24px 20px;
+    margin-top: 28px;
+  }
+  .experience-highlight h3 {
+    font-size: 22px;
+  }
+  .experience-details h3 {
+    font-size: 21px;
+  }
+  .pipeline-steps,
+  .internship-case-grid,
+  .investigation-story {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .experience-takeaway {
+    padding: 18px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

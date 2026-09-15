@@ -16,6 +16,7 @@ Sous PowerShell, utiliser `npm.cmd` si nécessaire. Le site utilise le préfixe 
 ## Présentation
 
 - Profil et contact pour les recruteurs.
+- Expérience CECCE : stage de développeur logiciel, mai 2025–janvier 2026, missions Python/SQL, Microsoft Fabric, Azure DevOps et Java, d’après le CV fourni. Section et menu disponibles en français et en anglais.
 - RZO : entreprise cofondée, problème terrain, Startup Garage, deuxième place sur 40 équipes, Shopify Builders, captures et architecture.
 - Tacozzo et Lyz : deux sites vitrines statiques, chacun avec son identité, son aperçu et son étude de cas.
 - Les ambitions sont formulées comme des ambitions. Aucun chiffre d’affaires, nombre de clients ou gain de conversion n’est inventé.
@@ -27,6 +28,7 @@ Sous PowerShell, utiliser `npm.cmd` si nécessaire. Le site utilise le préfixe 
 | --- | --- |
 | `src/App.jsx` | Structure, présentation RZO, menu mobile et contact |
 | `src/components/ProjectCard.jsx` | Aperçu et étude de cas d’un site vitrine |
+| `src/components/Experience.jsx` | Stage CECCE, synthèse et approfondissement : pipeline, Optania, investigation et collaboration |
 | `src/data/projects.js` | Liens, fonctionnalités et descriptions des projets |
 | `src/data/english.js` | Traductions anglaises des textes français |
 | `src/i18n.jsx` | Langue, persistance, URL et métadonnées du navigateur |

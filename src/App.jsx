@@ -16,6 +16,7 @@ import {
   X,
 } from "lucide-react";
 import ProjectCard from "./components/ProjectCard";
+import Experience from "./components/Experience";
 import { profile, projects, rzo } from "./data/projects";
 
 function ExternalLink({ href, children, className = "" }) {
@@ -110,6 +111,9 @@ export default function App() {
         >
           <a href="#projects" onClick={() => setMenuOpen(false)}>
             {t("Les projets")} <span>{t("03")}</span>
+          </a>
+          <a href="#experience" onClick={() => setMenuOpen(false)}>
+            {t("Expérience")}
           </a>
           <a href="#about" onClick={() => setMenuOpen(false)}>
             {t("À propos")}
@@ -464,6 +468,7 @@ export default function App() {
             ))}
           </div>
         </section>
+        <Experience />
         <section
           className="about-section"
           id="about"
@@ -472,7 +477,7 @@ export default function App() {
           <div className="wrap">
             <div className="about-grid">
               <div>
-                <p className="eyebrow">{t("02 / MA FAÇON DE TRAVAILLER")}</p>
+                <p className="eyebrow">{t("03 / MA FAÇON DE TRAVAILLER")}</p>
                 <h2 id="about-title">
                   {t("Penser au-delà")}
                   <br />
@@ -535,7 +540,7 @@ export default function App() {
         </section>
         <section className="contact wrap" id="contact">
           <div className="contact-top">
-            <p className="eyebrow">{t("03 / LA SUITE S’ÉCRIT ENSEMBLE")}</p>
+            <p className="eyebrow">{t("04 / LA SUITE S’ÉCRIT ENSEMBLE")}</p>
             <span>
               <Check size={15} /> {t("À l’écoute d’opportunités")}
             </span>

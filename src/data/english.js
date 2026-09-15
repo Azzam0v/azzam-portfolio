@@ -1,6 +1,92 @@
 // French is the editorial source. Keep complete sentences together so that
 // the English version can read naturally instead of translating word by word.
 export const english = {
+  "9 mois au sein d’une équipe technique": "9 months within a technical team",
+  "CONTRIBUTION CONCRÈTE / OPTANIA": "A CONCRETE CONTRIBUTION / OPTANIA",
+  "Consulter les résultats, sans tout recalculer.":
+    "Read the results without rerunning everything.",
+  "Pour Optania, une application interne de contrôle des données, j’ai développé un cache Java et optimisé des traitements SQL. Les derniers résultats pouvaient être consultés sans relancer systématiquement les calculs, avec la date de dernière actualisation et une option de recalcul à la demande.":
+    "For Optania, an internal data-checking application, I developed a Java cache and optimized SQL processing. Users could view the latest results without rerunning every calculation, see when they were last refreshed and request a new calculation when needed.",
+  "Approfondir mon stage au CECCE": "A closer look at my CECCE internship",
+  "Pipelines, optimisation & résolution de problèmes":
+    "Pipelines, optimization & problem solving",
+  "01 / DU BESOIN À LA DONNÉE VALIDÉE":
+    "01 / FROM REQUIREMENTS TO VALIDATED DATA",
+  "Des composants intégrés à un pipeline d’équipe.":
+    "Components within a shared data pipeline.",
+  "Ma contribution portait sur l’extraction, la préparation, la validation et le dépannage des données. Mes fonctions s’intégraient à l’architecture globale réalisée par l’équipe.":
+    "My contribution focused on extracting, preparing, validating and troubleshooting data. The functions I developed were components of the broader architecture built by the team.",
+  "Comprendre le besoin": "Understand the requirement",
+  "Identifier les données nécessaires, leur structure et le résultat attendu avec l’équipe.":
+    "Identify the required data, its structure and the expected result with the team.",
+  "Préparer la requête SQL": "Prepare the SQL query",
+  "Développer ou adapter la requête qui extrait les données pertinentes des systèmes internes.":
+    "Develop or adapt a query to extract the relevant data from internal systems.",
+  "Intégrer la fonction Python": "Integrate the Python function",
+  "Suivre le modèle commun de l’équipe pour faciliter la maintenance et la révision du composant.":
+    "Follow the team’s shared pattern to make the component easier to maintain and review.",
+  "Exécuter dans Microsoft Fabric": "Run in Microsoft Fabric",
+  "Récupérer et préparer les données avant leur chargement dans l’environnement analytique.":
+    "Retrieve and prepare data before loading it into the analytics environment.",
+  "Valider et investiguer": "Validate and investigate",
+  "Comparer les résultats aux attentes et rechercher les écarts dans le Python, le SQL ou les données sources.":
+    "Compare results against expectations and trace discrepancies through Python, SQL or the source data.",
+  "Faire réviser et intégrer": "Review and integrate",
+  "Versionner dans Azure DevOps, intégrer les commentaires et participer au chargement dans un Lakehouse ou un entrepôt de données.":
+    "Version code in Azure DevOps, incorporate feedback and contribute to loading data into a Lakehouse or data warehouse.",
+  "02 / OPTIMISATION D’OPTANIA": "02 / OPTIMIZING OPTANIA",
+  "Réutiliser les résultats. Garder le contrôle sur leur fraîcheur.":
+    "Reuse results. Stay in control of their freshness.",
+  "Le problème observé": "The observed problem",
+  "Certains contrôles relançaient de nombreux traitements SQL, qui pouvaient prendre environ 10 à 15 minutes, même lorsque des résultats récents avaient déjà été calculés.":
+    "Some checks reran numerous SQL operations that could take approximately 10 to 15 minutes, even when recent results had already been calculated.",
+  "Mon intervention": "My contribution",
+  "Optimiser une partie de la logique SQL et développer un cache Java des derniers résultats, avec une indication de la dernière actualisation et un recalcul déclenché volontairement par l’utilisateur.":
+    "Optimize part of the SQL logic and develop a Java cache of the latest results, displaying the last refresh time and letting the user explicitly trigger a recalculation.",
+  "Le résultat": "The outcome",
+  "Une consultation plus réactive des résultats disponibles et moins de traitements redondants. L’utilisateur conservait la possibilité de demander des données actualisées lorsque nécessaire.":
+    "More responsive access to available results and fewer redundant operations. Users retained the ability to request refreshed data whenever needed.",
+  "03 / INVESTIGUER AVANT DE CONCLURE": "03 / INVESTIGATE BEFORE CONCLUDING",
+  "Quand l’anomalie vient des données sources.":
+    "When the issue comes from the source data.",
+  "Face à des résultats inattendus, j’ai reproduit l’anomalie, revérifié la logique Python, examiné la requête SQL et comparé les résultats intermédiaires. En présentant mes recherches à un ingénieur, nous avons identifié un écart provenant des données sources.":
+    "When results did not match expectations, I reproduced the issue, rechecked the Python logic, examined the SQL query and compared intermediate results. After I shared my investigation with an engineer, we identified a discrepancy originating in the source data.",
+  "J’en ai retenu l’importance de documenter mes essais, de distinguer un défaut de code d’un problème de qualité des données et de solliciter un collègue quand le problème dépasse mon composant.":
+    "This taught me to document my attempts, distinguish code defects from data-quality issues and involve a colleague when the problem extends beyond my component.",
+  "Une méthode de travail que je garde aujourd’hui":
+    "A way of working I still use today",
+  "Comprendre le besoin, respecter les conventions d’une base de code existante, expliquer mes choix, intégrer les retours de revue et refaire les validations avant l’intégration. Ce stage m’a appris à conjuguer autonomie et collaboration avec des développeurs et des ingénieurs.":
+    "Understand the requirement, follow an existing codebase’s conventions, explain my decisions, incorporate review feedback and validate again before integration. This internship taught me to balance independence with collaboration alongside developers and engineers.",
+  Expérience: "Experience",
+  "02 / EXPÉRIENCE PROFESSIONNELLE": "02 / PROFESSIONAL EXPERIENCE",
+  "03 / MA FAÇON DE TRAVAILLER": "03 / HOW I WORK",
+  "04 / LA SUITE S’ÉCRIT ENSEMBLE": "04 / LET’S BUILD WHAT’S NEXT",
+  "Au sein d’une équipe.": "Working with a team.",
+  "Sur des besoins réels.": "Solving real needs.",
+  "Développement logiciel, données": "Software development, data",
+  "et amélioration d’outils internes.": "and better internal tools.",
+  "Mai 2025": "May 2025",
+  "Janvier 2026": "January 2026",
+  "Le CECCE": "About CECCE",
+  "STAGE / DÉVELOPPEMENT LOGICIEL & DONNÉES":
+    "INTERNSHIP / SOFTWARE DEVELOPMENT & DATA",
+  "Stagiaire en développement logiciel": "Software Developer Intern",
+  "Contribuer à des données fiables et à des applications internes plus réactives, dans un environnement de développement collaboratif.":
+    "Contributing to reliable data and more responsive internal applications in a collaborative development environment.",
+  "Pipelines de données": "Data pipelines",
+  "Contribution à des pipelines Python et SQL dans Microsoft Fabric pour extraire, préparer et centraliser les données de systèmes internes.":
+    "Contributed to Python and SQL pipelines in Microsoft Fabric to extract, prepare and centralize data from internal systems.",
+  "Qualité et validation": "Quality and validation",
+  "Contrôle des données, comparaison aux résultats attendus et investigation des anomalies avant leur chargement dans un Lakehouse ou un entrepôt de données.":
+    "Checked data quality, compared results against expected outputs and investigated anomalies before loading data into a Lakehouse or data warehouse.",
+  "Développement en équipe": "Collaborative development",
+  "Développement de fonctions Python et adaptation de requêtes SQL selon les pratiques de l’équipe, avec gestion des versions, revue et validation dans Azure DevOps.":
+    "Developed Python functions and adapted SQL queries following team practices, with version control, code review and validation in Azure DevOps.",
+  "Performance applicative": "Application performance",
+  "Optimisation de traitements SQL et développement d’un mécanisme de cache Java avec actualisation des résultats pour améliorer la réactivité d’une application interne.":
+    "Optimized SQL processing and developed a Java caching mechanism with result refresh logic to improve an internal application’s responsiveness.",
+  "Technologies utilisées pendant le stage":
+    "Technologies used during the internship",
   "Aller au contenu": "Skip to content",
   "Azzam El Kettani, accueil": "Azzam El Kettani, home",
   "Navigation principale": "Main navigation",

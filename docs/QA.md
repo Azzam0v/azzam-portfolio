@@ -24,6 +24,12 @@ Un audit automatisé ne remplace pas une évaluation complète avec lecteurs d�
 
 ## Après publication
 
+## Ajout de l’expérience CECCE
+
+Section vérifiée en français et en anglais : dates, quatre contributions, six étapes du pipeline, ouverture des détails et conservation de leur état au changement de langue. Navigation mobile vers l’expérience et fermeture du menu validées. Aucun débordement aux largeurs 320, 390, 768, 900 et 1440 px. Aucun problème détecté par axe sur la section ouverte en FR ordinateur et EN mobile, aucune erreur JavaScript observée. Compilation finale réussie. Les exemples métier proviennent du récit de l’utilisateur et ne sont pas des résultats reproduits sur les systèmes du CECCE.
+
+## Vérification après publication
+
 1. Ouvrir le lien du CV sur ordinateur et téléphone.
 2. Tester FR / EN et un lien direct `?lang=en`.
 3. Ouvrir chaque lien de site et de code source.
