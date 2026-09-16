@@ -76,7 +76,8 @@ export default function Experience() {
       <article className="experience-card" aria-labelledby="cecce-role">
         <div className="experience-employer">
           <div className="experience-monogram" aria-hidden="true">
-            CECCE<span>↗</span>
+            CECCE
+            <ArrowUpRight size={19} aria-hidden="true" />
           </div>
           <p className="experience-organization">
             Conseil des écoles catholiques du Centre-Est

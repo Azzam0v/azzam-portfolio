@@ -192,6 +192,11 @@ summary:focus-visible {
   vertical-align: 15px;
   font-weight: 400;
 }
+.hero-asterisk svg {
+  display: block;
+  width: 0.74em;
+  height: 0.74em;
+}
 .hero-bottom {
   display: flex;
   justify-content: space-between;
@@ -1414,10 +1419,6 @@ a:not(.button):hover {
   font-weight: 700;
   letter-spacing: -1px;
   border-radius: 4px;
-}
-.experience-monogram span {
-  font-size: 19px;
-  font-weight: 400;
 }
 .experience-organization {
   font-size: 14px;

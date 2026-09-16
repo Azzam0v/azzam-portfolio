@@ -2,6 +2,7 @@ import { useLanguage } from "./i18n";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
+  ArrowUp,
   ArrowRight,
   ArrowUpRight,
   Check,
@@ -140,7 +141,15 @@ export default function App() {
             <br />
             {t("Du sens.")}
             <span className="hero-asterisk" aria-hidden="true">
-              {t("✳")}
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.2"
+                focusable="false"
+              >
+                <path d="M12 1v22M1 12h22M4.2 4.2l15.6 15.6M4.2 19.8 19.8 4.2" />
+              </svg>
             </span>
             <br />
             <span className="muted-heading">{t("De l’impact.")}</span>
@@ -577,7 +586,7 @@ export default function App() {
           <Github size={15} /> {t("GitHub")} <ArrowUpRight size={14} />
         </a>
         <a href="#top" aria-label={t("Retour en haut")}>
-          {t("↑")}
+          <ArrowUp size={18} aria-hidden="true" />
         </a>
       </footer>
     </>
