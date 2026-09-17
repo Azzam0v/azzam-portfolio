@@ -87,7 +87,27 @@ Chemins relatifs à `RZO-SPORTS-SERVER`. Les chemins abrégés `service/` ci-des
 
 Le rôle présenté est « cofondateur et développeur full-stack ». L’équipe comporte deux cofondateurs. Aucun module n’est attribué exclusivement à Azzam sans relevé de contribution individuel. Les fonctionnalités et le parcours entrepreneurial sont distingués.
 
-## Tacozzo — site vitrine de restaurant
+## Overy — plateforme multijoueur Minecraft
+
+Deuxième projet de la sélection, après RZO. Source : CV `01_software_backend.pdf` et confirmation d’Azzam du 17 septembre 2026, voir [SOURCES.md](SOURCES.md).
+
+- **Rôle :** fondateur et développeur principal.
+- **Réalisation :** plugins Java, services backend PHP/Node.js, conception et maintenance de la base MySQL ; boutique mise en place et administrée sur Tebex.
+- **Données et produit :** création et utilisation d’outils statistiques pour analyser achats et activité, adapter les offres et prioriser les fonctionnalités.
+- **Exploitation et équipe :** direction de développeurs et designers, roadmap, revues de code et déploiements en production.
+- **Résultats du récit fourni :** milliers d’utilisateurs accueillis, chiffre d’affaires cumulé à cinq chiffres, top 7 mondial atteint dans son segment.
+
+La présentation met en avant les responsabilités et résultats dès la synthèse. L’étude de cas dépliable raconte le passage du serveur Minecraft au produit logiciel, puis le développement, l’analyse des données, la boutique, l’exploitation et le travail d’équipe. Elle contient une capture mobile réelle du catalogue OveryCoins, datée et agrandissable. Les liens vers Tebex et la fiche publique du serveur sont accessibles sans ouvrir l’étude de cas. Les chiffres viennent du CV et du récit confirmé par Azzam ; ce document ne prétend pas constituer un audit des données de production.
+
+## Sports Facility Discovery — données et automatisation
+
+Troisième projet principal, personnel. Source : le même CV.
+
+Le besoin est de repérer et qualifier des installations sportives à partir de sources dispersées. Google Places, OpenStreetMap et le web public alimentent une collecte avec enrichissement, déduplication, score de confiance et classification locale Ollama. Le résultat couvre des centaines d’installations. L’interface React permet la validation, l’export CSV et la génération de courriels personnalisés ; le backend utilise Node.js et Express.
+
+La synthèse est suivie d’une étude de cas en trois parties : besoin, qualification, résultat exploitable. Aucun dépôt, démonstration publique ou capture n’a été fourni pour ce projet ; aucun lien n’est ajouté par supposition.
+
+## Tacozzo — site vitrine de restaurant (réalisation complémentaire)
 
 ### Objectif
 
@@ -107,7 +127,7 @@ Faire découvrir les plats, exprimer l’identité et guider vers la commande. U
 
 Carte de partage PNG 1200 × 630, balises Open Graph / Twitter, canonical et URL absolues. L’image reprend une photo existante et l’identité du restaurant. Les robots découvrent les balises directement dans le HTML. Voir `SOCIAL-PREVIEW.md` dans le dépôt Tacozzo pour le prompt, la configuration et la validation.
 
-## Lyz Barbier — site vitrine de salon
+## Lyz Barbier — site vitrine de salon (réalisation complémentaire)
 
 ### Objectif
 

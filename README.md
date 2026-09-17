@@ -1,6 +1,6 @@
 # Azzam El Kettani — portfolio FR / EN
 
-Portfolio de développeur full-stack et cofondateur de RZO Sports. Trois projets uniquement : **RZO Sports**, **Tacozzo**, **Lyz Barbier**.
+Portfolio d’un étudiant en génie informatique à uOttawa, développeur full-stack et cofondateur de RZO Sports. Trois projets principaux : **RZO Sports**, **Overy**, **Sports Facility Discovery**. Deux sites vitrines complémentaires : **Tacozzo** et **Lyz Barbier**.
 
 ## Démarrer
 
@@ -17,7 +17,9 @@ Sous PowerShell, utiliser `npm.cmd` si nécessaire. Le site utilise le préfixe 
 
 - Profil et contact pour les recruteurs.
 - Expérience CECCE : stage de développeur logiciel, mai 2025–janvier 2026, missions Python/SQL, Microsoft Fabric, Azure DevOps et Java, d’après le CV fourni. Section et menu disponibles en français et en anglais.
-- RZO : entreprise cofondée, problème terrain, Startup Garage, deuxième place sur 40 équipes, Shopify Builders, captures et architecture.
+- RZO : présentation courte, puis étude de cas dépliable avec récit entrepreneurial, Startup Garage, deuxième place sur 40 équipes, Shopify Builders, captures et architecture.
+- Overy : fondateur et développeur principal d’une plateforme multijoueur Minecraft monétisée ; backend, MySQL, statistiques pour les décisions produit, boutique Tebex, équipe et exploitation. Résultats du récit d’Azzam : milliers d’utilisateurs accueillis, chiffre d’affaires cumulé à cinq chiffres et top 7 mondial atteint dans son segment. Liens publics et capture réelle du catalogue mobile dans l’étude de cas.
+- Sports Facility Discovery : prospection d’installations sportives, collecte multi-source, déduplication, scoring, classification locale Ollama et interface de validation React.
 - Tacozzo et Lyz : deux sites vitrines statiques, chacun avec son identité, son aperçu et son étude de cas.
 - Les ambitions sont formulées comme des ambitions. Aucun chiffre d’affaires, nombre de clients ou gain de conversion n’est inventé.
 - Le développement de RZO est présenté comme un projet partagé entre cofondateurs.
@@ -28,6 +30,7 @@ Sous PowerShell, utiliser `npm.cmd` si nécessaire. Le site utilise le préfixe 
 | --- | --- |
 | `src/App.jsx` | Structure, présentation RZO, menu mobile et contact |
 | `src/components/ProjectCard.jsx` | Aperçu et étude de cas d’un site vitrine |
+| `src/components/SoftwareProjects.jsx` | Overy et Sports Facility Discovery : synthèse, résultats, contributions et études de cas |
 | `src/components/Experience.jsx` | Stage CECCE, synthèse et approfondissement : pipeline, Optania, investigation et collaboration |
 | `src/data/projects.js` | Liens, fonctionnalités et descriptions des projets |
 | `src/data/english.js` | Traductions anglaises des textes français |

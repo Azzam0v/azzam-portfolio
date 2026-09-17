@@ -18,7 +18,8 @@ import {
 } from "lucide-react";
 import ProjectCard from "./components/ProjectCard";
 import Experience from "./components/Experience";
-import { profile, projects, rzo } from "./data/projects";
+import SoftwareProjects from "./components/SoftwareProjects";
+import { profile, projects, rzo, softwareProjects } from "./data/projects";
 
 function ExternalLink({ href, children, className = "" }) {
   return (
@@ -111,7 +112,13 @@ export default function App() {
           aria-label={t("Navigation principale")}
         >
           <a href="#projects" onClick={() => setMenuOpen(false)}>
-            {t("Les projets")} <span>{t("03")}</span>
+            {t("Les projets")}{" "}
+            <span>
+              {String(1 + softwareProjects.length + projects.length).padStart(
+                2,
+                "0",
+              )}
+            </span>
           </a>
           <a href="#experience" onClick={() => setMenuOpen(false)}>
             {t("Expérience")}
@@ -159,7 +166,7 @@ export default function App() {
               {t("Moi, c’est")} <strong>{t("Azzam El Kettani.")}</strong>
               <br />
               {t(
-                "Développeur full-stack et cofondateur de RZO Sports. Je construis des expériences web soignées et des produits qui rapprochent les gens.",
+                "Étudiant en génie informatique à uOttawa et cofondateur de RZO Sports. Du backend Java à une plateforme multijoueur monétisée, je construis des produits et les fais vivre en production.",
               )}
             </p>
             <a className="button button-dark" href="#projects">
@@ -170,7 +177,7 @@ export default function App() {
             <span>
               <MapPin size={14} /> {t("Ottawa — Gatineau")}
             </span>
-            <span>{t("FRONT-END & BACK-END")}</span>
+            <span>{t("GÉNIE INFORMATIQUE · UOTTAWA")}</span>
             <a href={profile.github} target="_blank" rel="noopener noreferrer">
               {t("GitHub")} <ArrowUpRight size={14} />
             </a>
@@ -187,14 +194,16 @@ export default function App() {
               <h2 id="work-title">
                 {t("Trois projets.")}
                 <br />
-                <span className="muted-heading">{t("Trois intentions.")}</span>
+                <span className="muted-heading">
+                  {t("Du logiciel concret.")}
+                </span>
               </h2>
               <p>
-                {t("Un produit au service du sport.")}
+                {t("Produit full-stack. Backend en production.")}
                 <br />
-                {t("Deux présences web singulières.")}
+                {t("Données, automatisation et IA locale.")}
                 <br />
-                {t("La même attention à l’expérience.")}
+                {t("Et deux sites vitrines en complément.")}
               </p>
             </div>
           </div>
@@ -227,8 +236,14 @@ export default function App() {
                   <ExternalLink className="button button-lime" href={rzo.live}>
                     {t("Découvrir RZO")}
                   </ExternalLink>
-                  <a className="light-link" href="#rzo-story">
-                    {t("L’histoire du projet")} <ArrowDown size={16} />
+                  <a
+                    className="light-link"
+                    href="#rzo-story"
+                    onClick={() => {
+                      document.getElementById("rzo-story").open = true;
+                    }}
+                  >
+                    {t("Voir l’étude de cas")} <ArrowDown size={16} />
                   </a>
                 </div>
               </div>
@@ -270,192 +285,202 @@ export default function App() {
               ))}
             </div>
           </article>
-          <div className="rzo-story" id="rzo-story">
-            <div>
-              <p className="eyebrow">
-                {t("COFONDATEUR & DÉVELOPPEUR FULL-STACK")}
-              </p>
-              <h3>
-                {t("Plus qu’un projet")}
-                <br />
-                {t("de programmation.")}
-              </h3>
-              <div className="founder-note">
-                {t("Un problème réel.")}
-                <br />
-                {t("Deux cofondateurs.")}
-                <br />
-                {t("Une entreprise incorporée.")}
-              </div>
-            </div>
-            <div>
-              <p className="story-lead">
-                {t(
-                  "Notre ambition : révolutionner la façon de vivre le sport et de créer du lien à Ottawa–Gatineau.",
-                )}
-              </p>
-              <p className="muted">
-                {t(
-                  "J’ai cofondé RZO Sports avec mon ami Mehdi Semmar à partir d’un constat simple : les joueurs et les centres sportifs avaient besoin d’un même espace pour se retrouver, réserver et organiser le jeu.",
-                )}
-              </p>
-              <p className="muted">
-                {t(
-                  "Nous avons rencontré des gestionnaires, au téléphone et sur place. Certains fonctionnaient encore par courriel, d’autres avec des outils peu adaptés. Ces échanges ont guidé la création d’un premier produit, testé auprès de vrais utilisateurs.",
-                )}
-              </p>
-              <p className="muted">
-                {t(
-                  "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.",
-                )}
-              </p>
-            </div>
-          </div>
-          <div className="milestones">
-            <div>
-              <span className="milestone-value">{t("Startup Garage")}</span>
-              <h4>{t("De l’idée au modèle d’affaires")}</h4>
-              <p>
-                {t(
-                  "Accélérateur de l’Université d’Ottawa : étude de marché, plan d’affaires et identité de marque.",
-                )}
-              </p>
-            </div>
-            <div>
-              <span className="milestone-value">{t("2 / 40")}</span>
-              <h4>{t("Au concours de pitch")}</h4>
-              <p>
-                {t(
-                  "Deuxième place sur 40 équipes, devant un jury de quatre investisseurs.",
-                )}
-              </p>
-            </div>
-            <div>
-              <span className="milestone-value">{t("Shopify Builders")}</span>
-              <h4>{t("Le produit face à son public")}</h4>
-              <p>
-                {t(
-                  "Présentation de RZO et échanges avec d’autres personnes qui construisent leurs entreprises.",
-                )}
-              </p>
-            </div>
-          </div>
-          <div className="product-gallery">
-            <div className="product-gallery-heading">
-              <p className="eyebrow">{t("DU CONCEPT AU PRODUIT")}</p>
-              <p>{t("Un aperçu de l’application RZO Sports.")}</p>
-            </div>
-            <div className="product-shots">
-              <figure>
-                <a
-                  href={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t("Agrandir la première capture RZO")}
-                >
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
-                    alt={t("Capture de l’application RZO Sports")}
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                  />
-                </a>
-                <figcaption>{t("01 / L’EXPÉRIENCE RZO")}</figcaption>
-              </figure>
-              <figure>
-                <a
-                  href={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={t("Agrandir la deuxième capture RZO")}
-                >
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
-                    alt={t("Capture d’un espace de gestion RZO Sports")}
-                    width="1600"
-                    height="1000"
-                    loading="lazy"
-                  />
-                </a>
-                <figcaption>{t("02 / LE PRODUIT EN DÉTAIL")}</figcaption>
-              </figure>
-            </div>
-            <a
-              className="story-source"
-              href="https://mehdisemmar.me/blog/rzo"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("L’aventure racontée par Mehdi, mon cofondateur")}{" "}
-              <ArrowUpRight size={14} />
-            </a>
-          </div>
-          <div className="feature-grid">
-            {localizedRzo.features.map(([n, title, text]) => (
-              <div key={n}>
-                <span className="feature-number">
-                  {n} {t("/")}
-                </span>
-                <h4>{title}</h4>
-                <p>{text}</p>
-              </div>
-            ))}
-          </div>
-          <details className="engineering">
+          <details className="rzo-case-study project-details" id="rzo-story">
             <summary>
-              <span>
-                <Code2 size={20} /> {t("Sous le capot de RZO")}{" "}
-                <small>{t("Architecture, choix techniques & qualité")}</small>
-              </span>
-              <Plus size={22} />
+              <span>{t("Voir l’étude de cas")} — RZO Sports</span>
+              <Plus size={19} aria-hidden="true" />
             </summary>
-            <div className="engineering-content">
-              <div className="architecture" aria-label={t("Architecture RZO")}>
-                <span>
-                  {t("React")}
-                  <small>{t("Interface & parcours")}</small>
-                </span>
-                <ArrowRight />
-                <span>
-                  {t("Spring Boot")}
-                  <small>{t("API & règles métier")}</small>
-                </span>
-                <ArrowRight />
-                <span>
-                  {t("MySQL")}
-                  <small>{t("Données persistantes")}</small>
-                </span>
+            <div className="rzo-story">
+              <div>
+                <p className="eyebrow">
+                  {t("COFONDATEUR & DÉVELOPPEUR FULL-STACK")}
+                </p>
+                <h3>
+                  {t("Plus qu’un projet")}
+                  <br />
+                  {t("de programmation.")}
+                </h3>
+                <div className="founder-note">
+                  {t("Un problème réel.")}
+                  <br />
+                  {t("Deux cofondateurs.")}
+                  <br />
+                  {t("Une entreprise incorporée.")}
+                </div>
               </div>
-              <div className="engineering-grid">
-                {localizedRzo.engineering.map((item) => (
-                  <div key={item.title}>
-                    <h4>{item.title}</h4>
-                    <p>{item.text}</p>
-                    <div className="tags">
-                      {item.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="engineering-footer">
-                <p>
+              <div>
+                <p className="story-lead">
                   {t(
-                    "Fonctionnalités et architecture décrites à partir du code du projet.",
+                    "Notre ambition : révolutionner la façon de vivre le sport et de créer du lien à Ottawa–Gatineau.",
                   )}
                 </p>
-                <ExternalLink href={rzo.github}>
-                  {t("Explorer le code client")}
-                </ExternalLink>
+                <p className="muted">
+                  {t(
+                    "J’ai cofondé RZO Sports avec mon ami Mehdi Semmar à partir d’un constat simple : les joueurs et les centres sportifs avaient besoin d’un même espace pour se retrouver, réserver et organiser le jeu.",
+                  )}
+                </p>
+                <p className="muted">
+                  {t(
+                    "Nous avons rencontré des gestionnaires, au téléphone et sur place. Certains fonctionnaient encore par courriel, d’autres avec des outils peu adaptés. Ces échanges ont guidé la création d’un premier produit, testé auprès de vrais utilisateurs.",
+                  )}
+                </p>
+                <p className="muted">
+                  {t(
+                    "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.",
+                  )}
+                </p>
               </div>
             </div>
+            <div className="milestones">
+              <div>
+                <span className="milestone-value">{t("Startup Garage")}</span>
+                <h4>{t("De l’idée au modèle d’affaires")}</h4>
+                <p>
+                  {t(
+                    "Accélérateur de l’Université d’Ottawa : étude de marché, plan d’affaires et identité de marque.",
+                  )}
+                </p>
+              </div>
+              <div>
+                <span className="milestone-value">{t("2 / 40")}</span>
+                <h4>{t("Au concours de pitch")}</h4>
+                <p>
+                  {t(
+                    "Deuxième place sur 40 équipes, devant un jury de quatre investisseurs.",
+                  )}
+                </p>
+              </div>
+              <div>
+                <span className="milestone-value">{t("Shopify Builders")}</span>
+                <h4>{t("Le produit face à son public")}</h4>
+                <p>
+                  {t(
+                    "Présentation de RZO et échanges avec d’autres personnes qui construisent leurs entreprises.",
+                  )}
+                </p>
+              </div>
+            </div>
+            <div className="product-gallery">
+              <div className="product-gallery-heading">
+                <p className="eyebrow">{t("DU CONCEPT AU PRODUIT")}</p>
+                <p>{t("Un aperçu de l’application RZO Sports.")}</p>
+              </div>
+              <div className="product-shots">
+                <figure>
+                  <a
+                    href={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t("Agrandir la première capture RZO")}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
+                      alt={t("Capture de l’application RZO Sports")}
+                      width="1600"
+                      height="1000"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>{t("01 / L’EXPÉRIENCE RZO")}</figcaption>
+                </figure>
+                <figure>
+                  <a
+                    href={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={t("Agrandir la deuxième capture RZO")}
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
+                      alt={t("Capture d’un espace de gestion RZO Sports")}
+                      width="1600"
+                      height="1000"
+                      loading="lazy"
+                    />
+                  </a>
+                  <figcaption>{t("02 / LE PRODUIT EN DÉTAIL")}</figcaption>
+                </figure>
+              </div>
+              <a
+                className="story-source"
+                href="https://mehdisemmar.me/blog/rzo"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("L’aventure racontée par Mehdi, mon cofondateur")}{" "}
+                <ArrowUpRight size={14} />
+              </a>
+            </div>
+            <div className="feature-grid">
+              {localizedRzo.features.map(([n, title, text]) => (
+                <div key={n}>
+                  <span className="feature-number">
+                    {n} {t("/")}
+                  </span>
+                  <h4>{title}</h4>
+                  <p>{text}</p>
+                </div>
+              ))}
+            </div>
+            <details className="engineering">
+              <summary>
+                <span>
+                  <Code2 size={20} /> {t("Sous le capot de RZO")}{" "}
+                  <small>{t("Architecture, choix techniques & qualité")}</small>
+                </span>
+                <Plus size={22} />
+              </summary>
+              <div className="engineering-content">
+                <div
+                  className="architecture"
+                  aria-label={t("Architecture RZO")}
+                >
+                  <span>
+                    {t("React")}
+                    <small>{t("Interface & parcours")}</small>
+                  </span>
+                  <ArrowRight />
+                  <span>
+                    {t("Spring Boot")}
+                    <small>{t("API & règles métier")}</small>
+                  </span>
+                  <ArrowRight />
+                  <span>
+                    {t("MySQL")}
+                    <small>{t("Données persistantes")}</small>
+                  </span>
+                </div>
+                <div className="engineering-grid">
+                  {localizedRzo.engineering.map((item) => (
+                    <div key={item.title}>
+                      <h4>{item.title}</h4>
+                      <p>{item.text}</p>
+                      <div className="tags">
+                        {item.tags.map((tag) => (
+                          <span key={tag}>{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="engineering-footer">
+                  <p>
+                    {t(
+                      "Fonctionnalités et architecture décrites à partir du code du projet.",
+                    )}
+                  </p>
+                  <ExternalLink href={rzo.github}>
+                    {t("Explorer le code client")}
+                  </ExternalLink>
+                </div>
+              </div>
+            </details>
           </details>
+          <SoftwareProjects />
           <div className="sites-heading">
             <div>
               <p className="eyebrow">
-                {t("SITES VITRINES / DÉVELOPPEMENT STATIQUE")}
+                {t("AUTRES RÉALISATIONS / SITES VITRINES")}
               </p>
               <h3>
                 {t("Des univers qui")}
@@ -496,12 +521,12 @@ export default function App() {
               <div className="about-copy">
                 <p>
                   {t(
-                    "J’aime comprendre ce qu’une personne cherche à accomplir, puis construire le chemin le plus clair pour y arriver.",
+                    "J’étudie le génie informatique à l’Université d’Ottawa, avec l’option gestion et entrepreneuriat. J’aime relier la technique à un besoin réel, puis suivre le produit au-delà de sa première version.",
                   )}
                 </p>
                 <p>
                   {t(
-                    "Un site de restaurant, l’identité d’un salon ou une plateforme sportive : chaque projet demande ses propres choix. J’accorde autant d’attention à la lisibilité d’une interface qu’à la structure du code qui la fait fonctionner.",
+                    "Overy m’a appris à développer et exploiter une plateforme avec une communauté et une équipe. Au CECCE, j’ai contribué à une base de code existante, aux pipelines de données et à l’optimisation d’une application Java. Avec RZO Sports, je poursuis cette démarche comme cofondateur et développeur full-stack.",
                   )}
                 </p>
                 <p>

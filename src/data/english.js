@@ -1,6 +1,100 @@
 // French is the editorial source. Keep complete sentences together so that
 // the English version can read naturally instead of translating word by word.
 export const english = {
+  "Étudiant en génie informatique à uOttawa et cofondateur de RZO Sports. Du backend Java à une plateforme multijoueur monétisée, je construis des produits et les fais vivre en production.":
+    "Computer Engineering student at uOttawa and RZO Sports co-founder. From Java backend development to a monetized multiplayer platform, I build products and run them in production.",
+  "GÉNIE INFORMATIQUE · UOTTAWA": "COMPUTER ENGINEERING · UOTTAWA",
+  "Du logiciel concret.": "Real-world software.",
+  "Produit full-stack. Backend en production.":
+    "Full-stack products. Backend in production.",
+  "Données, automatisation et IA locale.": "Data, automation and local AI.",
+  "Et deux sites vitrines en complément.": "Plus two showcase websites.",
+  "Voir l’étude de cas": "View case study",
+  "AUTRES RÉALISATIONS / SITES VITRINES": "MORE WORK / SHOWCASE WEBSITES",
+  "J’étudie le génie informatique à l’Université d’Ottawa, avec l’option gestion et entrepreneuriat. J’aime relier la technique à un besoin réel, puis suivre le produit au-delà de sa première version.":
+    "I study Computer Engineering at the University of Ottawa, with the Management and Entrepreneurship option. I enjoy connecting technology to real needs and taking a product beyond its first release.",
+  "Overy m’a appris à développer et exploiter une plateforme avec une communauté et une équipe. Au CECCE, j’ai contribué à une base de code existante, aux pipelines de données et à l’optimisation d’une application Java. Avec RZO Sports, je poursuis cette démarche comme cofondateur et développeur full-stack.":
+    "Overy taught me to build and operate a platform with a community and a team. At CECCE, I contributed to an existing codebase, data pipelines and Java application optimization. At RZO Sports, I continue this work as a co-founder and full-stack developer.",
+  "BACKEND / PRODUIT EN PRODUCTION": "BACKEND / PRODUCT IN PRODUCTION",
+  "Fondateur & développeur principal": "Founder & Lead Developer",
+  "D’un serveur Minecraft à une plateforme multijoueur monétisée.":
+    "From a Minecraft server to a monetized multiplayer platform.",
+  "J’ai fondé, développé et exploité Overy : un serveur Minecraft avec ses plugins, ses services backend, sa base de données et sa boutique. Je coordonnais l’équipe et utilisais les données d’activité pour faire évoluer le produit et ses offres.":
+    "I founded, built and operated Overy: a Minecraft server with custom plugins, backend services, a database and a storefront. I coordinated the team and used activity data to guide the product and its offerings.",
+  "Des milliers": "Thousands",
+  "d’utilisateurs accueillis": "of users served",
+  "5 chiffres": "Five figures",
+  "de chiffre d’affaires cumulé": "in cumulative revenue",
+  "Top 7 mondial": "Top 7 worldwide",
+  "atteint dans son segment": "reached within its segment",
+  "Plugins Java, services backend PHP et Node.js, conception et maintenance de la base MySQL.":
+    "Java plugins, PHP and Node.js backend services, and MySQL database design and maintenance.",
+  "Boutique Tebex et outils statistiques pour analyser les achats et orienter les offres.":
+    "Tebex storefront and analytics tools to understand purchases and shape product offerings.",
+  "Pilotage de la roadmap, revues de code et déploiements avec les développeurs et designers.":
+    "Led the roadmap, code reviews and deployments with developers and designers.",
+  "Construire pour des joueurs": "Building for players",
+  "Overy a commencé comme un projet de serveur Minecraft. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes techniques. J’assurais la direction du produit autant que son développement, dans un environnement utilisé au quotidien.":
+    "Overy began as a Minecraft server project. As the community grew, it required attracting and retaining players, developing features, managing purchases and fixing technical issues. I handled both product direction and development in a service people used every day.",
+  "Relier les composants techniques": "Connecting the technical components",
+  "J’ai développé des plugins Java et des services backend en PHP et Node.js. Je concevais et maintenais la base MySQL pour organiser les données des utilisateurs, des fonctionnalités et des achats. Chaque évolution demandait de préserver la cohérence de ces composants et de l’expérience de jeu.":
+    "I developed Java plugins and backend services in PHP and Node.js. I designed and maintained the MySQL database to organize user, feature and purchase data. Each change required keeping these components and the gameplay experience consistent.",
+  "Utiliser les données pour décider": "Using data to make decisions",
+  "J’ai créé et utilisé des outils statistiques pour analyser les achats et l’activité des utilisateurs. Ces observations m’aidaient à repérer les produits et fonctionnalités qui suscitaient de l’intérêt, à adapter les offres de la boutique et à prioriser le développement. C’était ma première utilisation concrète de l’analyse de données dans un projet entrepreneurial.":
+    "I built and used analytics tools to understand purchases and user activity. These observations helped me identify popular products and features, adjust store offerings and prioritize development. This was my first practical use of data analysis in an entrepreneurial project.",
+  "Organiser la boutique et les offres":
+    "Managing the storefront and its offerings",
+  "J’ai mis en place et administré la boutique sur Tebex : organisation des produits, suivi des achats et évolution des offres à partir des résultats observés. Le chiffre d’affaires cumulé à cinq chiffres reliait directement mes décisions techniques et produit à une activité commerciale.":
+    "I set up and managed the Tebex storefront: organizing products, tracking purchases and adjusting offerings based on observed results. Five-figure cumulative revenue connected my technical and product decisions directly to a commercial operation.",
+  "Faire évoluer un service en production": "Evolving a service in production",
+  "Je définissais les priorités, répartissais les tâches entre développeurs et designers et révisais le code avant les mises à jour. En production, je surveillais le fonctionnement du service et traitais les problèmes après déploiement, en tenant compte de la stabilité, des erreurs et de la cohérence des données.":
+    "I set priorities, assigned tasks to developers and designers, and reviewed code before updates. In production, I monitored the service and addressed issues after deployment, paying attention to stability, errors and data consistency.",
+  "Des résultats et une responsabilité concrète":
+    "Results and real responsibility",
+  "Overy a accueilli des milliers d’utilisateurs et atteint le top 7 mondial dans son segment. J’y ai appris à suivre tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données. Cette expérience a renforcé mon intérêt pour le backend, l’ingénierie des données et le travail d’équipe.":
+    "Overy served thousands of users and reached the top 7 worldwide in its segment. It taught me to work across a product’s entire lifecycle: building, testing, deploying, maintaining and making decisions based on data. This experience strengthened my interest in backend development, data engineering and teamwork.",
+  "Voir la boutique": "Visit the store",
+  "Fiche publique du serveur": "Public server listing",
+  "Capture mobile de la boutique Overy sur Tebex : présentation des OveryCoins et offre de 500 pièces.":
+    "Mobile screenshot of the Overy store on Tebex: OveryCoins introduction and a 500-coin package.",
+  "Une boutique reliée à l’expérience de jeu.":
+    "A storefront connected to the game experience.",
+  "Les joueurs achètent des OveryCoins sur la boutique Tebex, puis les utilisent en jeu pour obtenir des grades, des clés et des éléments de personnalisation. La boutique annonce une livraison automatique sur le serveur à partir du pseudo renseigné.":
+    "Players buy OveryCoins through the Tebex store, then use them in-game for ranks, keys and customization. The store describes automatic delivery to the server using the player name entered at purchase.",
+  "Boutique Tebex · capture mobile du 17 septembre 2026":
+    "Tebex store · mobile screenshot taken September 17, 2026",
+  "Agrandir la capture de la boutique Overy":
+    "Enlarge the Overy store screenshot",
+  "LE PRODUIT EN IMAGES": "A LOOK AT THE PRODUCT",
+  "Cliquer sur la capture pour l’agrandir":
+    "Click the screenshot to enlarge it",
+  "DATA / AUTOMATISATION / IA LOCALE": "DATA / AUTOMATION / LOCAL AI",
+  "Projet personnel · développement full-stack":
+    "Personal project · full-stack development",
+  "Transformer des sources dispersées en installations qualifiées.":
+    "Turning scattered sources into qualified facilities.",
+  "Une plateforme de prospection qui identifie, enrichit et qualifie des installations sportives à partir de Google Places, d’OpenStreetMap et de sources web publiques.":
+    "A prospecting platform that identifies, enriches and qualifies sports facilities using Google Places, OpenStreetMap and public web sources.",
+  "Des centaines": "Hundreds",
+  "d’installations identifiées et qualifiées":
+    "of facilities identified and qualified",
+  "classification par IA locale": "local AI classification",
+  "Validation humaine": "Human review",
+  "depuis l’interface React": "through the React interface",
+  "Collecte et enrichissement depuis les API géographiques et les sources web publiques.":
+    "Collected and enriched data from geographic APIs and public web sources.",
+  "Pipeline de déduplication, score de confiance et classification avec Ollama.":
+    "Built a pipeline for deduplication, confidence scoring and classification with Ollama.",
+  "Validation des résultats, export CSV et génération de courriels de prise de contact personnalisés.":
+    "Enabled result validation, CSV export and personalized outreach email generation.",
+  "Identifier des installations pertinentes sans refaire manuellement les mêmes recherches. J’ai construit une plateforme qui rassemble les informations de plusieurs sources pour faciliter la qualification et préparer la prise de contact.":
+    "Identify relevant facilities without repeating the same manual searches. I built a platform that brings together information from multiple sources to support qualification and prepare outreach.",
+  "De la collecte à la qualification": "From collection to qualification",
+  "Le pipeline combine Google Places, OpenStreetMap et des sources web publiques. La déduplication rapproche les résultats, un score de confiance aide à les qualifier et une classification locale avec Ollama filtre les installations pertinentes.":
+    "The pipeline combines Google Places, OpenStreetMap and public web sources. Deduplication reconciles results, confidence scoring supports qualification, and local classification with Ollama filters relevant facilities.",
+  "Un résultat exploitable": "Actionable results",
+  "Une interface React permet de valider les résultats, de les exporter en CSV et de générer des courriels personnalisés. Node.js et Express composent la stack backend. Le projet relie collecte de données, automatisation et contrôle humain dans un même outil.":
+    "A React interface lets users validate results, export them as CSV and generate personalized emails. Node.js and Express make up the backend stack. The project brings data collection, automation and human review into one tool.",
   "9 mois au sein d’une équipe technique": "9 months within a technical team",
   "CONTRIBUTION CONCRÈTE / OPTANIA": "A CONCRETE CONTRIBUTION / OPTANIA",
   "Consulter les résultats, sans tout recalculer.":

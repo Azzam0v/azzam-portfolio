@@ -1,4 +1,4 @@
-// Descriptions verified against the local repositories; evidence: docs/PROJECTS.md.
+// Sources: local repositories and the supplied CV; see docs/PROJECTS.md.
 export const profile = {
   name: "Azzam El Kettani",
   github: "https://github.com/Azzam0v",
@@ -58,7 +58,7 @@ export const rzo = {
 export const projects = [
   {
     id: "tacozzo",
-    number: "02",
+    number: "04",
     name: "Tacozzo",
     location: "Restaurant · Ottawa",
     headline: "Une identité qui ouvre l’appétit.",
@@ -90,7 +90,7 @@ export const projects = [
   },
   {
     id: "lyz",
-    number: "03",
+    number: "05",
     name: "Lyz Barbier",
     location: "Salon & barbier · Gatineau",
     headline: "Le sens du détail, à l’écran aussi.",
@@ -117,6 +117,105 @@ export const projects = [
       [
         "Le soin du détail",
         "Vidéos locales chargées au clic, pause hors écran, polices locales, navigation au clavier et carte de partage avec le logo du salon.",
+      ],
+    ],
+  },
+];
+
+export const softwareProjects = [
+  {
+    id: "overy",
+    number: "02",
+    name: "Overy",
+    category: "BACKEND / PRODUIT EN PRODUCTION",
+    role: "Fondateur & développeur principal",
+    headline: "D’un serveur Minecraft à une plateforme multijoueur monétisée.",
+    description:
+      "J’ai fondé, développé et exploité Overy : un serveur Minecraft avec ses plugins, ses services backend, sa base de données et sa boutique. Je coordonnais l’équipe et utilisais les données d’activité pour faire évoluer le produit et ses offres.",
+    technologies: ["Java", "PHP", "MySQL", "Node.js"],
+    results: [
+      ["Des milliers", "d’utilisateurs accueillis"],
+      ["5 chiffres", "de chiffre d’affaires cumulé"],
+      ["Top 7 mondial", "atteint dans son segment"],
+    ],
+    contributions: [
+      "Plugins Java, services backend PHP et Node.js, conception et maintenance de la base MySQL.",
+      "Boutique Tebex et outils statistiques pour analyser les achats et orienter les offres.",
+      "Pilotage de la roadmap, revues de code et déploiements avec les développeurs et designers.",
+    ],
+    links: [
+      { label: "Voir la boutique", href: "https://overy.tebex.io/" },
+      {
+        label: "Fiche publique du serveur",
+        href: "https://minecraftpocket-servers.com/server/119622/",
+      },
+    ],
+    showcase: {
+      image: "images/overy-shop-mobile.jpg",
+      alt: "Capture mobile de la boutique Overy sur Tebex : présentation des OveryCoins et offre de 500 pièces.",
+      title: "Une boutique reliée à l’expérience de jeu.",
+      text: "Les joueurs achètent des OveryCoins sur la boutique Tebex, puis les utilisent en jeu pour obtenir des grades, des clés et des éléments de personnalisation. La boutique annonce une livraison automatique sur le serveur à partir du pseudo renseigné.",
+      caption: "Boutique Tebex · capture mobile du 17 septembre 2026",
+    },
+    details: [
+      [
+        "Construire pour des joueurs",
+        "Overy a commencé comme un projet de serveur Minecraft. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes techniques. J’assurais la direction du produit autant que son développement, dans un environnement utilisé au quotidien.",
+      ],
+      [
+        "Relier les composants techniques",
+        "J’ai développé des plugins Java et des services backend en PHP et Node.js. Je concevais et maintenais la base MySQL pour organiser les données des utilisateurs, des fonctionnalités et des achats. Chaque évolution demandait de préserver la cohérence de ces composants et de l’expérience de jeu.",
+      ],
+      [
+        "Utiliser les données pour décider",
+        "J’ai créé et utilisé des outils statistiques pour analyser les achats et l’activité des utilisateurs. Ces observations m’aidaient à repérer les produits et fonctionnalités qui suscitaient de l’intérêt, à adapter les offres de la boutique et à prioriser le développement. C’était ma première utilisation concrète de l’analyse de données dans un projet entrepreneurial.",
+      ],
+      [
+        "Organiser la boutique et les offres",
+        "J’ai mis en place et administré la boutique sur Tebex : organisation des produits, suivi des achats et évolution des offres à partir des résultats observés. Le chiffre d’affaires cumulé à cinq chiffres reliait directement mes décisions techniques et produit à une activité commerciale.",
+      ],
+      [
+        "Faire évoluer un service en production",
+        "Je définissais les priorités, répartissais les tâches entre développeurs et designers et révisais le code avant les mises à jour. En production, je surveillais le fonctionnement du service et traitais les problèmes après déploiement, en tenant compte de la stabilité, des erreurs et de la cohérence des données.",
+      ],
+      [
+        "Des résultats et une responsabilité concrète",
+        "Overy a accueilli des milliers d’utilisateurs et atteint le top 7 mondial dans son segment. J’y ai appris à suivre tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données. Cette expérience a renforcé mon intérêt pour le backend, l’ingénierie des données et le travail d’équipe.",
+      ],
+    ],
+  },
+  {
+    id: "sports-discovery",
+    number: "03",
+    name: "Sports Facility Discovery",
+    category: "DATA / AUTOMATISATION / IA LOCALE",
+    role: "Projet personnel · développement full-stack",
+    headline: "Transformer des sources dispersées en installations qualifiées.",
+    description:
+      "Une plateforme de prospection qui identifie, enrichit et qualifie des installations sportives à partir de Google Places, d’OpenStreetMap et de sources web publiques.",
+    technologies: ["React", "Node.js", "Express", "Web scraping", "Ollama"],
+    results: [
+      ["Des centaines", "d’installations identifiées et qualifiées"],
+      ["Ollama", "classification par IA locale"],
+      ["Validation humaine", "depuis l’interface React"],
+    ],
+    contributions: [
+      "Collecte et enrichissement depuis les API géographiques et les sources web publiques.",
+      "Pipeline de déduplication, score de confiance et classification avec Ollama.",
+      "Validation des résultats, export CSV et génération de courriels de prise de contact personnalisés.",
+    ],
+    details: [
+      [
+        "Le besoin",
+        "Identifier des installations pertinentes sans refaire manuellement les mêmes recherches. J’ai construit une plateforme qui rassemble les informations de plusieurs sources pour faciliter la qualification et préparer la prise de contact.",
+      ],
+      [
+        "De la collecte à la qualification",
+        "Le pipeline combine Google Places, OpenStreetMap et des sources web publiques. La déduplication rapproche les résultats, un score de confiance aide à les qualifier et une classification locale avec Ollama filtre les installations pertinentes.",
+      ],
+      [
+        "Un résultat exploitable",
+        "Une interface React permet de valider les résultats, de les exporter en CSV et de générer des courriels personnalisés. Node.js et Express composent la stack backend. Le projet relie collecte de données, automatisation et contrôle humain dans un même outil.",
       ],
     ],
   },

@@ -47,8 +47,8 @@ export function LanguageProvider({ children }) {
         : "Azzam El Kettani — Full-stack developer & RZO Sports co-founder";
     const description =
       language === "fr"
-        ? "Développeur full-stack à Ottawa–Gatineau et cofondateur de RZO Sports. Découvrez RZO, Tacozzo et Lyz Barbier : produit, design et développement."
-        : "Full-stack developer in Ottawa–Gatineau and RZO Sports co-founder. Explore RZO, Tacozzo and Lyz Barbier: product, design and development.";
+        ? "Étudiant en génie informatique à uOttawa et développeur full-stack. RZO Sports, Overy et Sports Facility Discovery : produit, backend en production et automatisation."
+        : "Computer Engineering student at uOttawa and full-stack developer. RZO Sports, Overy and Sports Facility Discovery: product, backend in production and automation.";
     document
       .querySelector('meta[name="description"]')
       ?.setAttribute("content", description);
