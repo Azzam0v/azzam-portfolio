@@ -360,4 +360,81 @@ export const english = {
     "Booking links open the matching Squire profiles. Final service selection and confirmation take place on Squire.",
   "Vidéos locales chargées au clic, pause hors écran, polices locales, navigation au clavier et carte de partage avec le logo du salon.":
     "Local videos loaded on click and paused off screen, local fonts, keyboard navigation and a sharing card featuring the salon’s logo.",
+
+  // Client websites — October 2026 update
+  "Et deux sites livrés à des clients.": "Plus two websites delivered to clients.",
+  "AUTRES RÉALISATIONS / SITES CLIENTS": "MORE WORK / CLIENT WEBSITES",
+  "Un site vitrine expressif, livré et vendu au restaurant, qui fait découvrir le menu, donne envie de passer au restaurant et guide vers la commande en ligne.":
+    "An expressive showcase site, delivered and sold to the restaurant, that presents the menu, makes people want to visit and guides them to online ordering.",
+  "Le client": "The client",
+  "Projet commandé et acheté par le restaurant : cadrage, conception, développement et mise en ligne sur Cloudflare.":
+    "Commissioned and bought by the restaurant: scoping, design, development and launch on Cloudflare.",
+  "Une expérience éditoriale, vendue au salon, pour découvrir ses réalisations et son équipe, puis réserver auprès du bon barbier. Les réservations ont doublé dans les trois mois suivant la mise en ligne.":
+    "An editorial experience, sold to the salon, for discovering its work and team, then booking with the right barber. Bookings doubled within three months of launch.",
+  "Site commandé et acheté par le salon. Dans les trois mois suivant la mise en ligne, ses réservations ont été multipliées par deux.":
+    "Commissioned and bought by the salon. Within three months of launch, its bookings doubled.",
+
+  // CECCE internship — October 2026 update
+  "Ingénierie des données, API": "Data engineering, APIs",
+  "STAGE / INGÉNIERIE DES DONNÉES & BACKEND":
+    "INTERNSHIP / DATA ENGINEERING & BACKEND",
+  "Transformer les données scolaires de plusieurs systèmes en tables fiables et en API utilisées par les applications du conseil scolaire.":
+    "Turning school data from several systems into reliable tables and APIs used by the school board’s applications.",
+  "Pipelines Spark": "Spark pipelines",
+  "Pipelines Spark SQL et PySpark dans Microsoft Fabric qui croisent les dossiers élèves d’Aspen et les prévisions de StaffAllocator, puis matérialisent les résultats en tables Delta.":
+    "Spark SQL and PySpark pipelines in Microsoft Fabric that combine Aspen student records with StaffAllocator forecasts, then materialize the results as Delta tables.",
+  "Règles métier et effectifs": "Business rules and enrollment",
+  "Calcul des effectifs par école, année et niveau (initial, préinscrits, arrivés) : dernière inscription avec ROW_NUMBER, bornes d’année avec LEAD, unpivot et comptages sans doublons.":
+    "Enrollment counts by school, year and grade (initial, pre-registered, arrived): latest enrollment with ROW_NUMBER, school-year boundaries with LEAD, unpivots and duplicate-free counts.",
+  "Exposition en API": "API exposure",
+  "Fonctions Microsoft Fabric User Data Functions en Python qui exposent les tables de l’entrepôt en JSON, avec requêtes paramétrées, sérialisation des types et identifiants MD5 stables.":
+    "Python Microsoft Fabric User Data Functions that expose warehouse tables as JSON, with parameterized queries, type serialization and stable MD5 identifiers.",
+  "Cache Java et optimisation SQL dans Optania : des recalculs de 10 à 15 minutes deviennent une consultation quasi instantanée, et l’outil remplace les rapports d’état envoyés à la main par courriel.":
+    "Java cache and SQL optimization in Optania: 10–15 minute recalculations became near-instant lookups, and the tool replaced status reports sent by hand over email.",
+  "Partir du contrat d’API": "Start from the API contract",
+  "Identifier les champs attendus par l’application consommatrice, comme InfoDot, et les règles métier à respecter.":
+    "Identify the fields expected by the consuming application, such as InfoDot, and the business rules to follow.",
+  "Explorer les sources": "Explore the sources",
+  "Analyser les tables d’Aspen (élèves, inscriptions, écoles, horaires) et les prévisions de StaffAllocator dans leurs Lakehouses.":
+    "Analyze Aspen tables (students, enrollments, schools, schedules) and StaffAllocator forecasts in their Lakehouses.",
+  "Transformer en Spark SQL": "Transform with Spark SQL",
+  "Nettoyer, normaliser, joindre et agréger avec des CTE, des fonctions analytiques et des unpivot.":
+    "Clean, normalize, join and aggregate with CTEs, window functions and unpivots.",
+  "Matérialiser en tables Delta": "Materialize as Delta tables",
+  "Persister le résultat dans l’entrepôt pour le rendre accessible depuis le SQL Endpoint.":
+    "Persist the result in the warehouse so it is available through the SQL Endpoint.",
+  "Exposer par une fonction": "Expose through a function",
+  "Développer la Fabric User Data Function en Python qui interroge la table et renvoie une réponse JSON paramétrée.":
+    "Build the Python Fabric User Data Function that queries the table and returns a parameterized JSON response.",
+  "Valider et documenter": "Validate and document",
+  "Vérifier les résultats et le contrat, faire réviser dans Azure DevOps et documenter l’endpoint dans Confluence.":
+    "Check the results and the contract, get the change reviewed in Azure DevOps and document the endpoint in Confluence.",
+  "Optania est l’outil de contrôle des données de l’équipe. J’ai développé un cache Java et optimisé des traitements SQL : les derniers résultats se consultent sans relancer des calculs de 10 à 15 minutes, avec la date de dernière actualisation et un recalcul à la demande. L’outil a remplacé les rapports d’état des bases de données rédigés et envoyés à la main par courriel.":
+    "Optania is the team’s data-checking tool. I built a Java cache and optimized SQL processing: the latest results can be viewed without rerunning 10–15 minute calculations, with the last refresh time and on-demand recalculation. The tool replaced database status reports that were written and sent by hand over email.",
+  "Pipelines, API, optimisation & résolution de problèmes":
+    "Pipelines, APIs, optimization & problem-solving",
+  "01 / DES SOURCES À L’API": "01 / FROM SOURCES TO API",
+  "Une chaîne complète, d’Aspen jusqu’à l’application.":
+    "A complete chain, from Aspen to the application.",
+  "Les données d’Aspen et de StaffAllocator arrivaient dans plusieurs Lakehouses Microsoft Fabric. Mon travail couvrait la transformation en Spark SQL, la matérialisation en tables Delta et l’exposition par des fonctions consommées par des applications comme InfoDot.":
+    "Aspen and StaffAllocator data landed in several Microsoft Fabric Lakehouses. My work covered Spark SQL transformation, materialization as Delta tables and exposure through functions consumed by applications such as InfoDot.",
+  "02 / COMPTER CHAQUE ÉLÈVE UNE FOIS": "02 / COUNTING EACH STUDENT ONCE",
+  "Des effectifs fiables malgré des données qui se recoupent.":
+    "Reliable enrollment counts despite overlapping data.",
+  "Un même élève pouvait avoir plusieurs inscriptions dans Aspen, et les jointures entre élèves, écoles et horaires risquaient de le compter plusieurs fois. Les prévisions de StaffAllocator arrivaient en colonnes, une par niveau.":
+    "A single student could have several enrollments in Aspen, and joins across students, schools and schedules risked counting them more than once. StaffAllocator forecasts arrived as columns, one per grade.",
+  "Garder la dernière inscription de chaque élève avec ROW_NUMBER, rattacher les inscriptions à la bonne année scolaire avec LEAD, passer les prévisions en lignes par unpivot et compter avec COUNT DISTINCT, y compris pour les classes distinctes.":
+    "Keep each student’s latest enrollment with ROW_NUMBER, assign enrollments to the right school year with LEAD, turn forecasts into rows with an unpivot and count with COUNT DISTINCT, including for distinct classes.",
+  "Des indicateurs initial, préinscrits et arrivés par école, année et niveau, alignés sur le contrat de l’API et identifiés par des clés MD5 stables.":
+    "Initial, pre-registered and arrived indicators by school, year and grade, aligned with the API contract and identified by stable MD5 keys.",
+  "03 / OPTIMISATION D’OPTANIA": "03 / OPTIMIZING OPTANIA",
+  "Certains contrôles relançaient de nombreux traitements SQL, qui pouvaient prendre environ 10 à 15 minutes, même lorsque des résultats récents avaient déjà été calculés. L’état des bases de données était donc encore rédigé et envoyé à la main par courriel.":
+    "Some checks reran many SQL processes that could take around 10 to 15 minutes, even when recent results had already been calculated. Database status was therefore still written up and sent by hand over email.",
+  "Une consultation quasi instantanée des résultats disponibles, et un outil assez utile pour remplacer les rapports envoyés à la main. L’utilisateur peut toujours demander des données actualisées.":
+    "Near-instant access to available results, and a tool useful enough to replace the reports sent by hand. Users can still request refreshed data.",
+  "04 / INVESTIGUER AVANT DE CONCLURE": "04 / INVESTIGATE BEFORE CONCLUDING",
+  "Comprendre où se trouve vraiment le problème.":
+    "Finding where the problem really is.",
+  "J’ai aussi diagnostiqué des échecs de matérialisation Spark, une vue temporaire utilisée comme objet persistant, des noms de tables mal qualifiés et une fonction qui exigeait un paramètre absent du contrat de l’API. Chaque cas m’a appris à isoler une étape à la fois.":
+    "I also diagnosed Spark materialization failures, a temporary view used as a persistent object, incorrectly qualified table names and a function requiring a parameter missing from the API contract. Each case taught me to isolate one step at a time.",
 };

@@ -1,6 +1,6 @@
 # Azzam El Kettani — portfolio FR / EN
 
-Portfolio d’un étudiant en génie informatique à uOttawa, développeur full-stack et cofondateur de RZO Sports. Trois projets principaux : **RZO Sports**, **Overy**, **Sports Facility Discovery**. Deux sites vitrines complémentaires : **Tacozzo** et **Lyz Barbier**.
+Portfolio d’un étudiant en génie informatique à uOttawa, développeur full-stack et cofondateur de RZO Sports. Trois projets principaux : **RZO Sports**, **Overy**, **Sports Facility Discovery**. Deux sites livrés et vendus à des clients : **Tacozzo** et **Lyz Barbier**.
 
 ## Démarrer
 
@@ -20,8 +20,8 @@ Sous PowerShell, utiliser `npm.cmd` si nécessaire. Le site utilise le préfixe 
 - RZO : présentation courte, puis étude de cas dépliable avec récit entrepreneurial, Startup Garage, deuxième place sur 40 équipes, Shopify Builders, captures et architecture.
 - Overy : fondateur et développeur principal d’une plateforme multijoueur Minecraft monétisée ; backend, MySQL, statistiques pour les décisions produit, boutique Tebex, équipe et exploitation. Résultats du récit d’Azzam : milliers d’utilisateurs accueillis, chiffre d’affaires cumulé à cinq chiffres et top 7 mondial atteint dans son segment. Liens publics et capture réelle du catalogue mobile dans l’étude de cas.
 - Sports Facility Discovery : prospection d’installations sportives, collecte multi-source, déduplication, scoring, classification locale Ollama et interface de validation React.
-- Tacozzo et Lyz : deux sites vitrines statiques, chacun avec son identité, son aperçu et son étude de cas.
-- Les ambitions sont formulées comme des ambitions. Aucun chiffre d’affaires, nombre de clients ou gain de conversion n’est inventé.
+- Tacozzo et Lyz : deux sites statiques vendus à des clients, chacun avec son identité, son aperçu et son étude de cas.
+- Les ambitions sont formulées comme des ambitions. Les résultats affichés (réservations de Lyz multipliées par deux en trois mois) viennent d’Azzam.
 - Le développement de RZO est présenté comme un projet partagé entre cofondateurs.
 
 ## Organisation

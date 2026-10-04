@@ -203,7 +203,7 @@ export default function App() {
                 <br />
                 {t("Données, automatisation et IA locale.")}
                 <br />
-                {t("Et deux sites vitrines en complément.")}
+                {t("Et deux sites livrés à des clients.")}
               </p>
             </div>
           </div>
@@ -480,7 +480,7 @@ export default function App() {
           <div className="sites-heading">
             <div>
               <p className="eyebrow">
-                {t("AUTRES RÉALISATIONS / SITES VITRINES")}
+                {t("AUTRES RÉALISATIONS / SITES CLIENTS")}
               </p>
               <h3>
                 {t("Des univers qui")}

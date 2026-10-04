@@ -63,7 +63,7 @@ export const projects = [
     location: "Restaurant · Ottawa",
     headline: "Une identité qui ouvre l’appétit.",
     description:
-      "Un site vitrine expressif qui fait découvrir le menu, donne envie de passer au restaurant et guide vers la commande en ligne.",
+      "Un site vitrine expressif, livré et vendu au restaurant, qui fait découvrir le menu, donne envie de passer au restaurant et guide vers la commande en ligne.",
     live: "https://azzam0v.github.io/tacozzo-landing/",
     github: "https://github.com/Azzam0v/tacozzo-landing",
     image: "images/tacozzo-preview.jpg",
@@ -86,6 +86,10 @@ export const projects = [
         "Le soin du détail",
         "Polices locales, images WebP, chargement différé des médias secondaires et aperçu de partage Open Graph. Build statique adapté à GitHub Pages et Cloudflare.",
       ],
+      [
+        "Le client",
+        "Projet commandé et acheté par le restaurant : cadrage, conception, développement et mise en ligne sur Cloudflare.",
+      ],
     ],
   },
   {
@@ -95,7 +99,7 @@ export const projects = [
     location: "Salon & barbier · Gatineau",
     headline: "Le sens du détail, à l’écran aussi.",
     description:
-      "Une expérience éditoriale pour découvrir le salon, ses réalisations et son équipe, puis réserver auprès du bon barbier.",
+      "Une expérience éditoriale, vendue au salon, pour découvrir ses réalisations et son équipe, puis réserver auprès du bon barbier. Les réservations ont doublé dans les trois mois suivant la mise en ligne.",
     live: "https://azzam0v.github.io/lyz-barbier/",
     github: "https://github.com/Azzam0v/lyz-barbier",
     image: "images/lyz-preview.jpg",
@@ -117,6 +121,10 @@ export const projects = [
       [
         "Le soin du détail",
         "Vidéos locales chargées au clic, pause hors écran, polices locales, navigation au clavier et carte de partage avec le logo du salon.",
+      ],
+      [
+        "Le résultat",
+        "Site commandé et acheté par le salon. Dans les trois mois suivant la mise en ligne, ses réservations ont été multipliées par deux.",
       ],
     ],
   },

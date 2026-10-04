@@ -1,51 +1,52 @@
 import { ArrowUpRight, Plus } from "lucide-react";
 import { useLanguage } from "../i18n";
 
-// Dates and contributions come from Azzam's CV and detailed internship account.
-// The original internship posting could not be identified online.
+// Dates and contributions come from Azzam's CV and his detailed internship notes
+// (October 2026): Aspen / StaffAllocator sources, Spark SQL transformations,
+// Delta tables, Fabric User Data Functions and the Optania cache.
 const contributions = [
   [
-    "Pipelines de données",
-    "Contribution à des pipelines Python et SQL dans Microsoft Fabric pour extraire, préparer et centraliser les données de systèmes internes.",
+    "Pipelines Spark",
+    "Pipelines Spark SQL et PySpark dans Microsoft Fabric qui croisent les dossiers élèves d’Aspen et les prévisions de StaffAllocator, puis matérialisent les résultats en tables Delta.",
   ],
   [
-    "Qualité et validation",
-    "Contrôle des données, comparaison aux résultats attendus et investigation des anomalies avant leur chargement dans un Lakehouse ou un entrepôt de données.",
+    "Règles métier et effectifs",
+    "Calcul des effectifs par école, année et niveau (initial, préinscrits, arrivés) : dernière inscription avec ROW_NUMBER, bornes d’année avec LEAD, unpivot et comptages sans doublons.",
   ],
   [
-    "Développement en équipe",
-    "Développement de fonctions Python et adaptation de requêtes SQL selon les pratiques de l’équipe, avec gestion des versions, revue et validation dans Azure DevOps.",
+    "Exposition en API",
+    "Fonctions Microsoft Fabric User Data Functions en Python qui exposent les tables de l’entrepôt en JSON, avec requêtes paramétrées, sérialisation des types et identifiants MD5 stables.",
   ],
   [
     "Performance applicative",
-    "Optimisation de traitements SQL et développement d’un mécanisme de cache Java avec actualisation des résultats pour améliorer la réactivité d’une application interne.",
+    "Cache Java et optimisation SQL dans Optania : des recalculs de 10 à 15 minutes deviennent une consultation quasi instantanée, et l’outil remplace les rapports d’état envoyés à la main par courriel.",
   ],
 ];
 
 const pipelineSteps = [
   [
-    "Comprendre le besoin",
-    "Identifier les données nécessaires, leur structure et le résultat attendu avec l’équipe.",
+    "Partir du contrat d’API",
+    "Identifier les champs attendus par l’application consommatrice, comme InfoDot, et les règles métier à respecter.",
   ],
   [
-    "Préparer la requête SQL",
-    "Développer ou adapter la requête qui extrait les données pertinentes des systèmes internes.",
+    "Explorer les sources",
+    "Analyser les tables d’Aspen (élèves, inscriptions, écoles, horaires) et les prévisions de StaffAllocator dans leurs Lakehouses.",
   ],
   [
-    "Intégrer la fonction Python",
-    "Suivre le modèle commun de l’équipe pour faciliter la maintenance et la révision du composant.",
+    "Transformer en Spark SQL",
+    "Nettoyer, normaliser, joindre et agréger avec des CTE, des fonctions analytiques et des unpivot.",
   ],
   [
-    "Exécuter dans Microsoft Fabric",
-    "Récupérer et préparer les données avant leur chargement dans l’environnement analytique.",
+    "Matérialiser en tables Delta",
+    "Persister le résultat dans l’entrepôt pour le rendre accessible depuis le SQL Endpoint.",
   ],
   [
-    "Valider et investiguer",
-    "Comparer les résultats aux attentes et rechercher les écarts dans le Python, le SQL ou les données sources.",
+    "Exposer par une fonction",
+    "Développer la Fabric User Data Function en Python qui interroge la table et renvoie une réponse JSON paramétrée.",
   ],
   [
-    "Faire réviser et intégrer",
-    "Versionner dans Azure DevOps, intégrer les commentaires et participer au chargement dans un Lakehouse ou un entrepôt de données.",
+    "Valider et documenter",
+    "Vérifier les résultats et le contrat, faire réviser dans Azure DevOps et documenter l’endpoint dans Confluence.",
   ],
 ];
 
@@ -67,7 +68,7 @@ export default function Experience() {
             <span className="muted-heading">{t("Sur des besoins réels.")}</span>
           </h2>
           <p>
-            {t("Développement logiciel, données")}
+            {t("Ingénierie des données, API")}
             <br />
             {t("et amélioration d’outils internes.")}
           </p>
@@ -103,12 +104,12 @@ export default function Experience() {
         </div>
         <div className="experience-work">
           <p className="eyebrow">
-            {t("STAGE / DÉVELOPPEMENT LOGICIEL & DONNÉES")}
+            {t("STAGE / INGÉNIERIE DES DONNÉES & BACKEND")}
           </p>
           <h3 id="cecce-role">{t("Stagiaire en développement logiciel")}</h3>
           <p className="experience-intro">
             {t(
-              "Contribuer à des données fiables et à des applications internes plus réactives, dans un environnement de développement collaboratif.",
+              "Transformer les données scolaires de plusieurs systèmes en tables fiables et en API utilisées par les applications du conseil scolaire.",
             )}
           </p>
           <ul className="experience-contributions">
@@ -123,11 +124,19 @@ export default function Experience() {
             className="tags"
             aria-label={t("Technologies utilisées pendant le stage")}
           >
-            {["Python", "SQL", "Microsoft Fabric", "Azure DevOps", "Java"].map(
-              (tech) => (
-                <span key={tech}>{tech}</span>
-              ),
-            )}
+            {[
+              "Spark SQL",
+              "PySpark",
+              "Python",
+              "Microsoft Fabric",
+              "Delta Lake",
+              "SQL",
+              "Java",
+              "Azure DevOps",
+              "Confluence",
+            ].map((tech) => (
+              <span key={tech}>{tech}</span>
+            ))}
           </div>
         </div>
       </article>
@@ -136,7 +145,7 @@ export default function Experience() {
         <h3>{t("Consulter les résultats, sans tout recalculer.")}</h3>
         <p>
           {t(
-            "Pour Optania, une application interne de contrôle des données, j’ai développé un cache Java et optimisé des traitements SQL. Les derniers résultats pouvaient être consultés sans relancer systématiquement les calculs, avec la date de dernière actualisation et une option de recalcul à la demande.",
+            "Optania est l’outil de contrôle des données de l’équipe. J’ai développé un cache Java et optimisé des traitements SQL : les derniers résultats se consultent sans relancer des calculs de 10 à 15 minutes, avec la date de dernière actualisation et un recalcul à la demande. L’outil a remplacé les rapports d’état des bases de données rédigés et envoyés à la main par courriel.",
           )}
         </p>
       </div>
@@ -145,20 +154,20 @@ export default function Experience() {
           <span>
             {t("Approfondir mon stage au CECCE")}
             <small>
-              {t("Pipelines, optimisation & résolution de problèmes")}
+              {t("Pipelines, API, optimisation & résolution de problèmes")}
             </small>
           </span>
           <Plus size={22} />
         </summary>
         <div className="engineering-content">
           <section aria-labelledby="pipeline-title">
-            <p className="eyebrow">{t("01 / DU BESOIN À LA DONNÉE VALIDÉE")}</p>
+            <p className="eyebrow">{t("01 / DES SOURCES À L’API")}</p>
             <h3 id="pipeline-title">
-              {t("Des composants intégrés à un pipeline d’équipe.")}
+              {t("Une chaîne complète, d’Aspen jusqu’à l’application.")}
             </h3>
             <p className="experience-detail-intro">
               {t(
-                "Ma contribution portait sur l’extraction, la préparation, la validation et le dépannage des données. Mes fonctions s’intégraient à l’architecture globale réalisée par l’équipe.",
+                "Les données d’Aspen et de StaffAllocator arrivaient dans plusieurs Lakehouses Microsoft Fabric. Mon travail couvrait la transformation en Spark SQL, la matérialisation en tables Delta et l’exposition par des fonctions consommées par des applications comme InfoDot.",
               )}
             </p>
             <ol className="pipeline-steps">
@@ -175,8 +184,40 @@ export default function Experience() {
               ))}
             </ol>
           </section>
+          <section className="internship-case" aria-labelledby="counts-title">
+            <p className="eyebrow">{t("02 / COMPTER CHAQUE ÉLÈVE UNE FOIS")}</p>
+            <h3 id="counts-title">
+              {t("Des effectifs fiables malgré des données qui se recoupent.")}
+            </h3>
+            <div className="internship-case-grid">
+              <div>
+                <h4>{t("Le problème observé")}</h4>
+                <p>
+                  {t(
+                    "Un même élève pouvait avoir plusieurs inscriptions dans Aspen, et les jointures entre élèves, écoles et horaires risquaient de le compter plusieurs fois. Les prévisions de StaffAllocator arrivaient en colonnes, une par niveau.",
+                  )}
+                </p>
+              </div>
+              <div>
+                <h4>{t("Mon intervention")}</h4>
+                <p>
+                  {t(
+                    "Garder la dernière inscription de chaque élève avec ROW_NUMBER, rattacher les inscriptions à la bonne année scolaire avec LEAD, passer les prévisions en lignes par unpivot et compter avec COUNT DISTINCT, y compris pour les classes distinctes.",
+                  )}
+                </p>
+              </div>
+              <div>
+                <h4>{t("Le résultat")}</h4>
+                <p>
+                  {t(
+                    "Des indicateurs initial, préinscrits et arrivés par école, année et niveau, alignés sur le contrat de l’API et identifiés par des clés MD5 stables.",
+                  )}
+                </p>
+              </div>
+            </div>
+          </section>
           <section className="internship-case" aria-labelledby="optania-title">
-            <p className="eyebrow">{t("02 / OPTIMISATION D’OPTANIA")}</p>
+            <p className="eyebrow">{t("03 / OPTIMISATION D’OPTANIA")}</p>
             <h3 id="optania-title">
               {t(
                 "Réutiliser les résultats. Garder le contrôle sur leur fraîcheur.",
@@ -187,7 +228,7 @@ export default function Experience() {
                 <h4>{t("Le problème observé")}</h4>
                 <p>
                   {t(
-                    "Certains contrôles relançaient de nombreux traitements SQL, qui pouvaient prendre environ 10 à 15 minutes, même lorsque des résultats récents avaient déjà été calculés.",
+                    "Certains contrôles relançaient de nombreux traitements SQL, qui pouvaient prendre environ 10 à 15 minutes, même lorsque des résultats récents avaient déjà été calculés. L’état des bases de données était donc encore rédigé et envoyé à la main par courriel.",
                   )}
                 </p>
               </div>
@@ -203,7 +244,7 @@ export default function Experience() {
                 <h4>{t("Le résultat")}</h4>
                 <p>
                   {t(
-                    "Une consultation plus réactive des résultats disponibles et moins de traitements redondants. L’utilisateur conservait la possibilité de demander des données actualisées lorsque nécessaire.",
+                    "Une consultation quasi instantanée des résultats disponibles, et un outil assez utile pour remplacer les rapports envoyés à la main. L’utilisateur peut toujours demander des données actualisées.",
                   )}
                 </p>
               </div>
@@ -213,9 +254,9 @@ export default function Experience() {
             className="internship-case"
             aria-labelledby="investigation-title"
           >
-            <p className="eyebrow">{t("03 / INVESTIGUER AVANT DE CONCLURE")}</p>
+            <p className="eyebrow">{t("04 / INVESTIGUER AVANT DE CONCLURE")}</p>
             <h3 id="investigation-title">
-              {t("Quand l’anomalie vient des données sources.")}
+              {t("Comprendre où se trouve vraiment le problème.")}
             </h3>
             <div className="investigation-story">
               <p>
@@ -225,7 +266,7 @@ export default function Experience() {
               </p>
               <p>
                 {t(
-                  "J’en ai retenu l’importance de documenter mes essais, de distinguer un défaut de code d’un problème de qualité des données et de solliciter un collègue quand le problème dépasse mon composant.",
+                  "J’ai aussi diagnostiqué des échecs de matérialisation Spark, une vue temporaire utilisée comme objet persistant, des noms de tables mal qualifiés et une fonction qui exigeait un paramètre absent du contrat de l’API. Chaque cas m’a appris à isoler une étape à la fois.",
                 )}
               </p>
             </div>

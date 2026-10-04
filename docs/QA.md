@@ -1,5 +1,12 @@
 # Vérifications — 15 septembre 2026
 
+## Stage CECCE détaillé et sites clients — 4 octobre 2026
+
+- Section CECCE réécrite à partir des notes de stage d’Azzam : sources Aspen et StaffAllocator, transformations Spark SQL / PySpark, tables Delta, Fabric User Data Functions, documentation Confluence et cache Optania remplaçant les rapports envoyés par courriel. Nouvelle étude de cas sur le comptage des effectifs sans doublons.
+- Tacozzo et Lyz présentés comme sites vendus à des clients ; résultat de Lyz (réservations multipliées par deux en trois mois) fourni par Azzam.
+- Toutes les nouvelles chaînes couvertes par le dictionnaire anglais.
+- Compilation production réussie. Contrôle Playwright de la version compilée en FR à 1280 px et en EN à 390 px, études ouvertes : aucun débordement horizontal, aucune erreur JavaScript.
+
 ## Récit détaillé et boutique Overy — 17 septembre 2026
 
 - Capture réelle du catalogue Tebex en vue mobile 390 × 1000, JPEG de 62 Ko, servie localement dans l’étude de cas ; lien d’agrandissement et dimensions vérifiés.
