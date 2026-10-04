@@ -135,21 +135,21 @@ export const softwareProjects = [
     id: "overy",
     number: "02",
     name: "Overy",
-    category: "BACKEND / PRODUIT EN PRODUCTION",
+    category: "BACKEND / SYSTÈMES DISTRIBUÉS / PRODUIT EN PRODUCTION",
     role: "Fondateur & développeur principal",
-    headline: "D’un serveur Minecraft à une plateforme multijoueur monétisée.",
+    headline: "D’un serveur Minecraft à un réseau multijoueur classé 7e mondial.",
     description:
-      "J’ai fondé, développé et exploité Overy : un serveur Minecraft avec ses plugins, ses services backend, sa base de données et sa boutique. Je coordonnais l’équipe et utilisais les données d’activité pour faire évoluer le produit et ses offres.",
-    technologies: ["Java", "PHP", "MySQL", "Node.js"],
+      "J’ai fondé, développé et exploité Overy : un réseau de serveurs Minecraft Bedrock interconnectés, avec son core maison, ses centaines de plugins, ses services backend, sa base de données, sa boutique et ses outils internes. J’ai dirigé une équipe de plus de 50 personnes et utilisé les données d’activité pour faire évoluer le produit.",
+    technologies: ["Java", "PHP", "MySQL", "Node.js", "Linux"],
     results: [
-      ["Des milliers", "d’utilisateurs accueillis"],
-      ["5 chiffres", "de chiffre d’affaires cumulé"],
-      ["Top 7 mondial", "atteint dans son segment"],
+      ["10 000+", "joueurs, jusqu’à 200 connectés en même temps"],
+      ["10 000 €+", "de chiffre d’affaires"],
+      ["7e mondial", "et 2e en France"],
     ],
     contributions: [
-      "Plugins Java, services backend PHP et Node.js, conception et maintenance de la base MySQL.",
-      "Boutique Tebex et outils statistiques pour analyser les achats et orienter les offres.",
-      "Pilotage de la roadmap, revues de code et déploiements avec les développeurs et designers.",
+      "Réseau multi-serveurs derrière un proxy : données, monnaie et grades partagés en MySQL, messagerie entre serveurs et matchmaking des mini-jeux.",
+      "Core de serveur maison, centaines de plugins Java et PHP, anti-cheat, requêtes asynchrones et cache pour éviter le lag.",
+      "Boutique Tebex à livraison automatique, panel web pour le staff, bot Discord et outils statistiques pour orienter les offres.",
     ],
     links: [
       { label: "Voir la boutique", href: "https://overy.tebex.io/" },
@@ -168,27 +168,31 @@ export const softwareProjects = [
     details: [
       [
         "Construire pour des joueurs",
-        "Overy a commencé comme un projet de serveur Minecraft. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes techniques. J’assurais la direction du produit autant que son développement, dans un environnement utilisé au quotidien.",
+        "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes techniques. J’assurais la direction du produit autant que son développement, dans un environnement utilisé au quotidien par des milliers de joueurs.",
       ],
       [
-        "Relier les composants techniques",
-        "J’ai développé des plugins Java et des services backend en PHP et Node.js. Je concevais et maintenais la base MySQL pour organiser les données des utilisateurs, des fonctionnalités et des achats. Chaque évolution demandait de préserver la cohérence de ces composants et de l’expérience de jeu.",
+        "Un réseau de serveurs interconnectés",
+        "Overy n’était pas un serveur unique : plusieurs serveurs (lobby, mini-jeux, modes de jeu) fonctionnaient derrière un proxy. Les données des joueurs, leur monnaie et leurs grades étaient partagés en MySQL entre tous les serveurs, une messagerie reliait les serveurs entre eux, et un système de matchmaking répartissait les joueurs dans les parties de mini-jeux.",
       ],
       [
-        "Utiliser les données pour décider",
-        "J’ai créé et utilisé des outils statistiques pour analyser les achats et l’activité des utilisateurs. Ces observations m’aidaient à repérer les produits et fonctionnalités qui suscitaient de l’intérêt, à adapter les offres de la boutique et à prioriser le développement. C’était ma première utilisation concrète de l’analyse de données dans un projet entrepreneurial.",
+        "Un core maison et des centaines de plugins",
+        "Les fonctionnalités reposaient sur un core de serveur maison et sur des centaines de plugins Java et PHP développés par l’équipe. Je concevais et maintenais la base MySQL qui organisait les données des joueurs, des fonctionnalités et des achats, en préservant la cohérence entre tous ces composants.",
       ],
       [
-        "Organiser la boutique et les offres",
-        "J’ai mis en place et administré la boutique sur Tebex : organisation des produits, suivi des achats et évolution des offres à partir des résultats observés. Le chiffre d’affaires cumulé à cinq chiffres reliait directement mes décisions techniques et produit à une activité commerciale.",
+        "Tenir la charge en production",
+        "Pour garder une expérience fluide jusqu’à 200 joueurs connectés en même temps, les accès à la base de données passaient par des requêtes asynchrones et du cache plutôt que de bloquer le jeu. Nous avons développé un anti-cheat maison et mis en place une protection qui a tenu face à de vraies attaques DDoS.",
       ],
       [
-        "Faire évoluer un service en production",
-        "Je définissais les priorités, répartissais les tâches entre développeurs et designers et révisais le code avant les mises à jour. En production, je surveillais le fonctionnement du service et traitais les problèmes après déploiement, en tenant compte de la stabilité, des erreurs et de la cohérence des données.",
+        "Des outils autour du jeu",
+        "La boutique Tebex livrait automatiquement les achats en jeu. Un panel web permettait au staff de gérer les joueurs, les sanctions et les statistiques, et un bot Discord reliait la communauté au serveur. J’ai créé et utilisé des outils statistiques pour analyser les achats et l’activité, adapter les offres et prioriser le développement.",
+      ],
+      [
+        "Diriger une équipe de plus de 50 personnes",
+        "Au fil du projet, j’ai recruté et dirigé plus de 50 personnes réparties entre le développement, la modélisation 3D et les textures. Je définissais les priorités, répartissais les tâches, révisais le code avant les mises à jour et traitais les problèmes en production.",
       ],
       [
         "Des résultats et une responsabilité concrète",
-        "Overy a accueilli des milliers d’utilisateurs et atteint le top 7 mondial dans son segment. J’y ai appris à suivre tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données. Cette expérience a renforcé mon intérêt pour le backend, l’ingénierie des données et le travail d’équipe.",
+        "Overy a rassemblé plus de 10 000 joueurs, atteint la 7e place mondiale et la 2e en France, et généré plus de 10 000 € de chiffre d’affaires. J’y ai appris tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données.",
       ],
     ],
   },

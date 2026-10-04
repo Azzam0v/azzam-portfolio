@@ -437,4 +437,46 @@ export const english = {
     "Finding where the problem really is.",
   "J’ai aussi diagnostiqué des échecs de matérialisation Spark, une vue temporaire utilisée comme objet persistant, des noms de tables mal qualifiés et une fonction qui exigeait un paramètre absent du contrat de l’API. Chaque cas m’a appris à isoler une étape à la fois.":
     "I also diagnosed Spark materialization failures, a temporary view used as a persistent object, incorrectly qualified table names and a function requiring a parameter missing from the API contract. Each case taught me to isolate one step at a time.",
+
+  // Overy — October 2026 update
+  "BACKEND / SYSTÈMES DISTRIBUÉS / PRODUIT EN PRODUCTION":
+    "BACKEND / DISTRIBUTED SYSTEMS / PRODUCT IN PRODUCTION",
+  "D’un serveur Minecraft à un réseau multijoueur classé 7e mondial.":
+    "From a Minecraft server to a multiplayer network ranked #7 worldwide.",
+  "J’ai fondé, développé et exploité Overy : un réseau de serveurs Minecraft Bedrock interconnectés, avec son core maison, ses centaines de plugins, ses services backend, sa base de données, sa boutique et ses outils internes. J’ai dirigé une équipe de plus de 50 personnes et utilisé les données d’activité pour faire évoluer le produit.":
+    "I founded, built and operated Overy: a network of interconnected Minecraft Bedrock servers with an in-house core, hundreds of plugins, backend services, a database, a storefront and internal tools. I led a team of more than 50 people and used activity data to guide the product.",
+  "10 000+": "10,000+",
+  "joueurs, jusqu’à 200 connectés en même temps":
+    "players, up to 200 online at once",
+  "10 000 €+": "€10,000+",
+  "de chiffre d’affaires": "in revenue",
+  "7e mondial": "#7 worldwide",
+  "et 2e en France": "and #2 in France",
+  "Réseau multi-serveurs derrière un proxy : données, monnaie et grades partagés en MySQL, messagerie entre serveurs et matchmaking des mini-jeux.":
+    "Multi-server network behind a proxy: player data, currency and ranks shared in MySQL, cross-server messaging and minigame matchmaking.",
+  "Core de serveur maison, centaines de plugins Java et PHP, anti-cheat, requêtes asynchrones et cache pour éviter le lag.":
+    "In-house server core, hundreds of Java and PHP plugins, anti-cheat, async queries and caching to prevent lag.",
+  "Boutique Tebex à livraison automatique, panel web pour le staff, bot Discord et outils statistiques pour orienter les offres.":
+    "Tebex store with automatic delivery, a web panel for staff, a Discord bot and analytics tools to guide offerings.",
+  "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes techniques. J’assurais la direction du produit autant que son développement, dans un environnement utilisé au quotidien par des milliers de joueurs.":
+    "Overy started as a Minecraft server when I was 12 or 13. As the community grew, we had to attract and retain players, build features, manage purchases and fix technical issues. I led the product as much as its development, in an environment used daily by thousands of players.",
+  "Un réseau de serveurs interconnectés": "A network of interconnected servers",
+  "Overy n’était pas un serveur unique : plusieurs serveurs (lobby, mini-jeux, modes de jeu) fonctionnaient derrière un proxy. Les données des joueurs, leur monnaie et leurs grades étaient partagés en MySQL entre tous les serveurs, une messagerie reliait les serveurs entre eux, et un système de matchmaking répartissait les joueurs dans les parties de mini-jeux.":
+    "Overy was not a single server: several servers (lobby, minigames, game modes) ran behind a proxy. Player data, currency and ranks were shared in MySQL across every server, a messaging layer connected the servers, and a matchmaking system placed players into minigame matches.",
+  "Un core maison et des centaines de plugins":
+    "An in-house core and hundreds of plugins",
+  "Les fonctionnalités reposaient sur un core de serveur maison et sur des centaines de plugins Java et PHP développés par l’équipe. Je concevais et maintenais la base MySQL qui organisait les données des joueurs, des fonctionnalités et des achats, en préservant la cohérence entre tous ces composants.":
+    "Features ran on an in-house server core and hundreds of Java and PHP plugins built by the team. I designed and maintained the MySQL database for player, feature and purchase data, keeping all these components consistent.",
+  "Tenir la charge en production": "Holding up under load",
+  "Pour garder une expérience fluide jusqu’à 200 joueurs connectés en même temps, les accès à la base de données passaient par des requêtes asynchrones et du cache plutôt que de bloquer le jeu. Nous avons développé un anti-cheat maison et mis en place une protection qui a tenu face à de vraies attaques DDoS.":
+    "To keep the experience smooth with up to 200 players online at once, database access went through async queries and caching instead of blocking the game. We built an in-house anti-cheat and set up protection that held up against real DDoS attacks.",
+  "Des outils autour du jeu": "Tools around the game",
+  "La boutique Tebex livrait automatiquement les achats en jeu. Un panel web permettait au staff de gérer les joueurs, les sanctions et les statistiques, et un bot Discord reliait la communauté au serveur. J’ai créé et utilisé des outils statistiques pour analyser les achats et l’activité, adapter les offres et prioriser le développement.":
+    "The Tebex store delivered purchases in game automatically. A web panel let staff manage players, sanctions and statistics, and a Discord bot connected the community to the server. I built and used analytics tools to study purchases and activity, adjust offerings and prioritize development.",
+  "Diriger une équipe de plus de 50 personnes":
+    "Leading a team of more than 50 people",
+  "Au fil du projet, j’ai recruté et dirigé plus de 50 personnes réparties entre le développement, la modélisation 3D et les textures. Je définissais les priorités, répartissais les tâches, révisais le code avant les mises à jour et traitais les problèmes en production.":
+    "Over the project, I recruited and led more than 50 people across development, 3D modeling and textures. I set priorities, assigned work, reviewed code before updates and handled production issues.",
+  "Overy a rassemblé plus de 10 000 joueurs, atteint la 7e place mondiale et la 2e en France, et généré plus de 10 000 € de chiffre d’affaires. J’y ai appris tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données.":
+    "Overy brought together more than 10,000 players, reached #7 worldwide and #2 in France, and generated more than €10,000 in revenue. It taught me a product’s full lifecycle: build, test, deploy, maintain and decide from data.",
 };
