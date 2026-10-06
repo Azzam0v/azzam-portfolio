@@ -242,11 +242,36 @@ export const softwareProjects = [
       ["10 000 €+", "de chiffre d’affaires"],
       ["7e mondial", "et 2e en France"],
     ],
-    contributions: [
-      "Réseau multi-serveurs derrière un proxy : données, monnaie et grades partagés en MySQL, messagerie entre serveurs et matchmaking des mini-jeux.",
-      "Core de serveur maison, centaines de plugins Java et PHP, anti-cheat, requêtes asynchrones et cache pour éviter le lag.",
-      "Boutique Tebex à livraison automatique, panel web pour le staff, bot Discord et outils statistiques pour orienter les offres.",
+    challenges: [
+      [
+        "Cohérence",
+        "Garder un seul état juste",
+        "Deux serveurs pouvaient modifier le même joueur pendant qu’une écriture SQL était en cours. Les écritures d’un même enregistrement passaient une à la fois, les changements simultanés étaient fusionnés (la dernière valeur gagne) et MySQL restait la source de vérité, jamais le cache.",
+      ],
+      [
+        "Performance",
+        "Ne jamais bloquer le jeu",
+        "La boucle de jeu ne doit pas attendre la base de données. J’ai construit une couche de persistance asynchrone : requêtes avec promesses, cache write-behind et regroupement de plusieurs mises à jour en une seule écriture pour réduire la charge SQL.",
+      ],
+      [
+        "Fiabilité",
+        "Tenir en production",
+        "Un achat ne doit pas être livré deux fois, une reconnexion ne doit rien faire perdre. Transactions et gestion explicite des erreurs côté données, anti-cheat maison et protection qui a tenu face à de vraies attaques DDoS côté exploitation.",
+      ],
     ],
+    feature: {
+      eyebrow: "EXEMPLE DE FONCTIONNALITÉ COMPLEXE",
+      title: "Des raids qui survivent aux redémarrages.",
+      text: "Un système de raids multijoueur conçu comme une machine à états persistante, couvert par des tests automatisés.",
+      points: [
+        "États durables : préparation, activation, fin, annulation",
+        "Reprise après un redémarrage, délais enregistrés",
+        "Permissions vérifiées à chaque action",
+        "Protection contre les actions simultanées",
+        "Constructions temporaires journalisées, nettoyées après une panne",
+        "Discord intégré sans rendre le jeu dépendant de Discord",
+      ],
+    },
     links: [
       { label: "Voir la boutique", href: "https://overy.tebex.io/" },
       {
@@ -263,32 +288,20 @@ export const softwareProjects = [
     },
     details: [
       [
-        "Construire pour des joueurs",
-        "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes techniques. J’assurais la direction du produit autant que son développement, dans un environnement utilisé au quotidien par des milliers de joueurs.",
+        "D’un serveur à une plateforme",
+        "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes en production. J’assurais la direction du produit autant que son développement.",
       ],
       [
-        "Un réseau de serveurs interconnectés",
-        "Overy n’était pas un serveur unique : plusieurs serveurs (lobby, mini-jeux, modes de jeu) fonctionnaient derrière un proxy. Les données des joueurs, leur monnaie et leurs grades étaient partagés en MySQL entre tous les serveurs, une messagerie reliait les serveurs entre eux, et un système de matchmaking répartissait les joueurs dans les parties de mini-jeux.",
-      ],
-      [
-        "Un core maison et des centaines de plugins",
-        "Les fonctionnalités reposaient sur un core de serveur maison et sur des centaines de plugins Java et PHP développés par l’équipe. Je concevais et maintenais la base MySQL qui organisait les données des joueurs, des fonctionnalités et des achats, en préservant la cohérence entre tous ces composants.",
-      ],
-      [
-        "Tenir la charge en production",
-        "Pour garder une expérience fluide jusqu’à 200 joueurs connectés en même temps, les accès à la base de données passaient par des requêtes asynchrones et du cache plutôt que de bloquer le jeu. Nous avons développé un anti-cheat maison et mis en place une protection qui a tenu face à de vraies attaques DDoS.",
+        "Un contenu propre à Overy",
+        "Blocs, objets, entités, interfaces, modèles et animations sur mesure. Il fallait faire coopérer la logique serveur, les paquets réseau Bedrock et les resource packs des joueurs, avec des correspondances générées automatiquement.",
       ],
       [
         "Des outils autour du jeu",
-        "La boutique Tebex livrait automatiquement les achats en jeu. Un panel web permettait au staff de gérer les joueurs, les sanctions et les statistiques, et un bot Discord reliait la communauté au serveur. J’ai créé et utilisé des outils statistiques pour analyser les achats et l’activité, adapter les offres et prioriser le développement.",
+        "La boutique Tebex livrait les achats en jeu automatiquement. Un panel web permettait au staff de gérer joueurs, sanctions et statistiques, et un bot Discord reliait la communauté au serveur. Les statistiques d’achat et d’activité guidaient les offres et les priorités.",
       ],
       [
-        "Diriger une équipe de plus de 50 personnes",
-        "Au fil du projet, j’ai recruté et dirigé plus de 50 personnes réparties entre le développement, la modélisation 3D et les textures. Je définissais les priorités, répartissais les tâches, révisais le code avant les mises à jour et traitais les problèmes en production.",
-      ],
-      [
-        "Des résultats et une responsabilité concrète",
-        "Overy a rassemblé plus de 10 000 joueurs, atteint la 7e place mondiale et la 2e en France, et généré plus de 10 000 € de chiffre d’affaires. J’y ai appris tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données.",
+        "Diriger plus de 50 personnes",
+        "Au fil du projet, j’ai recruté et dirigé des développeurs, des modélisateurs 3D et des artistes de textures. Je définissais la roadmap, répartissais le travail, révisais le code, préparais les mises à jour et gérais les incidents en production.",
       ],
     ],
   },

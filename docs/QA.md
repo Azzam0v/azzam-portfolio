@@ -1,5 +1,12 @@
 # Vérifications — 15 septembre 2026
 
+## Architecture RZO et Overy — 6 octobre 2026
+
+- RZO : schéma d’architecture corrigé (site et app → API Spring Boot sur EC2 derrière Nginx → MySQL ; Stripe relié à l’API, webhooks en retour) et trois décisions techniques visibles dans l’étude de cas : verrou pessimiste contre les doubles réservations, clés d’idempotence Stripe, déploiement Docker. Source : analyse du dépôt serveur privé fournie par Azzam.
+- Overy : l’illustration est remplacée par un vrai schéma du réseau avec le parcours d’une connexion en six étapes, trois défis techniques et l’exemple des raids persistants. L’étude de cas est réduite à quatre blocs pour éviter les répétitions.
+- Titre de la section projets : « Du produit à la production ».
+- Compilation production réussie. Contrôle Playwright en FR à 1280 px et en EN à 390 px : aucun débordement, aucune erreur JavaScript.
+
 ## Capstone et illustration Overy — 6 octobre 2026
 
 - Sports Facility Discovery remplacé par le capstone drone autonome à partir du CV fourni. Rôle, équipe, technologies et état en cours traduits en anglais ; introduction et métadonnées adaptées.

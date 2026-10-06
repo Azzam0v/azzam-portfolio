@@ -573,4 +573,200 @@ export const english = {
     "Each piece page offers an email purchase request prefilled with the piece’s name. No cart or checkout: the brand talks directly with its customers.",
   "Site commandé et acheté par la marque, mis en ligne sur son propre domaine avec Cloudflare.":
     "Commissioned and bought by the brand, launched on its own domain with Cloudflare.",
+
+  // RZO decisions and Overy architecture — October 2026 update
+  "Du produit":
+    "From product",
+  "à la production.":
+    "to production.",
+  "Toutes les briques de RZO":
+    "Every building block of RZO",
+  "Clients, réservations, paiements, accès, conformité & tests":
+    "Clients, bookings, payments, access, compliance & tests",
+  "SOUS LE CAPOT / ARCHITECTURE":
+    "UNDER THE HOOD / ARCHITECTURE",
+  "Deux applications, une API qui décide.":
+    "Two apps, one API that decides.",
+  "Architecture RZO : le site React et l’app mobile appellent l’API Spring Boot, hébergée sur AWS EC2 derrière Nginx. L’API lit et écrit dans MySQL et échange avec Stripe, qui lui renvoie des webhooks.":
+    "RZO architecture: the React site and the mobile app call the Spring Boot API, hosted on AWS EC2 behind Nginx. The API reads and writes MySQL and talks to Stripe, which sends webhooks back.",
+  "CLIENTS":
+    "CLIENTS",
+  "Site web":
+    "Website",
+  "App mobile":
+    "Mobile app",
+  "HTTPS":
+    "HTTPS",
+  "point d’entrée, reverse proxy":
+    "entry point, reverse proxy",
+  "API Spring Boot":
+    "Spring Boot API",
+  "droits, disponibilités, prix, confirmation, paiements":
+    "permissions, availability, pricing, confirmation, payments",
+  "SQL":
+    "SQL",
+  "appels · webhooks":
+    "calls · webhooks",
+  "DONNÉES & PAIEMENTS":
+    "DATA & PAYMENTS",
+  "utilisateurs, terrains, réservations":
+    "users, courts, bookings",
+  "préautorisations, versements aux complexes":
+    "pre-authorizations, payouts to venues",
+  "Seule l’API parle à MySQL et à Stripe. Stripe la prévient de l’issue d’un paiement par webhook, dont la signature est vérifiée.":
+    "Only the API talks to MySQL and Stripe. Stripe reports each payment outcome through a webhook whose signature is verified.",
+  "TROIS DÉCISIONS TECHNIQUES":
+    "THREE TECHNICAL DECISIONS",
+  "Deux joueurs, un même créneau":
+    "Two players, one time slot",
+  "Alice et Karim veulent le même terrain de 18 h à 19 h. Sans protection, les deux vérifient « libre » avant que l’autre n’enregistre : deux réservations confirmées.":
+    "Alice and Karim want the same court from 6 to 7 p.m. Without protection, both see “free” before the other saves: two confirmed bookings.",
+  "prend le verrou du terrain":
+    "takes the court lock",
+  "attend son tour":
+    "waits for his turn",
+  "vérifie, confirme, libère":
+    "checks, confirms, releases",
+  "voit le conflit : refusé":
+    "sees the conflict: rejected",
+  "Vérification et confirmation se font dans une même transaction, avec un verrou pessimiste sur la ligne du terrain : elle existe même quand aucune réservation n’existe encore. Des tests lancent des demandes simultanées et vérifient qu’une seule est confirmée.":
+    "Checking and confirming happen in one transaction, with a pessimistic lock on the court’s row: it exists even when no booking does yet. Tests fire simultaneous requests and check that only one is confirmed.",
+  "Compromis : deux confirmations sur un même terrain passent l’une après l’autre, même pour des créneaux différents.":
+    "Trade-off: two confirmations on the same court run one after the other, even for different time slots.",
+  "Tests de concurrence":
+    "Concurrency tests",
+  "Réessayer sans débiter deux fois":
+    "Retry without charging twice",
+  "Le serveur demande une opération à Stripe, la connexion coupe avant la réponse. A-t-elle réussi ? Pour pouvoir réessayer sans risque, chaque opération porte une clé stable, déduite de la réservation.":
+    "The server asks Stripe for an operation and the connection drops before the answer. Did it succeed? To retry safely, each operation carries a stable key derived from the booking.",
+  "préautoriser la carte":
+    "pre-authorize the card",
+  "débiter après la partie":
+    "charge after the game",
+  "libérer l’empreinte":
+    "release the hold",
+  "Une même clé renvoyée, et Stripe restitue le résultat déjà enregistré au lieu de recommencer. Une clé aléatoire à chaque tentative supprimerait cette protection.":
+    "Send the same key again and Stripe returns the result it already recorded instead of starting over. A random key on each attempt would remove that protection.",
+  "Clés d’idempotence":
+    "Idempotency keys",
+  "Mettre l’API en ligne":
+    "Shipping the API",
+  "L’image Docker est construite en deux étapes : Java 21 et Gradle compilent, puis seul le JRE et l’application partent en production. Le conteneur tourne avec un utilisateur non-root.":
+    "The Docker image is built in two stages: Java 21 and Gradle compile, then only the JRE and the app ship to production. The container runs as a non-root user.",
+  "Docker Compose décrit les services, le réseau et les redémarrages sur une instance AWS EC2. Nginx reçoit les requêtes publiques et les transmet à Spring Boot.":
+    "Docker Compose defines the services, network and restart policies on an AWS EC2 instance. Nginx receives public requests and forwards them to Spring Boot.",
+  "ARCHITECTURE · MINECRAFT BEDROCK · 2019–2023":
+    "ARCHITECTURE · MINECRAFT BEDROCK · 2019–2023",
+  "Architecture Overy : les joueurs passent par un proxy vers le lobby, Skyblock ou les mini-jeux. Ces serveurs partagent leur état dans MySQL via un cache et des écritures asynchrones, et sont reliés par une messagerie. Des services gèrent achats, sanctions, matchmaking et statistiques, avec la boutique Tebex, le panel du staff et le bot Discord.":
+    "Overy architecture: players go through a proxy to the lobby, Skyblock or minigames. These servers share state in MySQL through a cache and async writes, and are linked by messaging. Services handle purchases, sanctions, matchmaking and statistics, alongside the Tebex store, the staff panel and the Discord bot.",
+  "ENTRÉE":
+    "ENTRY",
+  "Joueurs":
+    "Players",
+  "jusqu’à 200 en même temps":
+    "up to 200 at once",
+  "transfère d’un serveur à l’autre":
+    "moves players between servers",
+  "SERVEURS DE JEU":
+    "GAME SERVERS",
+  "accueil et navigation":
+    "welcome and navigation",
+  "mode de jeu persistant":
+    "persistent game mode",
+  "Mini-jeux":
+    "Minigames",
+  "instances de partie":
+    "match instances",
+  "Messagerie entre serveurs : événements, grades, commandes, cache à actualiser":
+    "Cross-server messaging: events, ranks, commands, cache refreshes",
+  "PERSISTANCE":
+    "PERSISTENCE",
+  "Cache + écritures asynchrones":
+    "Cache + async writes",
+  "regroupées, une à la fois par joueur":
+    "batched, one at a time per player",
+  "état partagé, source de vérité":
+    "shared state, source of truth",
+  "SERVICES":
+    "SERVICES",
+  "Services Overy":
+    "Overy services",
+  "achats, sanctions, matchmaking, statistiques":
+    "purchases, sanctions, matchmaking, statistics",
+  "reliés au proxy et aux serveurs":
+    "linked to the proxy and servers",
+  "achats livrés en jeu":
+    "purchases delivered in game",
+  "Panel staff":
+    "Staff panel",
+  "joueurs et sanctions":
+    "players and sanctions",
+  "Bot Discord":
+    "Discord bot",
+  "communauté et commandes":
+    "community and commands",
+  "Le parcours d’une connexion":
+    "A connection, step by step",
+  "Le joueur se connecte au proxy, point d’entrée unique.":
+    "The player connects to the proxy, the single entry point.",
+  "Le matchmaking forme une partie et réserve une instance libre.":
+    "Matchmaking forms a match and reserves a free instance.",
+  "Le proxy l’y transfère, sans reconnexion.":
+    "The proxy moves the player there, with no reconnect.",
+  "Le serveur charge son état partagé : compte, monnaie, grades.":
+    "The server loads their shared state: account, currency, ranks.",
+  "Ses changements passent par le cache, puis sont écrits en arrière-plan.":
+    "Their changes go through the cache, then get written in the background.",
+  "La messagerie prévient les autres serveurs d’actualiser leurs données.":
+    "Messaging tells the other servers to refresh their data.",
+  "TROIS DÉFIS TECHNIQUES":
+    "THREE TECHNICAL CHALLENGES",
+  "Cohérence":
+    "Consistency",
+  "Fiabilité":
+    "Reliability",
+  "Garder un seul état juste":
+    "Keeping one correct state",
+  "Deux serveurs pouvaient modifier le même joueur pendant qu’une écriture SQL était en cours. Les écritures d’un même enregistrement passaient une à la fois, les changements simultanés étaient fusionnés (la dernière valeur gagne) et MySQL restait la source de vérité, jamais le cache.":
+    "Two servers could change the same player while a SQL write was still running. Writes to the same record went through one at a time, simultaneous changes were merged (last value wins), and MySQL stayed the source of truth, never the cache.",
+  "Ne jamais bloquer le jeu":
+    "Never blocking the game",
+  "La boucle de jeu ne doit pas attendre la base de données. J’ai construit une couche de persistance asynchrone : requêtes avec promesses, cache write-behind et regroupement de plusieurs mises à jour en une seule écriture pour réduire la charge SQL.":
+    "The game loop must never wait on the database. I built an async persistence layer: promise-based queries, a write-behind cache and batching several updates into one write to cut SQL load.",
+  "Tenir en production":
+    "Holding up in production",
+  "Un achat ne doit pas être livré deux fois, une reconnexion ne doit rien faire perdre. Transactions et gestion explicite des erreurs côté données, anti-cheat maison et protection qui a tenu face à de vraies attaques DDoS côté exploitation.":
+    "A purchase must not be delivered twice, and reconnecting must not lose anything. Transactions and explicit error handling on the data side; an in-house anti-cheat and protection that held up against real DDoS attacks on the operations side.",
+  "EXEMPLE DE FONCTIONNALITÉ COMPLEXE":
+    "A COMPLEX FEATURE",
+  "Des raids qui survivent aux redémarrages.":
+    "Raids that survive restarts.",
+  "Un système de raids multijoueur conçu comme une machine à états persistante, couvert par des tests automatisés.":
+    "A multiplayer raid system designed as a persistent state machine, covered by automated tests.",
+  "États durables : préparation, activation, fin, annulation":
+    "Durable states: setup, active, finished, cancelled",
+  "Reprise après un redémarrage, délais enregistrés":
+    "Recovery after a restart, with stored timers",
+  "Permissions vérifiées à chaque action":
+    "Permissions checked on every action",
+  "Protection contre les actions simultanées":
+    "Protection against simultaneous actions",
+  "Constructions temporaires journalisées, nettoyées après une panne":
+    "Temporary builds logged and cleaned up after a crash",
+  "Discord intégré sans rendre le jeu dépendant de Discord":
+    "Discord integrated without making the game depend on it",
+  "D’un serveur à une plateforme":
+    "From a server to a platform",
+  "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes en production. J’assurais la direction du produit autant que son développement.":
+    "Overy started as a Minecraft server when I was 12 or 13. As the community grew, we had to attract and retain players, build features, manage purchases and fix production issues. I led the product as much as its development.",
+  "Un contenu propre à Overy":
+    "Content unique to Overy",
+  "Blocs, objets, entités, interfaces, modèles et animations sur mesure. Il fallait faire coopérer la logique serveur, les paquets réseau Bedrock et les resource packs des joueurs, avec des correspondances générées automatiquement.":
+    "Custom blocks, items, entities, interfaces, models and animations. Server logic, Bedrock network packets and players’ resource packs had to work together, with mappings generated automatically.",
+  "La boutique Tebex livrait les achats en jeu automatiquement. Un panel web permettait au staff de gérer joueurs, sanctions et statistiques, et un bot Discord reliait la communauté au serveur. Les statistiques d’achat et d’activité guidaient les offres et les priorités.":
+    "The Tebex store delivered purchases in game automatically. A web panel let staff manage players, sanctions and statistics, and a Discord bot connected the community to the server. Purchase and activity data guided offerings and priorities.",
+  "Diriger plus de 50 personnes":
+    "Leading more than 50 people",
+  "Au fil du projet, j’ai recruté et dirigé des développeurs, des modélisateurs 3D et des artistes de textures. Je définissais la roadmap, répartissais le travail, révisais le code, préparais les mises à jour et gérais les incidents en production.":
+    "Over the project, I recruited and led developers, 3D modelers and texture artists. I set the roadmap, assigned work, reviewed code, prepared updates and handled production incidents.",
 };

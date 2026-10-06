@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import {
   ArrowDown,
   ArrowUp,
-  ArrowRight,
   ArrowUpRight,
   Check,
   Code2,
@@ -19,6 +18,7 @@ import {
 import ProjectCard from "./components/ProjectCard";
 import Experience from "./components/Experience";
 import SoftwareProjects from "./components/SoftwareProjects";
+import RzoArchitecture from "./components/RzoArchitecture";
 import { profile, projects, rzo, softwareProjects } from "./data/projects";
 
 function ExternalLink({ href, children, className = "" }) {
@@ -192,10 +192,10 @@ export default function App() {
             <p className="eyebrow">{t("01 / PROJETS SÉLECTIONNÉS")}</p>
             <div className="heading-row">
               <h2 id="work-title">
-                {t("Trois projets.")}
+                {t("Du produit")}
                 <br />
                 <span className="muted-heading">
-                  {t("Du logiciel concret.")}
+                  {t("à la production.")}
                 </span>
               </h2>
               <p>
@@ -459,38 +459,16 @@ export default function App() {
                 </div>
               ))}
             </div>
+            <RzoArchitecture />
             <details className="engineering">
               <summary>
                 <span>
-                  <Code2 size={20} /> {t("Sous le capot de RZO")}{" "}
-                  <small>{t("Architecture, choix techniques & qualité")}</small>
+                  <Code2 size={20} /> {t("Toutes les briques de RZO")}{" "}
+                  <small>{t("Clients, réservations, paiements, accès, conformité & tests")}</small>
                 </span>
                 <Plus size={22} />
               </summary>
               <div className="engineering-content">
-                <div
-                  className="architecture"
-                  aria-label={t("Architecture RZO")}
-                >
-                  <span>
-                    {t("React · React Native")}
-                    <small>{t("Site web & app mobile")}</small>
-                  </span>
-                  <ArrowRight />
-                  <span>
-                    {t("Spring Boot")}
-                    <small>{t("API & règles métier")}</small>
-                  </span>
-                  <ArrowRight />
-                  <span>
-                    {t("MySQL")}
-                    <small>{t("Données persistantes")}</small>
-                  </span>
-                  <span className="architecture-side">
-                    {t("Stripe Connect · R2")}
-                    <small>{t("Paiements & images")}</small>
-                  </span>
-                </div>
                 <div className="engineering-grid">
                   {localizedRzo.engineering.map((item) => (
                     <div key={item.title}>

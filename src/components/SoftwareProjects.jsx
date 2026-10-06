@@ -28,7 +28,6 @@ export default function SoftwareProjects() {
               <p className="muted">{project.description}</p>
             </div>
           </div>
-          {project.id === "overy" && <OveryVisual />}
           <dl className="project-results">
             {project.results.map(([value, label]) => (
               <div key={label}>
@@ -37,11 +36,44 @@ export default function SoftwareProjects() {
               </div>
             ))}
           </dl>
-          <ul className="software-contributions">
-            {project.contributions.map((text) => (
-              <li key={text}>{text}</li>
-            ))}
-          </ul>
+          {project.id === "overy" && <OveryVisual />}
+          {project.challenges && (
+            <>
+              <p className="eyebrow software-subtitle">
+                {t("TROIS DÉFIS TECHNIQUES")}
+              </p>
+              <div className="software-challenges">
+                {project.challenges.map(([tag, title, text]) => (
+                  <article key={title}>
+                    <span>{tag}</span>
+                    <h4>{title}</h4>
+                    <p>{text}</p>
+                  </article>
+                ))}
+              </div>
+            </>
+          )}
+          {project.feature && (
+            <div className="software-feature">
+              <div>
+                <p className="eyebrow">{project.feature.eyebrow}</p>
+                <h4>{project.feature.title}</h4>
+                <p>{project.feature.text}</p>
+              </div>
+              <ul>
+                {project.feature.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          {project.contributions && (
+            <ul className="software-contributions">
+              {project.contributions.map((text) => (
+                <li key={text}>{text}</li>
+              ))}
+            </ul>
+          )}
           <div className="tags">
             {project.technologies.map((tech) => (
               <span key={tech}>{tech}</span>
