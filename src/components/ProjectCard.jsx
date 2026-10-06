@@ -45,9 +45,11 @@ export default function ProjectCard({ project }) {
         <a href={project.live} target="_blank" rel="noopener noreferrer">
           {t("Voir le site")} <ArrowUpRight size={17} />
         </a>
-        <a href={project.github} target="_blank" rel="noopener noreferrer">
-          {t("Code source")} <ArrowUpRight size={17} />
-        </a>
+        {project.github && (
+          <a href={project.github} target="_blank" rel="noopener noreferrer">
+            {t("Code source")} <ArrowUpRight size={17} />
+          </a>
+        )}
       </div>
       <details className="project-details">
         <summary>

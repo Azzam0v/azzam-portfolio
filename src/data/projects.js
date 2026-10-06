@@ -64,8 +64,7 @@ export const projects = [
     headline: "Une identité qui ouvre l’appétit.",
     description:
       "Un site vitrine expressif, livré et vendu au restaurant, qui fait découvrir le menu, donne envie de passer au restaurant et guide vers la commande en ligne.",
-    live: "https://azzam0v.github.io/tacozzo-landing/",
-    github: "https://github.com/Azzam0v/tacozzo-landing",
+    live: "https://tacozzo-on.ca/",
     image: "images/tacozzo-preview.jpg",
     alt: "Aperçu du site Tacozzo : identité jaune, menu et photographies des plats.",
     technologies: ["HTML", "CSS", "JavaScript", "Vite"],
@@ -100,8 +99,7 @@ export const projects = [
     headline: "Le sens du détail, à l’écran aussi.",
     description:
       "Une expérience éditoriale, vendue au salon, pour découvrir ses réalisations et son équipe, puis réserver auprès du bon barbier. Les réservations ont doublé dans les trois mois suivant la mise en ligne.",
-    live: "https://azzam0v.github.io/lyz-barbier/",
-    github: "https://github.com/Azzam0v/lyz-barbier",
+    live: "https://lyzbarbier.ca/",
     image: "images/lyz-preview.jpg",
     alt: "Aperçu du site Lyz Barbier : accueil élégant et présentation des univers du salon.",
     technologies: ["HTML", "CSS", "JavaScript", "Vite"],
@@ -125,6 +123,37 @@ export const projects = [
       [
         "Le résultat",
         "Site commandé et acheté par le salon. Dans les trois mois suivant la mise en ligne, ses réservations ont été multipliées par deux.",
+      ],
+    ],
+  },
+  {
+    id: "roundstyle",
+    number: "06",
+    name: "Round Style",
+    location: "Marque de vêtements · Ottawa",
+    headline: "Une pièce. Une histoire.",
+    description:
+      "Une vitrine éditoriale, vendue à la marque, pour présenter sa première collection et le récit de son fondateur, puis transformer l’intérêt en demande d’achat.",
+    live: "https://roundstyles.com/",
+    image: "images/roundstyle-preview.jpg",
+    alt: "Aperçu du site Round Style : nom de la marque en grand sur fond noir et logo circulaire Round Style 1960.",
+    technologies: ["HTML", "CSS", "JavaScript", "Vite"],
+    details: [
+      [
+        "Le besoin",
+        "Donner à une jeune marque inspirée par ses racines africaines une présence à la hauteur de ses pièces, et permettre de les acheter sans boutique en ligne.",
+      ],
+      [
+        "La réalisation",
+        "Ouverture typographique sur fond noir, collection numérotée en grands formats, fiche détaillée pour chaque pièce et espace éditorial dédié au récit du fondateur.",
+      ],
+      [
+        "Le parcours",
+        "Chaque fiche propose une demande d’achat par courriel, préremplie avec le nom de la pièce. Pas de panier ni de paiement : la marque échange directement avec ses clients.",
+      ],
+      [
+        "Le client",
+        "Site commandé et acheté par la marque, mis en ligne sur son propre domaine avec Cloudflare.",
       ],
     ],
   },

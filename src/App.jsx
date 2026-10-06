@@ -203,7 +203,7 @@ export default function App() {
                 <br />
                 {t("Données, automatisation et IA locale.")}
                 <br />
-                {t("Et deux sites livrés à des clients.")}
+                {t("Et trois sites livrés à des clients.")}
               </p>
             </div>
           </div>
@@ -493,7 +493,7 @@ export default function App() {
               <br />
               {t("Des sites légers, avec des interactions ciblées")}
               <br />
-              {t("et des services de réservation externes.")}
+              {t("et un parcours clair vers la réservation ou l’achat.")}
             </p>
           </div>
           <div className="sites-grid">

@@ -655,7 +655,7 @@ details[open] > summary > svg {
 }
 .sites-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px;
   margin-top: 34px;
   align-items: start;
@@ -840,6 +840,17 @@ details[open] > summary > svg {
 }
 .site-project--lyz .project-preview {
   background: #dfded3;
+}
+.site-project--roundstyle .project-preview {
+  background: #e4e3dc;
+}
+@media (max-width: 1100px) and (min-width: 761px) {
+  .sites-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .sites-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 .preview-top {
   display: flex;

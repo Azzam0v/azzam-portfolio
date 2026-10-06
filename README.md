@@ -1,6 +1,6 @@
 # Azzam El Kettani — portfolio FR / EN
 
-Portfolio d’un étudiant en génie informatique à uOttawa, développeur full-stack et cofondateur de RZO Sports. Trois projets principaux : **RZO Sports**, **Overy**, **Sports Facility Discovery**. Deux sites livrés et vendus à des clients : **Tacozzo** et **Lyz Barbier**.
+Portfolio d’un étudiant en génie informatique à uOttawa, développeur full-stack et cofondateur de RZO Sports. Trois projets principaux : **RZO Sports**, **Overy**, **Sports Facility Discovery**. Trois sites livrés et vendus à des clients : **Tacozzo**, **Lyz Barbier** et **Round Style**, chacun sur son propre domaine.
 
 ## Démarrer
 
@@ -20,7 +20,7 @@ Sous PowerShell, utiliser `npm.cmd` si nécessaire. Le site utilise le préfixe 
 - RZO : présentation courte, puis étude de cas dépliable avec récit entrepreneurial, Startup Garage, deuxième place sur 40 équipes, Shopify Builders, captures et architecture.
 - Overy : fondateur et développeur principal d’un réseau Minecraft Bedrock multi-serveurs ; proxy, données partagées en MySQL, core maison, centaines de plugins, anti-cheat, protection DDoS, boutique Tebex, panel web, bot Discord et équipe de plus de 50 personnes. Résultats du récit d’Azzam : 10 000+ joueurs (200 en simultané), 10 000 €+ de chiffre d’affaires, 7e mondial et 2e en France. Liens publics et capture réelle du catalogue mobile dans l’étude de cas.
 - Sports Facility Discovery : prospection d’installations sportives, collecte multi-source, déduplication, scoring, classification locale Ollama et interface de validation React.
-- Tacozzo et Lyz : deux sites statiques vendus à des clients, chacun avec son identité, son aperçu et son étude de cas.
+- Tacozzo, Lyz et Round Style : trois sites statiques vendus à des clients, chacun avec son identité, son aperçu, son étude de cas et un lien vers son domaine. Le code client reste privé.
 - Les ambitions sont formulées comme des ambitions. Les résultats affichés (réservations de Lyz multipliées par deux en trois mois) viennent d’Azzam.
 - Le développement de RZO est présenté comme un projet partagé entre cofondateurs.
 

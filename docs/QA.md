@@ -1,5 +1,12 @@
 # Vérifications — 15 septembre 2026
 
+## Round Style et domaines clients — 6 octobre 2026
+
+- Ajout de Round Style (site vendu à la marque, roundstyles.com) avec aperçu capturé depuis la version compilée du site, étude de cas et traductions.
+- Liens « Voir le site » de Tacozzo et Lyz remplacés par leurs domaines réels (tacozzo-on.ca, lyzbarbier.ca). Liens « Code source » retirés pour les sites clients, dont les dépôts sont privés.
+- Grille des sites : trois colonnes sur ordinateur, deux colonnes avec la dernière carte en pleine largeur entre 761 et 1100 px, une colonne sur mobile.
+- Compilation production réussie. Contrôle Playwright en FR à 1280 et 390 px et en EN à 900 px : aucun débordement, aucune erreur JavaScript, liens vérifiés.
+
 ## Stage CECCE détaillé et sites clients — 4 octobre 2026
 
 - Section CECCE réécrite à partir des notes de stage d’Azzam : sources Aspen et StaffAllocator, transformations Spark SQL / PySpark, tables Delta, Fabric User Data Functions, documentation Confluence et cache Optania remplaçant les rapports envoyés par courriel. Nouvelle étude de cas sur le comptage des effectifs sans doublons.

@@ -479,4 +479,23 @@ export const english = {
     "Over the project, I recruited and led more than 50 people across development, 3D modeling and textures. I set priorities, assigned work, reviewed code before updates and handled production issues.",
   "Overy a rassemblé plus de 10 000 joueurs, atteint la 7e place mondiale et la 2e en France, et généré plus de 10 000 € de chiffre d’affaires. J’y ai appris tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données.":
     "Overy brought together more than 10,000 players, reached #7 worldwide and #2 in France, and generated more than €10,000 in revenue. It taught me a product’s full lifecycle: build, test, deploy, maintain and decide from data.",
+
+  // Round Style and client domains — October 2026 update
+  "Et trois sites livrés à des clients.": "Plus three websites delivered to clients.",
+  "et un parcours clair vers la réservation ou l’achat.":
+    "and a clear path to booking or buying.",
+  "Marque de vêtements · Ottawa": "Clothing brand · Ottawa",
+  "Une pièce. Une histoire.": "One piece. One story.",
+  "Une vitrine éditoriale, vendue à la marque, pour présenter sa première collection et le récit de son fondateur, puis transformer l’intérêt en demande d’achat.":
+    "An editorial showcase, sold to the brand, presenting its first collection and its founder’s story, then turning interest into purchase requests.",
+  "Aperçu du site Round Style : nom de la marque en grand sur fond noir et logo circulaire Round Style 1960.":
+    "Preview of the Round Style site: the brand name in large type on black and the circular Round Style 1960 logo.",
+  "Donner à une jeune marque inspirée par ses racines africaines une présence à la hauteur de ses pièces, et permettre de les acheter sans boutique en ligne.":
+    "Give a young brand inspired by its African roots an online presence worthy of its pieces, and let people buy them without an online store.",
+  "Ouverture typographique sur fond noir, collection numérotée en grands formats, fiche détaillée pour chaque pièce et espace éditorial dédié au récit du fondateur.":
+    "A typographic opening on black, a numbered large-format collection, a detailed page for each piece and an editorial space for the founder’s story.",
+  "Chaque fiche propose une demande d’achat par courriel, préremplie avec le nom de la pièce. Pas de panier ni de paiement : la marque échange directement avec ses clients.":
+    "Each piece page offers an email purchase request prefilled with the piece’s name. No cart or checkout: the brand talks directly with its customers.",
+  "Site commandé et acheté par la marque, mis en ligne sur son propre domaine avec Cloudflare.":
+    "Commissioned and bought by the brand, launched on its own domain with Cloudflare.",
 };
