@@ -76,13 +76,13 @@ Deuxième projet de la sélection, après RZO. Source : CV `01_software_backend.
 
 La présentation met en avant les responsabilités et résultats dès la synthèse. L’étude de cas dépliable raconte le passage du serveur Minecraft au produit logiciel, puis le développement, l’analyse des données, la boutique, l’exploitation et le travail d’équipe. Elle contient une capture mobile réelle du catalogue OveryCoins, datée et agrandissable. Les liens vers Tebex et la fiche publique du serveur sont accessibles sans ouvrir l’étude de cas. Les chiffres viennent du CV et du récit confirmé par Azzam ; ce document ne prétend pas constituer un audit des données de production.
 
-## Sports Facility Discovery — données et automatisation
+Une illustration SVG du réseau multi-serveurs est désormais visible dès la présentation (6 octobre 2026). Elle reprend le proxy, le lobby, les mini-jeux, les modes de jeu et les données MySQL partagées dans une esthétique de blocs. Elle est identifiée comme une illustration, distincte de la capture réelle de la boutique.
 
-Troisième projet principal, personnel. Source : le même CV.
+## Drone autonome — Capstone
 
-Le besoin est de repérer et qualifier des installations sportives à partir de sources dispersées. Google Places, OpenStreetMap et le web public alimentent une collecte avec enrichissement, déduplication, score de confiance et classification locale Ollama. Le résultat couvre des centaines d’installations. L’interface React permet la validation, l’export CSV et la génération de courriels personnalisés ; le backend utilise Node.js et Express.
+Remplace Sports Facility Discovery à la demande d’Azzam le 6 octobre 2026. Source : `Azzam_El_Kettani_Resume (2).pdf`, fourni pour cette modification.
 
-La synthèse est suivie d’une étude de cas en trois parties : besoin, qualification, résultat exploitable. Aucun dépôt, démonstration publique ou capture n’a été fourni pour ce projet ; aucun lien n’est ajouté par supposition.
+Projet de fin d’études en cours depuis septembre 2026, dans une équipe de cinq. Azzam est responsable des commandes de vol et de la simulation PX4 SITL dans Gazebo, ainsi que de l’intégration MAVLink / ROS 2 avec un Raspberry Pi 5. Le drone de l’équipe combine vision accélérée sur FPGA et imagerie thermique ; ces deux sous-systèmes ne sont pas attribués personnellement à Azzam. Aucun essai en vol réussi ni résultat final n’est annoncé. Présentation et étude de cas disponibles en français et en anglais.
 
 ## Tacozzo — site vitrine de restaurant (réalisation complémentaire)
 

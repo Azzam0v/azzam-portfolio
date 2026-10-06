@@ -700,6 +700,64 @@ details[open] > summary > svg {
 .software-intro .muted {
   font-size: 13px;
 }
+.overy-visual {
+  margin: 32px 0 0;
+  overflow: hidden;
+  border-radius: 5px;
+  color: #eef1df;
+  background: radial-gradient(ellipse at 50% 55%, #314e3d, #142b24 75%);
+}
+.overy-visual-heading,
+.overy-visual figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 28px;
+}
+.overy-visual-heading {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+.overy-visual-heading > span:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.overy-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-family: inherit;
+}
+.overy-visual figcaption {
+  border-top: 1px solid #d1e6ba26;
+  font-size: 14px;
+}
+.overy-visual figcaption > span:last-child {
+  color: #b5c6ae;
+  font-size: 10px;
+}
+@media (max-width: 760px) {
+  .overy-visual-heading,
+  .overy-visual figcaption {
+    padding: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .overy-visual svg {
+    width: 130%;
+    max-width: none;
+    margin-left: -15%;
+  }
+  .overy-visual svg text {
+    font-size: 24px;
+  }
+  .overy-visual svg > text {
+    font-size: 20px;
+  }
+}
 .project-results {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

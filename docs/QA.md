@@ -1,5 +1,11 @@
 # Vérifications — 15 septembre 2026
 
+## Capstone et illustration Overy — 6 octobre 2026
+
+- Sports Facility Discovery remplacé par le capstone drone autonome à partir du CV fourni. Rôle, équipe, technologies et état en cours traduits en anglais ; introduction et métadonnées adaptées.
+- Illustration vectorielle Overy visible sans ouvrir l’étude de cas, avec description accessible et libellés FR / EN. Capture de boutique conservée dans l’étude de cas.
+- Build production réussi. Contrôle du rendu à 1280 et 390 px dans les deux langues : projet capstone présent, ancien projet absent, études de cas fonctionnelles, capture boutique chargée, aucun débordement horizontal ni erreur JavaScript ou HTTP.
+
 ## Nouvelle interface RZO — 6 octobre 2026
 
 - Captures RZO remplacées par la nouvelle interface (accueil, offre complexes, agenda) et trois écrans de l’app mobile, en FR et EN selon la langue choisie.

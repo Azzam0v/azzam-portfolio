@@ -1,6 +1,7 @@
 import { ArrowUpRight, Plus } from "lucide-react";
 import { useLanguage } from "../i18n";
 import { softwareProjects } from "../data/projects";
+import OveryVisual from "./OveryVisual";
 
 export default function SoftwareProjects() {
   const { t, translate } = useLanguage();
@@ -27,6 +28,7 @@ export default function SoftwareProjects() {
               <p className="muted">{project.description}</p>
             </div>
           </div>
+          {project.id === "overy" && <OveryVisual />}
           <dl className="project-results">
             {project.results.map(([value, label]) => (
               <div key={label}>

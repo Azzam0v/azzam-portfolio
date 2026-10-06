@@ -201,7 +201,7 @@ export default function App() {
               <p>
                 {t("Produit full-stack. Backend en production.")}
                 <br />
-                {t("Données, automatisation et IA locale.")}
+                {t("Robotique, simulation et systèmes embarqués.")}
                 <br />
                 {t("Et trois sites livrés à des clients.")}
               </p>
