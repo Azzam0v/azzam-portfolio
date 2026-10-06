@@ -1,5 +1,12 @@
 # Vérifications — 15 septembre 2026
 
+## Nouvelle interface RZO — 6 octobre 2026
+
+- Captures RZO remplacées par la nouvelle interface (accueil, offre complexes, agenda) et trois écrans de l’app mobile, en FR et EN selon la langue choisie.
+- Étude de cas enrichie : modèle sans abonnement (1 %), chiffres clés du produit, app mobile React Native, six parcours, préautorisations Stripe, moteur de réservation, conformité, tests et exploitation. Faits relevés dans les trois dépôts RZO et sur rzosports.com.
+- Lien « Explorer le code client » retiré : le dépôt est privé (404 pour un visiteur). Remplacé par l’offre publique pour les complexes.
+- Compilation production réussie. Contrôle Playwright, étude de cas et « Sous le capot » ouverts, en FR à 1280 et 900 px et en EN à 390 px : aucun débordement, aucune image cassée, aucune erreur JavaScript ou HTTP.
+
 ## Round Style et domaines clients — 6 octobre 2026
 
 - Ajout de Round Style (site vendu à la marque, roundstyles.com) avec aperçu capturé depuis la version compilée du site, étude de cas et traductions.

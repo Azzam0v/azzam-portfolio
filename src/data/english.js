@@ -206,12 +206,12 @@ export const english = {
   "Deux présences web singulières.": "Two distinct web experiences.",
   "La même attention à l’expérience.": "The same care for the experience.",
   "PROJET PHARE": "FEATURED PROJECT",
-  "01 / PLATEFORME FULL-STACK": "01 / FULL-STACK PLATFORM",
+  "01 / WEB · MOBILE · API": "01 / WEB · MOBILE · API",
   "Le sport nous rassemble.": "Sport brings us together.",
   "La technologie": "Technology",
   "crée le lien.": "makes the connection.",
-  "Une plateforme pour trouver un terrain, organiser une partie et connecter les joueurs aux centres sportifs d’Ottawa et de Gatineau.":
-    "A platform to find a field, organize a game and connect players with sports venues across Ottawa and Gatineau.",
+  "Les joueurs réservent un terrain, remplissent leur partie et partagent les frais. Les complexes sportifs d’Ottawa–Gatineau gèrent agenda, équipe et paiements, sans abonnement. Un site, une API et une app mobile.":
+    "Players book a court or field, fill their game and split the cost. Sports venues across Ottawa–Gatineau run their schedule, staff and payments with no subscription. One website, one API and a mobile app.",
   "Découvrir RZO": "Discover RZO",
   "L’histoire du projet": "The story behind it",
   "Un terrain de football, au cœur de l’expérience sportive RZO":
@@ -230,8 +230,19 @@ export const english = {
     "I co-founded RZO Sports with my friend Mehdi Semmar around a simple observation: players and sports venues needed one place to connect, book and organize games.",
   "Nous avons rencontré des gestionnaires, au téléphone et sur place. Certains fonctionnaient encore par courriel, d’autres avec des outils peu adaptés. Ces échanges ont guidé la création d’un premier produit, testé auprès de vrais utilisateurs.":
     "We spoke with venue managers over the phone and in person. Some still relied on email; others were working with tools that did not meet their needs. Those conversations shaped our first product, tested with real users.",
-  "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.":
-    "I’m committed to this project for the long term, from product thinking to full-stack development. RZO is now an incorporated company, and we are growing our network of venue partners, one conversation at a time.",
+  "Le premier prototype est devenu un vrai produit : une réservation pensée d’abord pour le joueur, un logiciel de gestion complet pour les complexes et un modèle simple. Les complexes ne paient aucun abonnement ; des frais de service de 1 % s’ajoutent au prix payé par les joueurs.":
+    "The first prototype has grown into a real product: booking designed around the player, complete management software for venues and a simple model. Venues pay no subscription; a 1% service fee is added to the price players pay.",
+  "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO Sports Inc. est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.":
+    "I’m committed to this project for the long term, from product thinking to full-stack development. RZO Sports Inc. is now an incorporated company, and we are growing our network of venue partners, one conversation at a time.",
+  "0 $": "$0",
+  "applications : site web, API et app mobile":
+    "applications: website, API and mobile app",
+  "d’abonnement pour les complexes, 1 % de frais de service":
+    "subscription for venues, 1% service fee",
+  "permissions pour déléguer au personnel d’un complexe":
+    "permissions to delegate work to venue staff",
+  "plateforme, courriels et documents légaux bilingues":
+    "bilingual platform, emails and legal documents",
   "De l’idée au modèle d’affaires": "From idea to business model",
   "Accélérateur de l’Université d’Ottawa : étude de marché, plan d’affaires et identité de marque.":
     "University of Ottawa accelerator: market research, business planning and brand identity.",
@@ -242,27 +253,48 @@ export const english = {
   "Présentation de RZO et échanges avec d’autres personnes qui construisent leurs entreprises.":
     "A live RZO demo and conversations with fellow founders and builders.",
   "DU CONCEPT AU PRODUIT": "FROM CONCEPT TO PRODUCT",
-  "Un aperçu de l’application RZO Sports.": "A look inside the RZO Sports app.",
-  "Agrandir la première capture RZO": "Enlarge the first RZO screenshot",
-  "Capture de l’application RZO Sports":
-    "RZO Sports app: homepage and sports discovery",
-  "01 / L’EXPÉRIENCE RZO": "01 / THE RZO EXPERIENCE",
-  "Agrandir la deuxième capture RZO": "Enlarge the second RZO screenshot",
-  "Capture d’un espace de gestion RZO Sports":
-    "RZO Sports venue workspace: scheduling configuration",
-  "02 / LE PRODUIT EN DÉTAIL": "02 / INSIDE THE PRODUCT",
+  "La nouvelle interface de RZO Sports, en ligne.":
+    "The new RZO Sports interface, live.",
+  "Agrandir la capture": "Enlarge screenshot",
+  "Page d’accueil de RZO Sports : réserver un terrain, rejoindre ou créer une partie, puis choisir son sport.":
+    "RZO Sports homepage: book a field, join or create a game, then pick a sport.",
+  "01 / ACCUEIL JOUEURS · RZOSPORTS.COM": "01 / PLAYER HOMEPAGE · RZOSPORTS.COM",
+  "Page RZO pour les complexes : tableau de bord et notifications de nouvelle demande, réservation garantie et partie complète.":
+    "RZO for venues page: dashboard with new request, guaranteed booking and full game notifications.",
+  "02 / L’OFFRE POUR LES COMPLEXES": "02 / THE OFFER FOR VENUES",
+  "Agenda hebdomadaire des réservations d’un complexe de démonstration, avec les réservations par terrain.":
+    "Weekly booking calendar of a demo venue, with bookings per field.",
+  "03 / AGENDA D’UN COMPLEXE (DONNÉES DE DÉMO)":
+    "03 / VENUE CALENDAR (DEMO DATA)",
+  "APP MOBILE · iOS & ANDROID": "MOBILE APP · iOS & ANDROID",
+  "Écran de l’app mobile RZO Sports": "RZO Sports mobile app screen",
+  "L’app mobile, en route vers les stores.":
+    "The mobile app, on its way to the stores.",
+  "Une app iOS et Android pour les joueurs, construite avec React Native, Expo et TypeScript sur la même API que le site. On l’explore sans compte, on réserve et on paie avec Stripe, on se connecte avec Google, et on retrouve la carte des complexes, les avis et les parties à rejoindre. Elle est annoncée sur le site, sortie prévue sur l’App Store et Google Play.":
+    "An iOS and Android app for players, built with React Native, Expo and TypeScript on the same API as the website. Browse without an account, book and pay with Stripe, sign in with Google, and find the venue map, reviews and games to join. Announced on the website, with an App Store and Google Play release planned.",
+  "Jeton JWT conservé dans le trousseau du téléphone, plutôt que le cookie HttpOnly du web":
+    "JWT kept in the phone’s secure keychain instead of the web’s HttpOnly cookie",
+  "Formulaire de paiement Stripe natif, qui enregistre la carte pour la préautorisation":
+    "Native Stripe payment sheet that saves the card for the pre-authorization",
+  "QR code d’entrée pour les joueurs et scanner pour l’accueil des complexes, en cours d’intégration":
+    "Entry QR codes for players and a front-desk scanner for venues, being integrated",
+  "Explorer : sports et complexes d’Ottawa–Gatineau":
+    "Explore: sports and venues in Ottawa–Gatineau",
+  "Parties à venir et prix par joueur": "Upcoming games and price per player",
+  "Créneaux libres d’un terrain": "A field’s open slots",
   "L’aventure racontée par Mehdi, mon cofondateur":
     "The story in my co-founder Mehdi’s words",
   "Sous le capot de RZO": "Under the hood of RZO",
   "Architecture, choix techniques & qualité":
     "Architecture, engineering decisions & quality",
   "Architecture RZO": "RZO architecture",
-  "Interface & parcours": "Interface & user journeys",
+  "Site web & app mobile": "Website & mobile app",
   "API & règles métier": "API & business logic",
   "Données persistantes": "Persistent data",
-  "Fonctionnalités et architecture décrites à partir du code du projet.":
-    "Features and architecture documented from the project’s source code.",
-  "Explorer le code client": "Explore the frontend code",
+  "Paiements & images": "Payments & images",
+  "Décrit à partir du code des trois dépôts, privés, de RZO Sports. Visite technique possible en entretien.":
+    "Documented from the code of RZO Sports’ three private repositories. Happy to walk through it in an interview.",
+  "Voir l’offre pour les complexes": "See the offer for venues",
   "SITES VITRINES / DÉVELOPPEMENT STATIQUE":
     "BUSINESS WEBSITES / STATIC DEVELOPMENT",
   "Des univers qui": "Distinct identities.",
@@ -307,27 +339,45 @@ export const english = {
   "nouvel onglet": "new tab",
   "Code source": "Source code",
   "Dans les coulisses du projet": "Behind the project",
-  "Trouver son terrain": "Find your field",
-  "Découvrir les installations, réserver des créneaux récurrents et laisser un avis après son expérience.":
-    "Discover venues, make recurring bookings and leave a review after your visit.",
-  "Se retrouver pour jouer": "Find people to play with",
-  "Organiser des parties publiques ou privées, gérer les participants et partager les frais entre joueurs.":
-    "Organize public or private games, manage participants and split the cost between players.",
-  "Faire vivre son centre": "Run your venue",
-  "Gérer les paiements, les statistiques, les horaires, les plages bloquées et les permissions des employés.":
-    "Manage payments, statistics, schedules, blocked slots and employee permissions.",
-  "Une interface pour chaque parcours": "An interface for every journey",
-  "React et React Router structurent les espaces joueur et gestionnaire. Les appels réseau sont isolés dans des modules API. L’interface est disponible en français et en anglais avec i18next.":
-    "React and React Router structure the player and manager workspaces. Network requests live in dedicated API modules. The interface supports French and English through i18next.",
-  "Une logique métier structurée": "Structured business logic",
-  "Le serveur Spring Boot sépare contrôleurs REST, services métier et accès aux données. Les réservations prennent en compte les horaires récurrents, les fermetures exceptionnelles et les conflits de créneaux.":
-    "The Spring Boot backend separates REST controllers, business services and data access. Bookings account for recurring schedules, exceptional closures and conflicting time slots.",
-  "Des accès et des paiements encadrés": "Access control and payment workflows",
-  "L’authentification utilise des JWT en cookies HttpOnly. Les contrôles de propriété et de permissions protègent les ressources. Stripe et ses webhooks participent au suivi des paiements.":
-    "Authentication uses JWTs stored in HttpOnly cookies. Ownership and permission checks protect resources. Stripe and its webhooks support payment tracking.",
-  "Un projet pensé pour évoluer": "Built to keep evolving",
-  "Docker Compose et Nginx structurent l’environnement. Le dépôt contient des tests sur les réservations, les disponibilités, les demandes de participation et les suppressions de ressources.":
-    "Docker Compose and Nginx structure the environment. The repository includes tests for bookings, availability, join requests and resource deletion.",
+  "Réserver en quelques clics": "Book in a few clicks",
+  "Recherche par sport et par proximité, seulement les créneaux vraiment libres, paiement par carte, Apple Pay, Google Pay ou Link, et alertes hebdomadaires de disponibilités.":
+    "Search by sport and distance, only truly open slots, pay by card, Apple Pay, Google Pay or Link, and weekly availability alerts.",
+  "Remplir sa partie": "Fill your game",
+  "Parties publiques ou privées, demandes de participation et partage des frais : chacun voit et paie sa part, avec un prix par joueur affiché avant de rejoindre.":
+    "Public or private games, join requests and cost splitting: everyone sees and pays their own share, with a per-player price shown before joining.",
+  "Payer seulement ce qui est joué": "Pay only for what is played",
+  "Les cartes sont préautorisées six jours avant la partie et débitées après. Annulation ou départ tardif suivent la politique du complexe, connue dès la réservation.":
+    "Cards are pre-authorized six days before the game and charged afterwards. Cancellations and late leaves follow the venue’s policy, shown at booking.",
+  "Gérer son complexe": "Run your venue",
+  "Agenda hebdomadaire, réservations au comptoir, clients réguliers sur plages récurrentes, approbation manuelle ou automatique des demandes.":
+    "Weekly calendar, front-desk bookings, regulars on recurring slots, and manual or automatic approval of requests.",
+  "Fixer ses règles": "Set your own rules",
+  "Plages horaires, pas de temps, durées permises, délais, temps de nettoyage et fermetures. Rôles sur mesure et plusieurs complexes par compte.":
+    "Opening hours, time steps, allowed durations, lead times, cleanup time and closures. Custom roles and several venues per account.",
+  "Piloter et encaisser": "Track and get paid",
+  "Taux d’occupation, revenu par heure, heures de pointe et projections. Versements Stripe Connect, taxes de vente par complexe et courriels automatiques.":
+    "Occupancy rate, revenue per hour, peak hours and projections. Stripe Connect payouts, per-venue sales tax and automated emails.",
+  "Deux clients, une même API": "Two clients, one API",
+  "Le site React sépare les espaces joueur, complexe et administration, avec des appels réseau isolés dans des modules API. L’app React Native réutilise les mêmes routes : le serveur accepte un cookie HttpOnly sur le web et un jeton Bearer sur mobile.":
+    "The React website separates the player, venue and admin workspaces, with network calls isolated in API modules. The React Native app reuses the same routes: the server accepts an HttpOnly cookie on the web and a Bearer token on mobile.",
+  "Un moteur de réservation": "A booking engine",
+  "Les disponibilités combinent horaires récurrents, fermetures, délais et temps de nettoyage. Les règles hebdomadaires restent sur l’heure locale du complexe, même lors des changements d’heure, et les demandes concurrentes sur un même créneau sont annulées automatiquement.":
+    "Availability combines recurring hours, closures, lead times and cleanup time. Weekly rules stay on the venue’s local clock, even across daylight saving changes, and competing requests for the same slot are cancelled automatically.",
+  "Des paiements par préautorisation": "Payments by pre-authorization",
+  "Plutôt que débiter puis rembourser, le serveur pose une empreinte sur chaque carte, puis la capture ou la libère. Verrous sur la part de chaque joueur, protection contre le double débit, nouvelles tentatives lors d’une panne de Stripe et reçus par courriel.":
+    "Instead of charging and refunding, the server places a hold on each card, then captures or releases it. Locks on each player’s share, protection against double charges, retries during Stripe outages and email receipts.",
+  "Des accès et des permissions": "Access and permissions",
+  "Spring Security, JWT et connexion Google OAuth2. Les services vérifient la propriété des ressources, et chaque rôle d’un complexe choisit parmi 20 permissions : la réception peut réserver sans voir les revenus.":
+    "Spring Security, JWT and Google OAuth2 sign-in. Services check resource ownership, and each venue role picks from 20 permissions: the front desk can book without seeing revenue.",
+  "Une entreprise qui respecte ses obligations": "A company that meets its obligations",
+  "Consentements horodatés et versionnés, entente de partenariat exigée avant de gérer un complexe, suppression de compte anonymisée et déclaration des taxes de vente, en tenant compte de la LPRPDE et de la Loi 25 du Québec.":
+    "Timestamped, versioned consent records, a partner agreement required before managing a venue, anonymized account deletion and sales tax declarations, with PIPEDA and Québec’s Law 25 in mind.",
+  Consentements: "Consent records",
+  "Loi 25": "Law 25",
+  LPRPDE: "PIPEDA",
+  "Tester et exploiter": "Test and operate",
+  "Environ 300 tests JUnit, et des tests de mutation PIT sur les règles de prix et d’authentification. Docker Compose, Nginx et Let’s Encrypt en production, images sur Cloudflare R2, courriels bilingues avec Thymeleaf et tâches planifiées.":
+    "About 300 JUnit tests, plus PIT mutation testing on pricing and authentication rules. Docker Compose, Nginx and Let’s Encrypt in production, images on Cloudflare R2, bilingual Thymeleaf emails and scheduled jobs.",
   "Restaurant · Ottawa": "Restaurant · Ottawa",
   "Une identité qui ouvre l’appétit.": "An identity that builds an appetite.",
   "Un site vitrine expressif qui fait découvrir le menu, donne envie de passer au restaurant et guide vers la commande en ligne.":

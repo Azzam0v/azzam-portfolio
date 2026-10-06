@@ -8,15 +8,17 @@ Informations fournies par Azzam, complétées par [l’article de Mehdi Semmar](
 
 | Fichier local | Origine | Usage |
 | --- | --- | --- |
-| `rzo-app-1.webp` | `https://mehdisemmar.me/assets/images/rzoscreen1.jpg` | Accueil et découverte sportive |
-| `rzo-app-2.webp` | `https://mehdisemmar.me/assets/images/rzoscreen3.png` | Configuration des horaires |
+| `rzo-home-{fr,en}.webp` | Capture Playwright 1440 × 900 de https://rzosports.com/, le 6 octobre 2026 | Accueil joueurs de la nouvelle interface |
+| `rzo-venues-{fr,en}.webp` | Capture Playwright 1440 × 900 de https://rzosports.com/complexes, le 6 octobre 2026 | Offre pour les complexes |
+| `rzo-agenda-{fr,en}.webp` | `RZO-SPORTS-CLIENT/public/images/venues/dash-agenda-{fr,en}.webp` | Agenda d’un complexe de démonstration |
+| `rzo-mobile-{explore,game,slots}-{fr,en}.webp` | `RZO-SPORTS-CLIENT/public/images/app/app-*-{fr,en}.webp` | Écrans de l’app mobile |
 | `rzo-football.jpg` | `RZO-SPORTS-CLIENT/public/images/football.jpg` | Visuel éditorial |
 | `tacozzo-preview.jpg` | Capture locale 1440 × 1000 | Site Tacozzo |
 | `lyz-preview.jpg` | Capture locale 1440 × 1000 | Site Lyz |
 | `overy-shop-mobile.jpg` | Capture réelle 390 × 1000 de `https://overy.tebex.io/category/overy-coins`, le 17 septembre 2026 | Catalogue OveryCoins, dans l’étude de cas Overy |
 | `portfolio-share.svg` / `.png` | Composition typographique créée pour ce portfolio | Partage de liens |
 
-Les captures RZO sont réutilisées à la demande d’Azzam depuis le lien de son cofondateur. Elles montrent une version documentée de l’application, avec des données de démonstration, et non un état actualisé en temps réel. Leur conversion WebP ne modifie pas leur contenu.
+Les captures RZO montrent la nouvelle interface en ligne au 6 octobre 2026, en français et en anglais selon la langue du portfolio. Les complexes, parties et réservations visibles sont des données de démonstration du site (« Démo », « Sample Venue »), pas une activité réelle. Les anciennes captures reprises du site de Mehdi Semmar ont été retirées.
 
 Les captures des sites reprennent leurs médias existants. Les provenances et licences amont restent celles documentées dans chaque dépôt. Inter est auto-hébergée ; sa licence est conservée dans `public/fonts/inter-LICENSE.txt`.
 

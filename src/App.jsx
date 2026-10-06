@@ -212,7 +212,7 @@ export default function App() {
               <span>
                 <span className="status-dot" /> {t("PROJET PHARE")}
               </span>
-              <span>{t("01 / PLATEFORME FULL-STACK")}</span>
+              <span>{t("01 / WEB · MOBILE · API")}</span>
             </div>
             <div className="rzo-grid">
               <div className="rzo-copy">
@@ -229,7 +229,7 @@ export default function App() {
                 </h3>
                 <p>
                   {t(
-                    "Une plateforme pour trouver un terrain, organiser une partie et connecter les joueurs aux centres sportifs d’Ottawa et de Gatineau.",
+                    "Les joueurs réservent un terrain, remplissent leur partie et partagent les frais. Les complexes sportifs d’Ottawa–Gatineau gèrent agenda, équipe et paiements, sans abonnement. Un site, une API et une app mobile.",
                   )}
                 </p>
                 <div className="rzo-actions">
@@ -326,11 +326,24 @@ export default function App() {
                 </p>
                 <p className="muted">
                   {t(
-                    "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.",
+                    "Le premier prototype est devenu un vrai produit : une réservation pensée d’abord pour le joueur, un logiciel de gestion complet pour les complexes et un modèle simple. Les complexes ne paient aucun abonnement ; des frais de service de 1 % s’ajoutent au prix payé par les joueurs.",
+                  )}
+                </p>
+                <p className="muted">
+                  {t(
+                    "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO Sports Inc. est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.",
                   )}
                 </p>
               </div>
             </div>
+            <dl className="rzo-facts">
+              {localizedRzo.facts.map(([value, label]) => (
+                <div key={value}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
             <div className="milestones">
               <div>
                 <span className="milestone-value">{t("Startup Garage")}</span>
@@ -363,43 +376,67 @@ export default function App() {
             <div className="product-gallery">
               <div className="product-gallery-heading">
                 <p className="eyebrow">{t("DU CONCEPT AU PRODUIT")}</p>
-                <p>{t("Un aperçu de l’application RZO Sports.")}</p>
+                <p>{t("La nouvelle interface de RZO Sports, en ligne.")}</p>
               </div>
               <div className="product-shots">
-                <figure>
-                  <a
-                    href={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={t("Agrandir la première capture RZO")}
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/rzo-app-1.webp`}
-                      alt={t("Capture de l’application RZO Sports")}
-                      width="1600"
-                      height="1000"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>{t("01 / L’EXPÉRIENCE RZO")}</figcaption>
-                </figure>
-                <figure>
-                  <a
-                    href={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={t("Agrandir la deuxième capture RZO")}
-                  >
-                    <img
-                      src={`${import.meta.env.BASE_URL}images/rzo-app-2.webp`}
-                      alt={t("Capture d’un espace de gestion RZO Sports")}
-                      width="1600"
-                      height="1000"
-                      loading="lazy"
-                    />
-                  </a>
-                  <figcaption>{t("02 / LE PRODUIT EN DÉTAIL")}</figcaption>
-                </figure>
+                {localizedRzo.shots.map((shot) => {
+                  const src = `${import.meta.env.BASE_URL}${shot.image.replace("{lang}", language)}`;
+                  return (
+                    <figure
+                      key={shot.image}
+                      className={shot.wide ? "is-wide" : undefined}
+                    >
+                      <a
+                        href={src}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${t("Agrandir la capture")} : ${shot.caption}`}
+                      >
+                        <img
+                          src={src}
+                          alt={shot.alt}
+                          width="1440"
+                          height="900"
+                          loading="lazy"
+                        />
+                      </a>
+                      <figcaption>{shot.caption}</figcaption>
+                    </figure>
+                  );
+                })}
+              </div>
+              <div className="rzo-mobile">
+                <div className="rzo-mobile-copy">
+                  <p className="eyebrow">{t("APP MOBILE · iOS & ANDROID")}</p>
+                  <h4>{localizedRzo.mobile.title}</h4>
+                  <p>{localizedRzo.mobile.text}</p>
+                  <ul>
+                    {localizedRzo.mobile.points.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                  <div className="tags">
+                    {["React Native", "Expo", "TypeScript", "Stripe"].map(
+                      (tag) => (
+                        <span key={tag}>{tag}</span>
+                      ),
+                    )}
+                  </div>
+                </div>
+                <div className="rzo-phones">
+                  {localizedRzo.mobile.shots.map(([screen, label]) => (
+                    <figure key={screen}>
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/rzo-mobile-${screen}-${language}.webp`}
+                        alt={`${t("Écran de l’app mobile RZO Sports")} : ${label}`}
+                        width="600"
+                        height="1162"
+                        loading="lazy"
+                      />
+                      <figcaption>{label}</figcaption>
+                    </figure>
+                  ))}
+                </div>
               </div>
               <a
                 className="story-source"
@@ -436,8 +473,8 @@ export default function App() {
                   aria-label={t("Architecture RZO")}
                 >
                   <span>
-                    {t("React")}
-                    <small>{t("Interface & parcours")}</small>
+                    {t("React · React Native")}
+                    <small>{t("Site web & app mobile")}</small>
                   </span>
                   <ArrowRight />
                   <span>
@@ -448,6 +485,10 @@ export default function App() {
                   <span>
                     {t("MySQL")}
                     <small>{t("Données persistantes")}</small>
+                  </span>
+                  <span className="architecture-side">
+                    {t("Stripe Connect · R2")}
+                    <small>{t("Paiements & images")}</small>
                   </span>
                 </div>
                 <div className="engineering-grid">
@@ -466,11 +507,11 @@ export default function App() {
                 <div className="engineering-footer">
                   <p>
                     {t(
-                      "Fonctionnalités et architecture décrites à partir du code du projet.",
+                      "Décrit à partir du code des trois dépôts, privés, de RZO Sports. Visite technique possible en entretien.",
                     )}
                   </p>
-                  <ExternalLink href={rzo.github}>
-                    {t("Explorer le code client")}
+                  <ExternalLink href={rzo.venues}>
+                    {t("Voir l’offre pour les complexes")}
                   </ExternalLink>
                 </div>
               </div>

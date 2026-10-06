@@ -4,54 +4,121 @@ export const profile = {
   github: "https://github.com/Azzam0v",
   linkedin: "https://www.linkedin.com/in/azzam-el-kettani-656b3b301/",
 };
+// RZO facts come from the RZO-SPORTS-CLIENT, -SERVER and -MOBILE repositories
+// and from rzosports.com (October 2026). The repositories are private.
 export const rzo = {
   live: "https://rzosports.com/",
-  github: "https://github.com/RZO-SPORTS/RZO-SPORTS-CLIENT",
+  venues: "https://rzosports.com/complexes",
   technologies: [
     "React",
+    "React Native",
     "Java 21",
     "Spring Boot",
     "MySQL",
-    "Stripe",
+    "Stripe Connect",
     "Docker",
   ],
+  facts: [
+    ["3", "applications : site web, API et app mobile"],
+    ["0 $", "d’abonnement pour les complexes, 1 % de frais de service"],
+    ["20", "permissions pour déléguer au personnel d’un complexe"],
+    ["FR / EN", "plateforme, courriels et documents légaux bilingues"],
+  ],
+  // Screenshots exist in both languages: `{lang}` is replaced at render time.
+  shots: [
+    {
+      image: "images/rzo-home-{lang}.webp",
+      alt: "Page d’accueil de RZO Sports : réserver un terrain, rejoindre ou créer une partie, puis choisir son sport.",
+      caption: "01 / ACCUEIL JOUEURS · RZOSPORTS.COM",
+      wide: true,
+    },
+    {
+      image: "images/rzo-venues-{lang}.webp",
+      alt: "Page RZO pour les complexes : tableau de bord et notifications de nouvelle demande, réservation garantie et partie complète.",
+      caption: "02 / L’OFFRE POUR LES COMPLEXES",
+    },
+    {
+      image: "images/rzo-agenda-{lang}.webp",
+      alt: "Agenda hebdomadaire des réservations d’un complexe de démonstration, avec les réservations par terrain.",
+      caption: "03 / AGENDA D’UN COMPLEXE (DONNÉES DE DÉMO)",
+    },
+  ],
+  mobile: {
+    title: "L’app mobile, en route vers les stores.",
+    text: "Une app iOS et Android pour les joueurs, construite avec React Native, Expo et TypeScript sur la même API que le site. On l’explore sans compte, on réserve et on paie avec Stripe, on se connecte avec Google, et on retrouve la carte des complexes, les avis et les parties à rejoindre. Elle est annoncée sur le site, sortie prévue sur l’App Store et Google Play.",
+    points: [
+      "Jeton JWT conservé dans le trousseau du téléphone, plutôt que le cookie HttpOnly du web",
+      "Formulaire de paiement Stripe natif, qui enregistre la carte pour la préautorisation",
+      "QR code d’entrée pour les joueurs et scanner pour l’accueil des complexes, en cours d’intégration",
+    ],
+    shots: [
+      ["explore", "Explorer : sports et complexes d’Ottawa–Gatineau"],
+      ["game", "Parties à venir et prix par joueur"],
+      ["slots", "Créneaux libres d’un terrain"],
+    ],
+  },
   features: [
     [
       "01",
-      "Trouver son terrain",
-      "Découvrir les installations, réserver des créneaux récurrents et laisser un avis après son expérience.",
+      "Réserver en quelques clics",
+      "Recherche par sport et par proximité, seulement les créneaux vraiment libres, paiement par carte, Apple Pay, Google Pay ou Link, et alertes hebdomadaires de disponibilités.",
     ],
     [
       "02",
-      "Se retrouver pour jouer",
-      "Organiser des parties publiques ou privées, gérer les participants et partager les frais entre joueurs.",
+      "Remplir sa partie",
+      "Parties publiques ou privées, demandes de participation et partage des frais : chacun voit et paie sa part, avec un prix par joueur affiché avant de rejoindre.",
     ],
     [
       "03",
-      "Faire vivre son centre",
-      "Gérer les paiements, les statistiques, les horaires, les plages bloquées et les permissions des employés.",
+      "Payer seulement ce qui est joué",
+      "Les cartes sont préautorisées six jours avant la partie et débitées après. Annulation ou départ tardif suivent la politique du complexe, connue dès la réservation.",
+    ],
+    [
+      "04",
+      "Gérer son complexe",
+      "Agenda hebdomadaire, réservations au comptoir, clients réguliers sur plages récurrentes, approbation manuelle ou automatique des demandes.",
+    ],
+    [
+      "05",
+      "Fixer ses règles",
+      "Plages horaires, pas de temps, durées permises, délais, temps de nettoyage et fermetures. Rôles sur mesure et plusieurs complexes par compte.",
+    ],
+    [
+      "06",
+      "Piloter et encaisser",
+      "Taux d’occupation, revenu par heure, heures de pointe et projections. Versements Stripe Connect, taxes de vente par complexe et courriels automatiques.",
     ],
   ],
   engineering: [
     {
-      title: "Une interface pour chaque parcours",
-      text: "React et React Router structurent les espaces joueur et gestionnaire. Les appels réseau sont isolés dans des modules API. L’interface est disponible en français et en anglais avec i18next.",
-      tags: ["React Router", "Tailwind CSS", "i18next"],
+      title: "Deux clients, une même API",
+      text: "Le site React sépare les espaces joueur, complexe et administration, avec des appels réseau isolés dans des modules API. L’app React Native réutilise les mêmes routes : le serveur accepte un cookie HttpOnly sur le web et un jeton Bearer sur mobile.",
+      tags: ["React Router", "Tailwind CSS", "Expo Router", "i18next"],
     },
     {
-      title: "Une logique métier structurée",
-      text: "Le serveur Spring Boot sépare contrôleurs REST, services métier et accès aux données. Les réservations prennent en compte les horaires récurrents, les fermetures exceptionnelles et les conflits de créneaux.",
-      tags: ["API REST", "Spring Data JPA", "MySQL"],
+      title: "Un moteur de réservation",
+      text: "Les disponibilités combinent horaires récurrents, fermetures, délais et temps de nettoyage. Les règles hebdomadaires restent sur l’heure locale du complexe, même lors des changements d’heure, et les demandes concurrentes sur un même créneau sont annulées automatiquement.",
+      tags: ["Spring Boot", "Spring Data JPA", "MySQL"],
     },
     {
-      title: "Des accès et des paiements encadrés",
-      text: "L’authentification utilise des JWT en cookies HttpOnly. Les contrôles de propriété et de permissions protègent les ressources. Stripe et ses webhooks participent au suivi des paiements.",
-      tags: ["Spring Security", "JWT", "Stripe"],
+      title: "Des paiements par préautorisation",
+      text: "Plutôt que débiter puis rembourser, le serveur pose une empreinte sur chaque carte, puis la capture ou la libère. Verrous sur la part de chaque joueur, protection contre le double débit, nouvelles tentatives lors d’une panne de Stripe et reçus par courriel.",
+      tags: ["Stripe Connect", "Webhooks", "Transactions"],
     },
     {
-      title: "Un projet pensé pour évoluer",
-      text: "Docker Compose et Nginx structurent l’environnement. Le dépôt contient des tests sur les réservations, les disponibilités, les demandes de participation et les suppressions de ressources.",
-      tags: ["Docker", "Nginx", "JUnit"],
+      title: "Des accès et des permissions",
+      text: "Spring Security, JWT et connexion Google OAuth2. Les services vérifient la propriété des ressources, et chaque rôle d’un complexe choisit parmi 20 permissions : la réception peut réserver sans voir les revenus.",
+      tags: ["Spring Security", "JWT", "OAuth2"],
+    },
+    {
+      title: "Une entreprise qui respecte ses obligations",
+      text: "Consentements horodatés et versionnés, entente de partenariat exigée avant de gérer un complexe, suppression de compte anonymisée et déclaration des taxes de vente, en tenant compte de la LPRPDE et de la Loi 25 du Québec.",
+      tags: ["Consentements", "Loi 25", "LPRPDE"],
+    },
+    {
+      title: "Tester et exploiter",
+      text: "Environ 300 tests JUnit, et des tests de mutation PIT sur les règles de prix et d’authentification. Docker Compose, Nginx et Let’s Encrypt en production, images sur Cloudflare R2, courriels bilingues avec Thymeleaf et tâches planifiées.",
+      tags: ["JUnit", "PIT", "Docker", "Nginx"],
     },
   ],
 };
