@@ -1,5 +1,11 @@
 # Vérifications — 15 septembre 2026
 
+## Études de cas allégées — 6 octobre 2026
+
+- Overy : suppression du bloc raids et du parcours numéroté ; schéma simplifié, quatre indicateurs, trois défis courts et un paragraphe produit / leadership. Boutique et fiche publique conservées.
+- RZO : deux paragraphes d’histoire, deux jalons, trois captures (joueur, complexe, mobile), architecture et trois décisions techniques. Retrait des fonctionnalités redondantes et du second accordéon technique.
+- Build production et `git diff --check` réussis. Vérification FR / EN à 1280 et 390 px : présence des trois captures RZO et trois défis par projet, absence des anciens blocs, accordéons et capture boutique fonctionnels, aucun débordement horizontal ni erreur JavaScript ou HTTP. Captures inspectées sur ordinateur et mobile.
+
 ## Architecture RZO et Overy — 6 octobre 2026
 
 - RZO : schéma d’architecture corrigé (site et app → API Spring Boot sur EC2 derrière Nginx → MySQL ; Stripe relié à l’API, webhooks en retour) et trois décisions techniques visibles dans l’étude de cas : verrou pessimiste contre les doubles réservations, clés d’idempotence Stripe, déploiement Docker. Source : analyse du dépôt serveur privé fournie par Azzam.

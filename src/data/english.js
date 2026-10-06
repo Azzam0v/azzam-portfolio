@@ -1,31 +1,90 @@
 // French is the editorial source. Keep complete sentences together so that
 // the English version can read naturally instead of translating word by word.
 export const english = {
+  "Un réseau Minecraft Bedrock composé de plusieurs serveurs reliés par un proxy, avec données partagées, matchmaking, boutique automatisée et outils d’administration.":
+    "A Minecraft Bedrock network of servers connected through a proxy, with shared data, matchmaking, an automated store and administration tools.",
+  "joueurs accueillis": "players welcomed",
+  "joueurs simultanés au pic": "concurrent players at peak",
+  "personnes dans l’équipe": "team members",
+  "Cohérence des données": "Data consistency",
+  "Sérialisation des écritures d’un même joueur et fusion des modifications concurrentes, avec MySQL comme source de vérité.":
+    "Serializing writes for each player and merging concurrent changes, with MySQL as the source of truth.",
+  "Performance temps réel": "Real-time performance",
+  "Requêtes asynchrones, cache write-behind et regroupement des mises à jour pour ne pas bloquer la boucle de jeu.":
+    "Asynchronous queries, write-behind caching and batched updates to keep the game loop responsive.",
+  "Exploitation en production": "Production operations",
+  "Livraison automatisée des achats, anti-cheat, gestion des erreurs et protection face à de véritables attaques DDoS.":
+    "Automated purchase delivery, anti-cheat, error handling and protection against real DDoS attacks.",
+  "J’ai piloté la roadmap, les mises en production et une équipe de plus de 50 développeurs, modélisateurs 3D et artistes. Le panel du staff, le bot Discord et les statistiques d’activité permettaient d’exploiter et de faire évoluer le réseau.":
+    "I led the roadmap, production releases and a team of over 50 developers, 3D modelers and artists. The staff panel, Discord bot and activity analytics supported daily operations and the network’s development.",
+  "Les débuts": "The beginnings",
+  "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il est devenu un produit dont j’assurais la direction et le développement.":
+    "Overy started as a Minecraft server when I was 12 or 13. As the community grew, it became a product that I both led and developed.",
+  "Produit et leadership": "Product and leadership",
+  "Avec mon cofondateur Mehdi Semmar, nous avons rencontré des gestionnaires de complexes sportifs pour comprendre leurs problèmes de réservation, de paiement et d’organisation. Ces échanges ont conduit à une plateforme commune pour les joueurs et les complexes.":
+    "With my co-founder Mehdi Semmar, we met sports facility managers to understand their booking, payment and scheduling challenges. Those conversations led to a shared platform for players and venues.",
+  "Le prototype est devenu un produit composé d’un site web, d’une API et d’une application mobile. RZO Sports est aujourd’hui une entreprise incorporée, avec un modèle sans abonnement pour les complexes : des frais de service de 1 % sont ajoutés au prix payé par les joueurs.":
+    "The prototype grew into a product with a website, an API and a mobile app. RZO Sports is now an incorporated company, with no subscription for venues: a 1% service fee is added to the price paid by players.",
+  "Une app iOS et Android en développement avec React Native et Expo, sur la même API : découvrir les complexes, réserver et payer depuis son téléphone.":
+    "An iOS and Android app in development with React Native and Expo, using the same API to explore venues, book and pay from a phone.",
+  "Réservation et concurrence": "Bookings and concurrency",
+  "Calcul des disponibilités et gestion des fuseaux horaires. La vérification et la confirmation partagent une transaction avec verrou sur le terrain pour empêcher les doubles réservations.":
+    "Availability calculation and time-zone handling. Checking and confirming a slot share a transaction with a lock on the field to prevent double bookings.",
+  "Tests de concurrence": "Concurrency tests",
+  "Paiements distribués": "Distributed payments",
+  "Préautorisations, partage des frais et webhooks Stripe vérifiés. Des clés d’idempotence permettent de réessayer une opération sans débiter deux fois.":
+    "Preauthorizations, split payments and verified Stripe webhooks. Idempotency keys allow an operation to be retried without charging twice.",
+  Idempotence: "Idempotency",
+  "Sécurité et qualité": "Security and quality",
+  "Permissions, JWT et OAuth2 encadrent les accès. Environ 300 tests JUnit et des tests de mutation vérifient les règles métier ; Docker et Nginx assurent le déploiement sur AWS EC2.":
+    "Permissions, JWT and OAuth2 control access. Around 300 JUnit tests and mutation tests check business rules; Docker and Nginx support deployment on AWS EC2.",
+  "connexion unique et transfert": "single connection and transfers",
+  "Messagerie interserveurs": "Cross-server messaging",
+  "Cache + accès asynchrones": "Cache + asynchronous access",
+  "comptes · monnaie · grades · sanctions":
+    "accounts · currency · ranks · sanctions",
+  "Réseau de jeu": "Game network",
+  "Achats, administration et communauté reliés au réseau.":
+    "Purchases, administration and community connected to the network.",
   "Drone autonome — Capstone": "Autonomous Drone — Capstone",
-  "ROBOTIQUE / COMMANDES DE VOL / SYSTÈMES EMBARQUÉS": "ROBOTICS / FLIGHT CONTROLS / EMBEDDED SYSTEMS",
-  "Commandes de vol & intégration · depuis septembre 2026": "Flight controls & integration · since September 2026",
-  "De la simulation au contrôle d’un drone autonome.": "From simulation to autonomous flight control.",
-  "Un projet de fin d’études mené à cinq : un drone autonome combinant vision accélérée sur FPGA et imagerie thermique. Je suis responsable des commandes de vol, de la simulation et de leur intégration avec le Raspberry Pi 5.": "A five-person capstone project: an autonomous drone combining FPGA-accelerated vision and thermal imaging. I am responsible for flight controls, simulation and their integration with the Raspberry Pi 5.",
+  "ROBOTIQUE / COMMANDES DE VOL / SYSTÈMES EMBARQUÉS":
+    "ROBOTICS / FLIGHT CONTROLS / EMBEDDED SYSTEMS",
+  "Commandes de vol & intégration · depuis septembre 2026":
+    "Flight controls & integration · since September 2026",
+  "De la simulation au contrôle d’un drone autonome.":
+    "From simulation to autonomous flight control.",
+  "Un projet de fin d’études mené à cinq : un drone autonome combinant vision accélérée sur FPGA et imagerie thermique. Je suis responsable des commandes de vol, de la simulation et de leur intégration avec le Raspberry Pi 5.":
+    "A five-person capstone project: an autonomous drone combining FPGA-accelerated vision and thermal imaging. I am responsible for flight controls, simulation and their integration with the Raspberry Pi 5.",
   "membres dans l’équipe": "team members",
   "simulation de vol SITL": "SITL flight simulation",
   "En cours": "In progress",
   "projet de fin d’études · 2026": "capstone project · 2026",
-  "Responsabilité des commandes de vol et de la simulation PX4 en mode SITL dans Gazebo.": "Responsible for flight controls and PX4 SITL simulation in Gazebo.",
-  "Intégration MAVLink / ROS 2 avec le Raspberry Pi 5 embarqué.": "MAVLink / ROS 2 integration with the onboard Raspberry Pi 5.",
-  "Travail au sein d’une équipe de cinq sur un drone intégrant vision accélérée sur FPGA et imagerie thermique.": "Working on a five-person team’s drone with FPGA-accelerated vision and thermal imaging.",
+  "Responsabilité des commandes de vol et de la simulation PX4 en mode SITL dans Gazebo.":
+    "Responsible for flight controls and PX4 SITL simulation in Gazebo.",
+  "Intégration MAVLink / ROS 2 avec le Raspberry Pi 5 embarqué.":
+    "MAVLink / ROS 2 integration with the onboard Raspberry Pi 5.",
+  "Travail au sein d’une équipe de cinq sur un drone intégrant vision accélérée sur FPGA et imagerie thermique.":
+    "Working on a five-person team’s drone with FPGA-accelerated vision and thermal imaging.",
   "Le projet": "The project",
-  "Depuis septembre 2026, notre équipe de cinq travaille sur un drone autonome dans le cadre du capstone en génie informatique. Le projet associe commandes de vol, vision accélérée sur FPGA et imagerie thermique.": "Since September 2026, our team of five has been working on an autonomous drone for our Computer Engineering capstone. The project combines flight controls, FPGA-accelerated vision and thermal imaging.",
+  "Depuis septembre 2026, notre équipe de cinq travaille sur un drone autonome dans le cadre du capstone en génie informatique. Le projet associe commandes de vol, vision accélérée sur FPGA et imagerie thermique.":
+    "Since September 2026, our team of five has been working on an autonomous drone for our Computer Engineering capstone. The project combines flight controls, FPGA-accelerated vision and thermal imaging.",
   "Mon rôle : commandes et simulation": "My role: controls and simulation",
-  "Je suis responsable des commandes de vol et de la simulation avec PX4 SITL dans Gazebo. Cet environnement permet de travailler sur le comportement du drone en simulation avant les essais physiques.": "I am responsible for flight controls and simulation using PX4 SITL in Gazebo. This environment lets us work on the drone’s behaviour in simulation before physical testing.",
+  "Je suis responsable des commandes de vol et de la simulation avec PX4 SITL dans Gazebo. Cet environnement permet de travailler sur le comportement du drone en simulation avant les essais physiques.":
+    "I am responsible for flight controls and simulation using PX4 SITL in Gazebo. This environment lets us work on the drone’s behaviour in simulation before physical testing.",
   "L’intégration embarquée": "Onboard integration",
-  "Mon périmètre comprend les échanges MAVLink / ROS 2 avec le Raspberry Pi 5. Le travail d’intégration relie la partie vol aux autres sous-systèmes développés par l’équipe. Le projet est en cours de développement.": "My scope includes MAVLink / ROS 2 communication with the Raspberry Pi 5. Integration connects flight controls with the other subsystems developed by the team. The project is currently in development.",
-  "Robotique, simulation et systèmes embarqués.": "Robotics, simulation and embedded systems.",
-  "Illustration du réseau Overy : un proxy relie le lobby, les mini-jeux et les modes de jeu à des données MySQL partagées.": "Illustration of the Overy network: a proxy connects the lobby, minigames and game modes with shared MySQL data.",
+  "Mon périmètre comprend les échanges MAVLink / ROS 2 avec le Raspberry Pi 5. Le travail d’intégration relie la partie vol aux autres sous-systèmes développés par l’équipe. Le projet est en cours de développement.":
+    "My scope includes MAVLink / ROS 2 communication with the Raspberry Pi 5. Integration connects flight controls with the other subsystems developed by the team. The project is currently in development.",
+  "Robotique, simulation et systèmes embarqués.":
+    "Robotics, simulation and embedded systems.",
+  "Illustration du réseau Overy : un proxy relie le lobby, les mini-jeux et les modes de jeu à des données MySQL partagées.":
+    "Illustration of the Overy network: a proxy connects the lobby, minigames and game modes with shared MySQL data.",
   "MINI-JEUX": "MINIGAMES",
   "MODES DE JEU": "GAME MODES",
   "données partagées": "shared data",
-  "Un univers de jeu. Tout un système derrière.": "A gaming world. A whole system behind it.",
-  "Illustration du réseau multi-serveurs": "Illustration of the multi-server network",
+  "Un univers de jeu. Tout un système derrière.":
+    "A gaming world. A whole system behind it.",
+  "Illustration du réseau multi-serveurs":
+    "Illustration of the multi-server network",
   "Étudiant en génie informatique à uOttawa et cofondateur de RZO Sports. Du backend Java à une plateforme multijoueur monétisée, je construis des produits et les fais vivre en production.":
     "Computer Engineering student at uOttawa and RZO Sports co-founder. From Java backend development to a monetized multiplayer platform, I build products and run them in production.",
   "GÉNIE INFORMATIQUE · UOTTAWA": "COMPUTER ENGINEERING · UOTTAWA",
@@ -283,7 +342,8 @@ export const english = {
   "Agrandir la capture": "Enlarge screenshot",
   "Page d’accueil de RZO Sports : réserver un terrain, rejoindre ou créer une partie, puis choisir son sport.":
     "RZO Sports homepage: book a field, join or create a game, then pick a sport.",
-  "01 / ACCUEIL JOUEURS · RZOSPORTS.COM": "01 / PLAYER HOMEPAGE · RZOSPORTS.COM",
+  "01 / ACCUEIL JOUEURS · RZOSPORTS.COM":
+    "01 / PLAYER HOMEPAGE · RZOSPORTS.COM",
   "Page RZO pour les complexes : tableau de bord et notifications de nouvelle demande, réservation garantie et partie complète.":
     "RZO for venues page: dashboard with new request, guaranteed booking and full game notifications.",
   "02 / L’OFFRE POUR LES COMPLEXES": "02 / THE OFFER FOR VENUES",
@@ -394,7 +454,8 @@ export const english = {
   "Des accès et des permissions": "Access and permissions",
   "Spring Security, JWT et connexion Google OAuth2. Les services vérifient la propriété des ressources, et chaque rôle d’un complexe choisit parmi 20 permissions : la réception peut réserver sans voir les revenus.":
     "Spring Security, JWT and Google OAuth2 sign-in. Services check resource ownership, and each venue role picks from 20 permissions: the front desk can book without seeing revenue.",
-  "Une entreprise qui respecte ses obligations": "A company that meets its obligations",
+  "Une entreprise qui respecte ses obligations":
+    "A company that meets its obligations",
   "Consentements horodatés et versionnés, entente de partenariat exigée avant de gérer un complexe, suppression de compte anonymisée et déclaration des taxes de vente, en tenant compte de la LPRPDE et de la Loi 25 du Québec.":
     "Timestamped, versioned consent records, a partner agreement required before managing a venue, anonymized account deletion and sales tax declarations, with PIPEDA and Québec’s Law 25 in mind.",
   Consentements: "Consent records",
@@ -437,7 +498,8 @@ export const english = {
     "Local videos loaded on click and paused off screen, local fonts, keyboard navigation and a sharing card featuring the salon’s logo.",
 
   // Client websites — October 2026 update
-  "Et deux sites livrés à des clients.": "Plus two websites delivered to clients.",
+  "Et deux sites livrés à des clients.":
+    "Plus two websites delivered to clients.",
   "AUTRES RÉALISATIONS / SITES CLIENTS": "MORE WORK / CLIENT WEBSITES",
   "Un site vitrine expressif, livré et vendu au restaurant, qui fait découvrir le menu, donne envie de passer au restaurant et guide vers la commande en ligne.":
     "An expressive showcase site, delivered and sold to the restaurant, that presents the menu, makes people want to visit and guides them to online ordering.",
@@ -556,7 +618,8 @@ export const english = {
     "Overy brought together more than 10,000 players, reached #7 worldwide and #2 in France, and generated more than €10,000 in revenue. It taught me a product’s full lifecycle: build, test, deploy, maintain and decide from data.",
 
   // Round Style and client domains — October 2026 update
-  "Et trois sites livrés à des clients.": "Plus three websites delivered to clients.",
+  "Et trois sites livrés à des clients.":
+    "Plus three websites delivered to clients.",
   "et un parcours clair vers la réservation ou l’achat.":
     "and a clear path to booking or buying.",
   "Marque de vêtements · Ottawa": "Clothing brand · Ottawa",
@@ -575,82 +638,54 @@ export const english = {
     "Commissioned and bought by the brand, launched on its own domain with Cloudflare.",
 
   // RZO decisions and Overy architecture — October 2026 update
-  "Du produit":
-    "From product",
-  "à la production.":
-    "to production.",
-  "Toutes les briques de RZO":
-    "Every building block of RZO",
+  "Du produit": "From product",
+  "à la production.": "to production.",
+  "Toutes les briques de RZO": "Every building block of RZO",
   "Clients, réservations, paiements, accès, conformité & tests":
     "Clients, bookings, payments, access, compliance & tests",
-  "SOUS LE CAPOT / ARCHITECTURE":
-    "UNDER THE HOOD / ARCHITECTURE",
-  "Deux applications, une API qui décide.":
-    "Two apps, one API that decides.",
+  "SOUS LE CAPOT / ARCHITECTURE": "UNDER THE HOOD / ARCHITECTURE",
+  "Deux applications, une API qui décide.": "Two apps, one API that decides.",
   "Architecture RZO : le site React et l’app mobile appellent l’API Spring Boot, hébergée sur AWS EC2 derrière Nginx. L’API lit et écrit dans MySQL et échange avec Stripe, qui lui renvoie des webhooks.":
     "RZO architecture: the React site and the mobile app call the Spring Boot API, hosted on AWS EC2 behind Nginx. The API reads and writes MySQL and talks to Stripe, which sends webhooks back.",
-  "CLIENTS":
-    "CLIENTS",
-  "Site web":
-    "Website",
-  "App mobile":
-    "Mobile app",
-  "HTTPS":
-    "HTTPS",
-  "point d’entrée, reverse proxy":
-    "entry point, reverse proxy",
-  "API Spring Boot":
-    "Spring Boot API",
+  CLIENTS: "CLIENTS",
+  "Site web": "Website",
+  "App mobile": "Mobile app",
+  HTTPS: "HTTPS",
+  "point d’entrée, reverse proxy": "entry point, reverse proxy",
+  "API Spring Boot": "Spring Boot API",
   "droits, disponibilités, prix, confirmation, paiements":
     "permissions, availability, pricing, confirmation, payments",
-  "SQL":
-    "SQL",
-  "appels · webhooks":
-    "calls · webhooks",
-  "DONNÉES & PAIEMENTS":
-    "DATA & PAYMENTS",
-  "utilisateurs, terrains, réservations":
-    "users, courts, bookings",
+  SQL: "SQL",
+  "appels · webhooks": "calls · webhooks",
+  "DONNÉES & PAIEMENTS": "DATA & PAYMENTS",
+  "utilisateurs, terrains, réservations": "users, courts, bookings",
   "préautorisations, versements aux complexes":
     "pre-authorizations, payouts to venues",
   "Seule l’API parle à MySQL et à Stripe. Stripe la prévient de l’issue d’un paiement par webhook, dont la signature est vérifiée.":
     "Only the API talks to MySQL and Stripe. Stripe reports each payment outcome through a webhook whose signature is verified.",
-  "TROIS DÉCISIONS TECHNIQUES":
-    "THREE TECHNICAL DECISIONS",
-  "Deux joueurs, un même créneau":
-    "Two players, one time slot",
+  "TROIS DÉCISIONS TECHNIQUES": "THREE TECHNICAL DECISIONS",
+  "Deux joueurs, un même créneau": "Two players, one time slot",
   "Alice et Karim veulent le même terrain de 18 h à 19 h. Sans protection, les deux vérifient « libre » avant que l’autre n’enregistre : deux réservations confirmées.":
     "Alice and Karim want the same court from 6 to 7 p.m. Without protection, both see “free” before the other saves: two confirmed bookings.",
-  "prend le verrou du terrain":
-    "takes the court lock",
-  "attend son tour":
-    "waits for his turn",
-  "vérifie, confirme, libère":
-    "checks, confirms, releases",
-  "voit le conflit : refusé":
-    "sees the conflict: rejected",
+  "prend le verrou du terrain": "takes the court lock",
+  "attend son tour": "waits for his turn",
+  "vérifie, confirme, libère": "checks, confirms, releases",
+  "voit le conflit : refusé": "sees the conflict: rejected",
   "Vérification et confirmation se font dans une même transaction, avec un verrou pessimiste sur la ligne du terrain : elle existe même quand aucune réservation n’existe encore. Des tests lancent des demandes simultanées et vérifient qu’une seule est confirmée.":
     "Checking and confirming happen in one transaction, with a pessimistic lock on the court’s row: it exists even when no booking does yet. Tests fire simultaneous requests and check that only one is confirmed.",
   "Compromis : deux confirmations sur un même terrain passent l’une après l’autre, même pour des créneaux différents.":
     "Trade-off: two confirmations on the same court run one after the other, even for different time slots.",
-  "Tests de concurrence":
-    "Concurrency tests",
-  "Réessayer sans débiter deux fois":
-    "Retry without charging twice",
+  "Tests de concurrence": "Concurrency tests",
+  "Réessayer sans débiter deux fois": "Retry without charging twice",
   "Le serveur demande une opération à Stripe, la connexion coupe avant la réponse. A-t-elle réussi ? Pour pouvoir réessayer sans risque, chaque opération porte une clé stable, déduite de la réservation.":
     "The server asks Stripe for an operation and the connection drops before the answer. Did it succeed? To retry safely, each operation carries a stable key derived from the booking.",
-  "préautoriser la carte":
-    "pre-authorize the card",
-  "débiter après la partie":
-    "charge after the game",
-  "libérer l’empreinte":
-    "release the hold",
+  "préautoriser la carte": "pre-authorize the card",
+  "débiter après la partie": "charge after the game",
+  "libérer l’empreinte": "release the hold",
   "Une même clé renvoyée, et Stripe restitue le résultat déjà enregistré au lieu de recommencer. Une clé aléatoire à chaque tentative supprimerait cette protection.":
     "Send the same key again and Stripe returns the result it already recorded instead of starting over. A random key on each attempt would remove that protection.",
-  "Clés d’idempotence":
-    "Idempotency keys",
-  "Mettre l’API en ligne":
-    "Shipping the API",
+  "Clés d’idempotence": "Idempotency keys",
+  "Mettre l’API en ligne": "Shipping the API",
   "L’image Docker est construite en deux étapes : Java 21 et Gradle compilent, puis seul le JRE et l’application partent en production. Le conteneur tourne avec un utilisateur non-root.":
     "The Docker image is built in two stages: Java 21 and Gradle compile, then only the JRE and the app ship to production. The container runs as a non-root user.",
   "Docker Compose décrit les services, le réseau et les redémarrages sur une instance AWS EC2. Nginx reçoit les requêtes publiques et les transmet à Spring Boot.":
@@ -659,54 +694,32 @@ export const english = {
     "ARCHITECTURE · MINECRAFT BEDROCK · 2019–2023",
   "Architecture Overy : les joueurs passent par un proxy vers le lobby, Skyblock ou les mini-jeux. Ces serveurs partagent leur état dans MySQL via un cache et des écritures asynchrones, et sont reliés par une messagerie. Des services gèrent achats, sanctions, matchmaking et statistiques, avec la boutique Tebex, le panel du staff et le bot Discord.":
     "Overy architecture: players go through a proxy to the lobby, Skyblock or minigames. These servers share state in MySQL through a cache and async writes, and are linked by messaging. Services handle purchases, sanctions, matchmaking and statistics, alongside the Tebex store, the staff panel and the Discord bot.",
-  "ENTRÉE":
-    "ENTRY",
-  "Joueurs":
-    "Players",
-  "jusqu’à 200 en même temps":
-    "up to 200 at once",
-  "transfère d’un serveur à l’autre":
-    "moves players between servers",
-  "SERVEURS DE JEU":
-    "GAME SERVERS",
-  "accueil et navigation":
-    "welcome and navigation",
-  "mode de jeu persistant":
-    "persistent game mode",
-  "Mini-jeux":
-    "Minigames",
-  "instances de partie":
-    "match instances",
+  ENTRÉE: "ENTRY",
+  Joueurs: "Players",
+  "jusqu’à 200 en même temps": "up to 200 at once",
+  "transfère d’un serveur à l’autre": "moves players between servers",
+  "SERVEURS DE JEU": "GAME SERVERS",
+  "accueil et navigation": "welcome and navigation",
+  "mode de jeu persistant": "persistent game mode",
+  "Mini-jeux": "Minigames",
+  "instances de partie": "match instances",
   "Messagerie entre serveurs : événements, grades, commandes, cache à actualiser":
     "Cross-server messaging: events, ranks, commands, cache refreshes",
-  "PERSISTANCE":
-    "PERSISTENCE",
-  "Cache + écritures asynchrones":
-    "Cache + async writes",
-  "regroupées, une à la fois par joueur":
-    "batched, one at a time per player",
-  "état partagé, source de vérité":
-    "shared state, source of truth",
-  "SERVICES":
-    "SERVICES",
-  "Services Overy":
-    "Overy services",
+  PERSISTANCE: "PERSISTENCE",
+  "Cache + écritures asynchrones": "Cache + async writes",
+  "regroupées, une à la fois par joueur": "batched, one at a time per player",
+  "état partagé, source de vérité": "shared state, source of truth",
+  SERVICES: "SERVICES",
+  "Services Overy": "Overy services",
   "achats, sanctions, matchmaking, statistiques":
     "purchases, sanctions, matchmaking, statistics",
-  "reliés au proxy et aux serveurs":
-    "linked to the proxy and servers",
-  "achats livrés en jeu":
-    "purchases delivered in game",
-  "Panel staff":
-    "Staff panel",
-  "joueurs et sanctions":
-    "players and sanctions",
-  "Bot Discord":
-    "Discord bot",
-  "communauté et commandes":
-    "community and commands",
-  "Le parcours d’une connexion":
-    "A connection, step by step",
+  "reliés au proxy et aux serveurs": "linked to the proxy and servers",
+  "achats livrés en jeu": "purchases delivered in game",
+  "Panel staff": "Staff panel",
+  "joueurs et sanctions": "players and sanctions",
+  "Bot Discord": "Discord bot",
+  "communauté et commandes": "community and commands",
+  "Le parcours d’une connexion": "A connection, step by step",
   "Le joueur se connecte au proxy, point d’entrée unique.":
     "The player connects to the proxy, the single entry point.",
   "Le matchmaking forme une partie et réserve une instance libre.":
@@ -719,28 +732,20 @@ export const english = {
     "Their changes go through the cache, then get written in the background.",
   "La messagerie prévient les autres serveurs d’actualiser leurs données.":
     "Messaging tells the other servers to refresh their data.",
-  "TROIS DÉFIS TECHNIQUES":
-    "THREE TECHNICAL CHALLENGES",
-  "Cohérence":
-    "Consistency",
-  "Fiabilité":
-    "Reliability",
-  "Garder un seul état juste":
-    "Keeping one correct state",
+  "TROIS DÉFIS TECHNIQUES": "THREE TECHNICAL CHALLENGES",
+  Cohérence: "Consistency",
+  Fiabilité: "Reliability",
+  "Garder un seul état juste": "Keeping one correct state",
   "Deux serveurs pouvaient modifier le même joueur pendant qu’une écriture SQL était en cours. Les écritures d’un même enregistrement passaient une à la fois, les changements simultanés étaient fusionnés (la dernière valeur gagne) et MySQL restait la source de vérité, jamais le cache.":
     "Two servers could change the same player while a SQL write was still running. Writes to the same record went through one at a time, simultaneous changes were merged (last value wins), and MySQL stayed the source of truth, never the cache.",
-  "Ne jamais bloquer le jeu":
-    "Never blocking the game",
+  "Ne jamais bloquer le jeu": "Never blocking the game",
   "La boucle de jeu ne doit pas attendre la base de données. J’ai construit une couche de persistance asynchrone : requêtes avec promesses, cache write-behind et regroupement de plusieurs mises à jour en une seule écriture pour réduire la charge SQL.":
     "The game loop must never wait on the database. I built an async persistence layer: promise-based queries, a write-behind cache and batching several updates into one write to cut SQL load.",
-  "Tenir en production":
-    "Holding up in production",
+  "Tenir en production": "Holding up in production",
   "Un achat ne doit pas être livré deux fois, une reconnexion ne doit rien faire perdre. Transactions et gestion explicite des erreurs côté données, anti-cheat maison et protection qui a tenu face à de vraies attaques DDoS côté exploitation.":
     "A purchase must not be delivered twice, and reconnecting must not lose anything. Transactions and explicit error handling on the data side; an in-house anti-cheat and protection that held up against real DDoS attacks on the operations side.",
-  "EXEMPLE DE FONCTIONNALITÉ COMPLEXE":
-    "A COMPLEX FEATURE",
-  "Des raids qui survivent aux redémarrages.":
-    "Raids that survive restarts.",
+  "EXEMPLE DE FONCTIONNALITÉ COMPLEXE": "A COMPLEX FEATURE",
+  "Des raids qui survivent aux redémarrages.": "Raids that survive restarts.",
   "Un système de raids multijoueur conçu comme une machine à états persistante, couvert par des tests automatisés.":
     "A multiplayer raid system designed as a persistent state machine, covered by automated tests.",
   "États durables : préparation, activation, fin, annulation":
@@ -755,18 +760,15 @@ export const english = {
     "Temporary builds logged and cleaned up after a crash",
   "Discord intégré sans rendre le jeu dépendant de Discord":
     "Discord integrated without making the game depend on it",
-  "D’un serveur à une plateforme":
-    "From a server to a platform",
+  "D’un serveur à une plateforme": "From a server to a platform",
   "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes en production. J’assurais la direction du produit autant que son développement.":
     "Overy started as a Minecraft server when I was 12 or 13. As the community grew, we had to attract and retain players, build features, manage purchases and fix production issues. I led the product as much as its development.",
-  "Un contenu propre à Overy":
-    "Content unique to Overy",
+  "Un contenu propre à Overy": "Content unique to Overy",
   "Blocs, objets, entités, interfaces, modèles et animations sur mesure. Il fallait faire coopérer la logique serveur, les paquets réseau Bedrock et les resource packs des joueurs, avec des correspondances générées automatiquement.":
     "Custom blocks, items, entities, interfaces, models and animations. Server logic, Bedrock network packets and players’ resource packs had to work together, with mappings generated automatically.",
   "La boutique Tebex livrait les achats en jeu automatiquement. Un panel web permettait au staff de gérer joueurs, sanctions et statistiques, et un bot Discord reliait la communauté au serveur. Les statistiques d’achat et d’activité guidaient les offres et les priorités.":
     "The Tebex store delivered purchases in game automatically. A web panel let staff manage players, sanctions and statistics, and a Discord bot connected the community to the server. Purchase and activity data guided offerings and priorities.",
-  "Diriger plus de 50 personnes":
-    "Leading more than 50 people",
+  "Diriger plus de 50 personnes": "Leading more than 50 people",
   "Au fil du projet, j’ai recruté et dirigé des développeurs, des modélisateurs 3D et des artistes de textures. Je définissais la roadmap, répartissais le travail, révisais le code, préparais les mises à jour et gérais les incidents en production.":
     "Over the project, I recruited and led developers, 3D modelers and texture artists. I set the roadmap, assigned work, reviewed code, prepared updates and handled production incidents.",
 };

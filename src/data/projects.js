@@ -233,45 +233,34 @@ export const softwareProjects = [
     name: "Overy",
     category: "BACKEND / SYSTÈMES DISTRIBUÉS / PRODUIT EN PRODUCTION",
     role: "Fondateur & développeur principal",
-    headline: "D’un serveur Minecraft à un réseau multijoueur classé 7e mondial.",
+    headline:
+      "D’un serveur Minecraft à un réseau multijoueur classé 7e mondial.",
     description:
-      "J’ai fondé, développé et exploité Overy : un réseau de serveurs Minecraft Bedrock interconnectés, avec son core maison, ses centaines de plugins, ses services backend, sa base de données, sa boutique et ses outils internes. J’ai dirigé une équipe de plus de 50 personnes et utilisé les données d’activité pour faire évoluer le produit.",
+      "Un réseau Minecraft Bedrock composé de plusieurs serveurs reliés par un proxy, avec données partagées, matchmaking, boutique automatisée et outils d’administration.",
     technologies: ["Java", "PHP", "MySQL", "Node.js", "Linux"],
     results: [
-      ["10 000+", "joueurs, jusqu’à 200 connectés en même temps"],
+      ["10 000+", "joueurs accueillis"],
+      ["200", "joueurs simultanés au pic"],
       ["10 000 €+", "de chiffre d’affaires"],
-      ["7e mondial", "et 2e en France"],
+      ["50+", "personnes dans l’équipe"],
     ],
     challenges: [
       [
         "Cohérence",
-        "Garder un seul état juste",
-        "Deux serveurs pouvaient modifier le même joueur pendant qu’une écriture SQL était en cours. Les écritures d’un même enregistrement passaient une à la fois, les changements simultanés étaient fusionnés (la dernière valeur gagne) et MySQL restait la source de vérité, jamais le cache.",
+        "Cohérence des données",
+        "Sérialisation des écritures d’un même joueur et fusion des modifications concurrentes, avec MySQL comme source de vérité.",
       ],
       [
         "Performance",
-        "Ne jamais bloquer le jeu",
-        "La boucle de jeu ne doit pas attendre la base de données. J’ai construit une couche de persistance asynchrone : requêtes avec promesses, cache write-behind et regroupement de plusieurs mises à jour en une seule écriture pour réduire la charge SQL.",
+        "Performance temps réel",
+        "Requêtes asynchrones, cache write-behind et regroupement des mises à jour pour ne pas bloquer la boucle de jeu.",
       ],
       [
         "Fiabilité",
-        "Tenir en production",
-        "Un achat ne doit pas être livré deux fois, une reconnexion ne doit rien faire perdre. Transactions et gestion explicite des erreurs côté données, anti-cheat maison et protection qui a tenu face à de vraies attaques DDoS côté exploitation.",
+        "Exploitation en production",
+        "Livraison automatisée des achats, anti-cheat, gestion des erreurs et protection face à de véritables attaques DDoS.",
       ],
     ],
-    feature: {
-      eyebrow: "EXEMPLE DE FONCTIONNALITÉ COMPLEXE",
-      title: "Des raids qui survivent aux redémarrages.",
-      text: "Un système de raids multijoueur conçu comme une machine à états persistante, couvert par des tests automatisés.",
-      points: [
-        "États durables : préparation, activation, fin, annulation",
-        "Reprise après un redémarrage, délais enregistrés",
-        "Permissions vérifiées à chaque action",
-        "Protection contre les actions simultanées",
-        "Constructions temporaires journalisées, nettoyées après une panne",
-        "Discord intégré sans rendre le jeu dépendant de Discord",
-      ],
-    },
     links: [
       { label: "Voir la boutique", href: "https://overy.tebex.io/" },
       {
@@ -286,22 +275,12 @@ export const softwareProjects = [
       text: "Les joueurs achètent des OveryCoins sur la boutique Tebex, puis les utilisent en jeu pour obtenir des grades, des clés et des éléments de personnalisation. La boutique annonce une livraison automatique sur le serveur à partir du pseudo renseigné.",
       caption: "Boutique Tebex · capture mobile du 17 septembre 2026",
     },
+    leadership:
+      "J’ai piloté la roadmap, les mises en production et une équipe de plus de 50 développeurs, modélisateurs 3D et artistes. Le panel du staff, le bot Discord et les statistiques d’activité permettaient d’exploiter et de faire évoluer le réseau.",
     details: [
       [
-        "D’un serveur à une plateforme",
-        "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il fallait attirer et fidéliser les joueurs, développer des fonctionnalités, gérer les achats et corriger les problèmes en production. J’assurais la direction du produit autant que son développement.",
-      ],
-      [
-        "Un contenu propre à Overy",
-        "Blocs, objets, entités, interfaces, modèles et animations sur mesure. Il fallait faire coopérer la logique serveur, les paquets réseau Bedrock et les resource packs des joueurs, avec des correspondances générées automatiquement.",
-      ],
-      [
-        "Des outils autour du jeu",
-        "La boutique Tebex livrait les achats en jeu automatiquement. Un panel web permettait au staff de gérer joueurs, sanctions et statistiques, et un bot Discord reliait la communauté au serveur. Les statistiques d’achat et d’activité guidaient les offres et les priorités.",
-      ],
-      [
-        "Diriger plus de 50 personnes",
-        "Au fil du projet, j’ai recruté et dirigé des développeurs, des modélisateurs 3D et des artistes de textures. Je définissais la roadmap, répartissais le travail, révisais le code, préparais les mises à jour et gérais les incidents en production.",
+        "Les débuts",
+        "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il est devenu un produit dont j’assurais la direction et le développement.",
       ],
     ],
   },
@@ -314,7 +293,14 @@ export const softwareProjects = [
     headline: "De la simulation au contrôle d’un drone autonome.",
     description:
       "Un projet de fin d’études mené à cinq : un drone autonome combinant vision accélérée sur FPGA et imagerie thermique. Je suis responsable des commandes de vol, de la simulation et de leur intégration avec le Raspberry Pi 5.",
-    technologies: ["PX4", "Gazebo", "MAVLink", "ROS 2", "Raspberry Pi 5", "FPGA"],
+    technologies: [
+      "PX4",
+      "Gazebo",
+      "MAVLink",
+      "ROS 2",
+      "Raspberry Pi 5",
+      "FPGA",
+    ],
     results: [
       ["5", "membres dans l’équipe"],
       ["PX4 / Gazebo", "simulation de vol SITL"],

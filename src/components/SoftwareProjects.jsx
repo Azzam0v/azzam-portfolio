@@ -53,18 +53,10 @@ export default function SoftwareProjects() {
               </div>
             </>
           )}
-          {project.feature && (
-            <div className="software-feature">
-              <div>
-                <p className="eyebrow">{project.feature.eyebrow}</p>
-                <h4>{project.feature.title}</h4>
-                <p>{project.feature.text}</p>
-              </div>
-              <ul>
-                {project.feature.points.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
+          {project.leadership && (
+            <div className="software-leadership">
+              <h4>{t("Produit et leadership")}</h4>
+              <p className="muted">{project.leadership}</p>
             </div>
           )}
           {project.contributions && (

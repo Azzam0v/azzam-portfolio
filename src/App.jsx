@@ -194,9 +194,7 @@ export default function App() {
               <h2 id="work-title">
                 {t("Du produit")}
                 <br />
-                <span className="muted-heading">
-                  {t("à la production.")}
-                </span>
+                <span className="muted-heading">{t("à la production.")}</span>
               </h2>
               <p>
                 {t("Produit full-stack. Backend en production.")}
@@ -309,41 +307,18 @@ export default function App() {
                 </div>
               </div>
               <div>
-                <p className="story-lead">
+                <p className="muted">
                   {t(
-                    "Notre ambition : révolutionner la façon de vivre le sport et de créer du lien à Ottawa–Gatineau.",
+                    "Avec mon cofondateur Mehdi Semmar, nous avons rencontré des gestionnaires de complexes sportifs pour comprendre leurs problèmes de réservation, de paiement et d’organisation. Ces échanges ont conduit à une plateforme commune pour les joueurs et les complexes.",
                   )}
                 </p>
                 <p className="muted">
                   {t(
-                    "J’ai cofondé RZO Sports avec mon ami Mehdi Semmar à partir d’un constat simple : les joueurs et les centres sportifs avaient besoin d’un même espace pour se retrouver, réserver et organiser le jeu.",
-                  )}
-                </p>
-                <p className="muted">
-                  {t(
-                    "Nous avons rencontré des gestionnaires, au téléphone et sur place. Certains fonctionnaient encore par courriel, d’autres avec des outils peu adaptés. Ces échanges ont guidé la création d’un premier produit, testé auprès de vrais utilisateurs.",
-                  )}
-                </p>
-                <p className="muted">
-                  {t(
-                    "Le premier prototype est devenu un vrai produit : une réservation pensée d’abord pour le joueur, un logiciel de gestion complet pour les complexes et un modèle simple. Les complexes ne paient aucun abonnement ; des frais de service de 1 % s’ajoutent au prix payé par les joueurs.",
-                  )}
-                </p>
-                <p className="muted">
-                  {t(
-                    "Je m’investis dans ce projet sur la durée, de la réflexion produit au développement full-stack. Aujourd’hui, RZO Sports Inc. est une entreprise incorporée, et nous développons notre réseau de centres partenaires, une rencontre à la fois.",
+                    "Le prototype est devenu un produit composé d’un site web, d’une API et d’une application mobile. RZO Sports est aujourd’hui une entreprise incorporée, avec un modèle sans abonnement pour les complexes : des frais de service de 1 % sont ajoutés au prix payé par les joueurs.",
                   )}
                 </p>
               </div>
             </div>
-            <dl className="rzo-facts">
-              {localizedRzo.facts.map(([value, label]) => (
-                <div key={value}>
-                  <dt>{label}</dt>
-                  <dd>{value}</dd>
-                </div>
-              ))}
-            </dl>
             <div className="milestones">
               <div>
                 <span className="milestone-value">{t("Startup Garage")}</span>
@@ -363,15 +338,6 @@ export default function App() {
                   )}
                 </p>
               </div>
-              <div>
-                <span className="milestone-value">{t("Shopify Builders")}</span>
-                <h4>{t("Le produit face à son public")}</h4>
-                <p>
-                  {t(
-                    "Présentation de RZO et échanges avec d’autres personnes qui construisent leurs entreprises.",
-                  )}
-                </p>
-              </div>
             </div>
             <div className="product-gallery">
               <div className="product-gallery-heading">
@@ -379,13 +345,10 @@ export default function App() {
                 <p>{t("La nouvelle interface de RZO Sports, en ligne.")}</p>
               </div>
               <div className="product-shots">
-                {localizedRzo.shots.map((shot) => {
+                {localizedRzo.shots.slice(0, 2).map((shot) => {
                   const src = `${import.meta.env.BASE_URL}${shot.image.replace("{lang}", language)}`;
                   return (
-                    <figure
-                      key={shot.image}
-                      className={shot.wide ? "is-wide" : undefined}
-                    >
+                    <figure key={shot.image} className="rzo-web-shot">
                       <a
                         href={src}
                         target="_blank"
@@ -409,12 +372,11 @@ export default function App() {
                 <div className="rzo-mobile-copy">
                   <p className="eyebrow">{t("APP MOBILE · iOS & ANDROID")}</p>
                   <h4>{localizedRzo.mobile.title}</h4>
-                  <p>{localizedRzo.mobile.text}</p>
-                  <ul>
-                    {localizedRzo.mobile.points.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
+                  <p>
+                    {t(
+                      "Une app iOS et Android en développement avec React Native et Expo, sur la même API : découvrir les complexes, réserver et payer depuis son téléphone.",
+                    )}
+                  </p>
                   <div className="tags">
                     {["React Native", "Expo", "TypeScript", "Stripe"].map(
                       (tag) => (
@@ -424,18 +386,20 @@ export default function App() {
                   </div>
                 </div>
                 <div className="rzo-phones">
-                  {localizedRzo.mobile.shots.map(([screen, label]) => (
-                    <figure key={screen}>
-                      <img
-                        src={`${import.meta.env.BASE_URL}images/rzo-mobile-${screen}-${language}.webp`}
-                        alt={`${t("Écran de l’app mobile RZO Sports")} : ${label}`}
-                        width="600"
-                        height="1162"
-                        loading="lazy"
-                      />
-                      <figcaption>{label}</figcaption>
-                    </figure>
-                  ))}
+                  {localizedRzo.mobile.shots
+                    .slice(0, 1)
+                    .map(([screen, label]) => (
+                      <figure key={screen}>
+                        <img
+                          src={`${import.meta.env.BASE_URL}images/rzo-mobile-${screen}-${language}.webp`}
+                          alt={`${t("Écran de l’app mobile RZO Sports")} : ${label}`}
+                          width="600"
+                          height="1162"
+                          loading="lazy"
+                        />
+                        <figcaption>{label}</figcaption>
+                      </figure>
+                    ))}
                 </div>
               </div>
               <a
@@ -448,52 +412,7 @@ export default function App() {
                 <ArrowUpRight size={14} />
               </a>
             </div>
-            <div className="feature-grid">
-              {localizedRzo.features.map(([n, title, text]) => (
-                <div key={n}>
-                  <span className="feature-number">
-                    {n} {t("/")}
-                  </span>
-                  <h4>{title}</h4>
-                  <p>{text}</p>
-                </div>
-              ))}
-            </div>
             <RzoArchitecture />
-            <details className="engineering">
-              <summary>
-                <span>
-                  <Code2 size={20} /> {t("Toutes les briques de RZO")}{" "}
-                  <small>{t("Clients, réservations, paiements, accès, conformité & tests")}</small>
-                </span>
-                <Plus size={22} />
-              </summary>
-              <div className="engineering-content">
-                <div className="engineering-grid">
-                  {localizedRzo.engineering.map((item) => (
-                    <div key={item.title}>
-                      <h4>{item.title}</h4>
-                      <p>{item.text}</p>
-                      <div className="tags">
-                        {item.tags.map((tag) => (
-                          <span key={tag}>{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="engineering-footer">
-                  <p>
-                    {t(
-                      "Décrit à partir du code des trois dépôts, privés, de RZO Sports. Visite technique possible en entretien.",
-                    )}
-                  </p>
-                  <ExternalLink href={rzo.venues}>
-                    {t("Voir l’offre pour les complexes")}
-                  </ExternalLink>
-                </div>
-              </div>
-            </details>
           </details>
           <SoftwareProjects />
           <div className="sites-heading">

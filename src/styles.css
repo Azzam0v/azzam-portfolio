@@ -2081,7 +2081,10 @@ a:not(.button):hover {
 }
 .rzo-arch-flow {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1.25fr) 96px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 70px minmax(0, 1.25fr) 96px minmax(
+      0,
+      1fr
+    );
   align-items: center;
 }
 .rzo-arch-col {
@@ -2320,38 +2323,111 @@ a:not(.button):hover {
   }
 }
 
-/* Overy — architecture diagram (Oct. 2026) */
-.overy-arch {
-  display: grid;
-  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr);
-  gap: 26px;
-  padding: 8px 28px 28px;
-}
-.overy-main,
-.overy-side {
+/* Compact case studies */
+.overy-flow {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-.overy-side {
-  padding-left: 26px;
-  border-left: 1px dashed #d1e6ba40;
-}
-.overy-layer {
-  font-size: 9px;
-  letter-spacing: 1.4px;
-  color: #a9bfa2;
-}
-.overy-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 56px minmax(0, 1fr);
   align-items: center;
+  padding: 8px 28px 24px;
+  text-align: center;
 }
-.overy-servers {
+.overy-flow > .overy-node {
+  width: min(100%, 360px);
+}
+.overy-connector {
+  color: #bbdf8d;
+  font-size: 22px;
+  line-height: 1.2;
+}
+.overy-game-servers {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: 14px;
+  width: min(100%, 640px);
+  position: relative;
+  padding-top: 14px;
+  border-top: 1px solid #bbdf8d99;
 }
+.overy-game-servers .overy-node::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -15px;
+  height: 14px;
+  border-left: 1px solid #bbdf8d99;
+}
+.overy-integrations {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr 28px 1fr;
+  gap: 12px;
+  align-items: center;
+  text-align: center;
+  margin: 0 28px 24px;
+  padding-top: 24px;
+  border-top: 1px solid #d1e6ba33;
+}
+.overy-tools {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+.overy-integration-arrow {
+  color: #bbdf8d;
+  font-size: 22px;
+}
+.software-leadership {
+  margin: 26px 0;
+  max-width: 850px;
+}
+.software-leadership h4 {
+  margin-bottom: 12px;
+}
+#overy .project-results {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.rzo-case-study .milestones {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.rzo-case-study .rzo-phones {
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.rzo-case-study .rzo-phones figure {
+  width: min(100%, 235px);
+}
+@media (max-width: 760px) {
+  #overy .project-results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .rzo-case-study .milestones {
+    grid-template-columns: 1fr;
+  }
+  .overy-flow {
+    padding: 8px 18px 24px;
+  }
+  .overy-game-servers {
+    gap: 6px;
+  }
+  .overy-game-servers .overy-node {
+    padding: 12px 3px;
+  }
+  .overy-game-servers .overy-node strong {
+    font-size: 12px;
+  }
+  .overy-integrations {
+    grid-template-columns: 1fr;
+    margin-inline: 18px;
+    gap: 8px;
+  }
+  .overy-tools {
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 11px;
+  }
+  .overy-integration-arrow {
+    transform: rotate(90deg);
+  }
+}
+
 .overy-node {
   position: relative;
   padding: 12px 14px;
@@ -2382,50 +2458,6 @@ a:not(.button):hover {
 .overy-node-ghost {
   background: transparent;
 }
-.overy-arrow {
-  position: relative;
-  height: 2px;
-  margin: 0 8px;
-  background: #bbdf8d99;
-}
-.overy-arrow::after {
-  content: "";
-  position: absolute;
-  right: -2px;
-  top: -4px;
-  border: 5px solid transparent;
-  border-left: 7px solid #bbdf8d99;
-  border-right: 0;
-}
-.overy-arrow > i,
-.overy-down > i,
-.overy-bus > i,
-.overy-tag {
-  display: inline-grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #eef1df;
-  color: #142b24;
-  font-size: 10px;
-  font-style: normal;
-  font-weight: 700;
-}
-.overy-arrow > i {
-  position: absolute;
-  left: calc(50% - 12px);
-  top: -9px;
-}
-.overy-down {
-  display: flex;
-  gap: 6px;
-  align-items: center;
-  height: 26px;
-  padding-left: 30px;
-  border-left: 2px solid #bbdf8d99;
-  margin-left: 24px;
-}
 .overy-bus {
   display: flex;
   align-items: center;
@@ -2436,87 +2468,8 @@ a:not(.button):hover {
   font-size: 11px;
   color: #d9e6cc;
 }
-.overy-tag {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-.overy-side-link {
-  font-size: 10px;
-  color: #a9bfa2;
-  padding: 2px 0 4px;
-}
-.overy-visual figcaption {
-  display: block;
-}
-.overy-journey-title {
-  display: block;
-  margin-bottom: 12px;
-  font-size: 12px;
-  font-weight: 600;
-}
-.overy-journey {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px 26px;
-  margin: 0;
-  padding-left: 18px;
-  font-size: 12px;
-  line-height: 1.6;
-  color: #d9e6cc;
-}
-@media (max-width: 860px) {
-  .overy-arch {
-    grid-template-columns: 1fr;
-  }
-  .overy-side {
-    padding-left: 0;
-    padding-top: 18px;
-    border-left: 0;
-    border-top: 1px dashed #d1e6ba40;
-  }
-  .overy-journey {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (max-width: 760px) {
-  .overy-arch {
-    padding: 4px 18px 20px;
-  }
-  .overy-servers {
-    grid-template-columns: 1fr;
-  }
-  .overy-row {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-  .overy-arrow {
-    width: 2px;
-    height: 22px;
-    margin: 0 0 0 24px;
-  }
-  .overy-arrow::after {
-    right: auto;
-    left: -4px;
-    top: auto;
-    bottom: -4px;
-    border: 5px solid transparent;
-    border-top: 7px solid #bbdf8d99;
-    border-bottom: 0;
-  }
-  .overy-arrow > i {
-    left: 10px;
-    top: 2px;
-  }
-  .overy-journey {
-    grid-template-columns: 1fr;
-  }
-  .overy-visual figcaption {
-    flex-direction: column;
-  }
-}
 
-/* Overy — technical challenges and complex feature */
+/* Overy — technical challenges */
 .software-challenges {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2548,55 +2501,12 @@ a:not(.button):hover {
   font-size: 10px;
   margin: 30px 0 14px;
 }
-.software-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-  gap: 28px;
-  padding: 24px;
-  margin-bottom: 22px;
-  border-radius: 5px;
-  background: var(--ink);
-  color: var(--paper);
-}
-.software-feature .eyebrow {
-  font-size: 10px;
-  color: var(--lime);
-  margin-bottom: 10px;
-}
-.software-feature h4 {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 10px;
-}
-.software-feature p {
-  font-size: 12.5px;
-  line-height: 1.75;
-  color: #c9cbbf;
-  margin: 0;
-}
-.software-feature ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px 20px;
-  margin: 0;
-  padding-left: 16px;
-  font-size: 12.5px;
-  line-height: 1.6;
-  color: #e7e8de;
-}
 @media (max-width: 1000px) {
   .software-challenges {
     grid-template-columns: 1fr;
   }
-  .software-feature {
-    grid-template-columns: 1fr;
-  }
 }
-@media (max-width: 560px) {
-  .software-feature ul {
-    grid-template-columns: 1fr;
-  }
-}
+
 .software-project .overy-visual {
   margin: 0 0 8px;
 }
