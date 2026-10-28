@@ -262,6 +262,7 @@ export const softwareProjects = [
       ],
     ],
     links: [
+      { label: "Site officiel", href: "https://overymc.fr/" },
       { label: "Voir la boutique", href: "https://overy.tebex.io/" },
       {
         label: "Fiche publique du serveur",
@@ -281,6 +282,10 @@ export const softwareProjects = [
       [
         "Les débuts",
         "Overy a commencé comme un serveur Minecraft quand j’avais 12 ou 13 ans. Avec la croissance de la communauté, il est devenu un produit dont j’assurais la direction et le développement.",
+      ],
+      [
+        "Le site officiel",
+        "Un site que j’ai créé en 2026, entièrement alimenté par le serveur : un plugin PHP exporte les données en JSON, un générateur statique en Python construit plus de 160 pages (classements, profils, Bourse en direct, wiki de 151 fiches), puis le site se reconstruit tout seul à chaque redémarrage.",
       ],
     ],
   },

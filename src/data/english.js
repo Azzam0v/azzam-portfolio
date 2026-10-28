@@ -771,4 +771,12 @@ export const english = {
   "Diriger plus de 50 personnes": "Leading more than 50 people",
   "Au fil du projet, j’ai recruté et dirigé des développeurs, des modélisateurs 3D et des artistes de textures. Je définissais la roadmap, répartissais le travail, révisais le code, préparais les mises à jour et gérais les incidents en production.":
     "Over the project, I recruited and led developers, 3D modelers and texture artists. I set the roadmap, assigned work, reviewed code, prepared updates and handled production incidents.",
+
+  // Overy website — October 2026
+  "Site officiel":
+    "Official website",
+  "Le site officiel":
+    "The official website",
+  "Un site que j’ai créé en 2026, entièrement alimenté par le serveur : un plugin PHP exporte les données en JSON, un générateur statique en Python construit plus de 160 pages (classements, profils, Bourse en direct, wiki de 151 fiches), puis le site se reconstruit tout seul à chaque redémarrage.":
+    "A site I built in 2026, fed entirely by the game server: a PHP plugin exports the data as JSON, a Python static-site generator builds 160+ pages (leaderboards, player profiles, a live market and a 151-page wiki), and the site rebuilds itself on every server restart.",
 };
