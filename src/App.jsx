@@ -6,6 +6,7 @@ import {
   ArrowUpRight,
   Check,
   Code2,
+  FileText,
   Github,
   Layers3,
   Linkedin,
@@ -531,12 +532,22 @@ export default function App() {
               <br />
               <strong>{t("Parlons de votre équipe.")}</strong>
             </p>
-            <ExternalLink
-              className="button button-dark"
-              href={profile.linkedin}
-            >
-              <Linkedin size={19} /> {t("Me contacter")}
-            </ExternalLink>
+            <div className="contact-actions">
+              <a
+                className="button button-lime"
+                href={`${import.meta.env.BASE_URL}${profile.resume}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileText size={19} /> {t("Voir mon CV")}
+              </a>
+              <ExternalLink
+                className="button button-dark"
+                href={profile.linkedin}
+              >
+                <Linkedin size={19} /> {t("Me contacter")}
+              </ExternalLink>
+            </div>
           </div>
         </section>
       </main>
@@ -547,6 +558,13 @@ export default function App() {
         <span>{t("Conçu avec intention. Développé avec soin.")}</span>
         <a href={profile.github} target="_blank" rel="noopener noreferrer">
           <Github size={15} /> {t("GitHub")} <ArrowUpRight size={14} />
+        </a>
+        <a
+          href={`${import.meta.env.BASE_URL}${profile.resume}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FileText size={15} /> {t("CV")} <ArrowUpRight size={14} />
         </a>
         <a href="#top" aria-label={t("Retour en haut")}>
           <ArrowUp size={18} aria-hidden="true" />

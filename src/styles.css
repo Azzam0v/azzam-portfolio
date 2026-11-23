@@ -1083,6 +1083,11 @@ details[open] > summary > svg {
   align-items: end;
   gap: 25px;
 }
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 .contact-bottom p {
   font-size: 14px;
   line-height: 1.8;

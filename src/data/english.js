@@ -417,6 +417,8 @@ export const english = {
     "who cares about the product and the details?",
   "Parlons de votre équipe.": "Let’s talk about your team.",
   "Me contacter": "Get in touch",
+  "Voir mon CV": "View my resume",
+  CV: "Resume",
   "Conçu avec intention. Développé avec soin.":
     "Designed with purpose. Developed with care.",
   "Retour en haut": "Back to top",

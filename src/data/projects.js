@@ -3,6 +3,7 @@ export const profile = {
   name: "Azzam El Kettani",
   github: "https://github.com/Azzam0v",
   linkedin: "https://www.linkedin.com/in/azzam-el-kettani-656b3b301/",
+  resume: "Azzam_El_Kettani_Resume.pdf",
 };
 // RZO facts come from the RZO-SPORTS-CLIENT, -SERVER and -MOBILE repositories
 // and from rzosports.com (October 2026). The repositories are private.
