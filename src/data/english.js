@@ -46,6 +46,26 @@ export const english = {
   "Réseau de jeu": "Game network",
   "Achats, administration et communauté reliés au réseau.":
     "Purchases, administration and community connected to the network.",
+  "ARDus — Drone d’intervention d’urgence": "ARDus — Emergency Response Drone",
+  "ROBOTIQUE / INTERFACE DE MISSION / CAPSTONE": "ROBOTICS / MISSION CONTROL / CAPSTONE",
+  "Interface de contrôle de mission · depuis septembre 2026": "Mission-control interface · since September 2026",
+  "Piloter une mission de recherche là où le GPS ne passe plus.": "Running a search mission where GPS no longer reaches.",
+  "Un projet de fin d’études mené à cinq : un drone de recherche et sauvetage conçu pour les sites sans GPS ni liaison radio fiable. Je conçois l’interface de contrôle de mission en React et son lien ROS 2 avec le contrôleur de vol PX4.":
+    "A five-person capstone: a search-and-rescue drone built for sites without GPS or a reliable radio link. I am designing the React mission-control interface and its ROS 2 link to the PX4 flight controller.",
+  "React · ROS 2": "React · ROS 2",
+  "interface de mission": "mission interface",
+  "En conception": "In design",
+  "Conception de l’interface de contrôle de mission en React.": "Designing the React mission-control interface.",
+  "Conception du lien ROS 2 entre l’interface et le contrôleur de vol PX4.": "Designing the ROS 2 link between the interface and the PX4 flight controller.",
+  "Télémétrie qui signale les données périmées quand la liaison est coupée.": "Telemetry that flags stale data when the link drops.",
+  "Depuis septembre 2026, notre équipe de cinq conçoit ARDus, un drone d’intervention d’urgence pour la recherche et le sauvetage dans des sites où le GPS et les communications radio ne sont pas fiables.":
+    "Since September 2026, our team of five has been designing ARDus, an emergency response drone for search and rescue in sites where GPS and radio communications are unreliable.",
+  "Mon rôle : le contrôle de mission": "My role: mission control",
+  "Je conçois l’interface React qui permet de suivre et de piloter la mission, ainsi que son lien ROS 2 avec le contrôleur de vol PX4.":
+    "I am designing the React interface used to follow and run the mission, and its ROS 2 link to the PX4 flight controller.",
+  "Une interface honnête sur ce qu’elle sait": "An interface honest about what it knows",
+  "Quand la liaison avec le drone se coupe, la télémétrie affichée est signalée comme périmée plutôt que présentée comme à jour. Le projet est en phase de conception.":
+    "When the link to the drone drops, the telemetry on screen is flagged as stale instead of being shown as current. The project is in the design phase.",
   "Drone autonome — Capstone": "Autonomous Drone — Capstone",
   "ROBOTIQUE / COMMANDES DE VOL / SYSTÈMES EMBARQUÉS":
     "ROBOTICS / FLIGHT CONTROLS / EMBEDDED SYSTEMS",
