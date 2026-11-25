@@ -242,7 +242,7 @@ export const softwareProjects = [
     results: [
       ["10 000+", "joueurs accueillis"],
       ["200", "joueurs simultanés au pic"],
-      ["10 000 €+", "de chiffre d’affaires"],
+      ["30 000 $+", "de chiffre d’affaires"],
       ["50+", "personnes dans l’équipe"],
     ],
     challenges: [

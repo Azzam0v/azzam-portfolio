@@ -587,7 +587,7 @@ export const english = {
   "10 000+": "10,000+",
   "joueurs, jusqu’à 200 connectés en même temps":
     "players, up to 200 online at once",
-  "10 000 €+": "€10,000+",
+  "30 000 $+": "CA$30,000+",
   "de chiffre d’affaires": "in revenue",
   "7e mondial": "#7 worldwide",
   "et 2e en France": "and #2 in France",
@@ -616,8 +616,8 @@ export const english = {
     "Leading a team of more than 50 people",
   "Au fil du projet, j’ai recruté et dirigé plus de 50 personnes réparties entre le développement, la modélisation 3D et les textures. Je définissais les priorités, répartissais les tâches, révisais le code avant les mises à jour et traitais les problèmes en production.":
     "Over the project, I recruited and led more than 50 people across development, 3D modeling and textures. I set priorities, assigned work, reviewed code before updates and handled production issues.",
-  "Overy a rassemblé plus de 10 000 joueurs, atteint la 7e place mondiale et la 2e en France, et généré plus de 10 000 € de chiffre d’affaires. J’y ai appris tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données.":
-    "Overy brought together more than 10,000 players, reached #7 worldwide and #2 in France, and generated more than €10,000 in revenue. It taught me a product’s full lifecycle: build, test, deploy, maintain and decide from data.",
+  "Overy a rassemblé plus de 10 000 joueurs, atteint la 7e place mondiale et la 2e en France, et généré plus de 30 000 $ CA de chiffre d’affaires. J’y ai appris tout le cycle de vie d’un produit : développer, tester, déployer, maintenir et décider à partir des données.":
+    "Overy brought together more than 10,000 players, reached #7 worldwide and #2 in France, and generated more than CA$30,000 in revenue. It taught me a product’s full lifecycle: build, test, deploy, maintain and decide from data.",
 
   // Round Style and client domains — October 2026 update
   "Et trois sites livrés à des clients.":
