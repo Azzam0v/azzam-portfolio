@@ -600,6 +600,11 @@ export const english = {
   // Overy — October 2026 update
   "BACKEND / SYSTÈMES DISTRIBUÉS / PRODUIT EN PRODUCTION":
     "BACKEND / DISTRIBUTED SYSTEMS / PRODUCT IN PRODUCTION",
+  "D’un serveur Minecraft à un réseau multijoueur classé jusqu’au 7e rang mondial.":
+    "From a Minecraft server to a multiplayer network that peaked at #7 worldwide.",
+  "meilleur rang mondial sur MinecraftPocket-Servers": "best worldwide rank on MinecraftPocket-Servers",
+  "joueurs simultanés au maximum": "concurrent players at peak",
+  "Classement MinecraftPocket-Servers": "MinecraftPocket-Servers ranking",
   "D’un serveur Minecraft à un réseau multijoueur classé 7e mondial.":
     "From a Minecraft server to a multiplayer network ranked #7 worldwide.",
   "J’ai fondé, développé et exploité Overy : un réseau de serveurs Minecraft Bedrock interconnectés, avec son core maison, ses centaines de plugins, ses services backend, sa base de données, sa boutique et ses outils internes. J’ai dirigé une équipe de plus de 50 personnes et utilisé les données d’activité pour faire évoluer le produit.":

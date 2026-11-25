@@ -235,15 +235,15 @@ export const softwareProjects = [
     category: "BACKEND / SYSTÈMES DISTRIBUÉS / PRODUIT EN PRODUCTION",
     role: "Fondateur & développeur principal",
     headline:
-      "D’un serveur Minecraft à un réseau multijoueur classé 7e mondial.",
+      "D’un serveur Minecraft à un réseau multijoueur classé jusqu’au 7e rang mondial.",
     description:
       "Un réseau Minecraft Bedrock composé de plusieurs serveurs reliés par un proxy, avec données partagées, matchmaking, boutique automatisée et outils d’administration.",
     technologies: ["Java", "PHP", "MySQL", "Node.js", "Linux"],
     results: [
+      ["#7", "meilleur rang mondial sur MinecraftPocket-Servers"],
       ["10 000+", "joueurs accueillis"],
-      ["200", "joueurs simultanés au pic"],
+      ["200", "joueurs simultanés au maximum"],
       ["30 000 $+", "de chiffre d’affaires"],
-      ["50+", "personnes dans l’équipe"],
     ],
     challenges: [
       [
@@ -266,7 +266,7 @@ export const softwareProjects = [
       { label: "Site officiel", href: "https://overymc.fr/" },
       { label: "Voir la boutique", href: "https://overy.tebex.io/" },
       {
-        label: "Fiche publique du serveur",
+        label: "Classement MinecraftPocket-Servers",
         href: "https://minecraftpocket-servers.com/server/119622/",
       },
     ],
